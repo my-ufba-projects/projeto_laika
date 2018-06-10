@@ -3,7 +3,7 @@ from .models import Perfil
 from django.contrib.auth.models import User
 from rest_framework import permissions,generics
 from .permissions import PermissaoUsuario,PermissaoPerfil
-from .Serializers import UserSerializer,PerfilSerializer,UserSerializer2
+from .Serializers import UserSerializer,PerfilSerializer
 
 # Create your views here.
 
@@ -20,7 +20,7 @@ class AtualizarUsuario (generics.UpdateAPIView):
 class ListasPerfil (generics.ListCreateAPIView):
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,PermissaoPerfil)
     queryset = Perfil.objects.all()
-    serializer_class = UserSerializer2
+    serializer_class = PerfilSerializer
 
     def perform_create(self, serializer):
         serializer.save(usuario=self.request.user)

@@ -2,15 +2,7 @@ from rest_framework import serializers
 from .models import Perfil
 from django.contrib.auth.models import User
 
-class UserSerializer2(serializers.ModelSerializer):
-    perfil = serializers.PrimaryKeyRelatedField(many=True, queryset=Perfil.objects.all())
-
-    class Meta:
-        model = User
-        fields = ('id', 'username', 'perfil')
-
-
-class UserSerializer(serializers.ModelSerializer):
+class UserSerializer(serializers.Serializer):
     id = serializers.IntegerField(read_only=True)
     password = serializers.CharField(write_only=True)
     first_name = serializers.CharField()
@@ -37,17 +29,17 @@ class UserSerializer(serializers.ModelSerializer):
         instance.save()
         return instance
 
-class PerfilSerializer (serializers.ModelSerializer):
+class PerfilSerializer (serializers.Serializer):
     id = serializers.IntegerField(read_only=True)
     tipo_conta = serializers.CharField(read_only=True)
     nascimento = serializers.DateField()
     usuario = serializers.ReadOnlyField(source='usuario.username')
-    email_primario = serializers.CharField()
-    email_secundario = serializers.CharField()
-    whatsapp = serializers.CharField()
-    facebook = serializers.CharField()
-    instagram = serializers.CharField()
-    telefone = serializers.CharField()
+    email_primario = serializers.CharField(required=False)
+    email_secundario = serializers.CharField(required=False)
+    whatsapp = serializers.CharField(required=False)
+    facebook = serializers.CharField(required=False)
+    instagram = serializers.CharField(required=False)
+    telefone = serializers.CharField(required=False)
 
     def create(self, validated_data):
         return Perfil.objects.create(**validated_data)
