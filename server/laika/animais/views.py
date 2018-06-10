@@ -84,3 +84,4 @@ class UserGatoDetalhe(generics.RetrieveAPIView):
     serializer_class = UserGatoSerializer
 
 
+#test
