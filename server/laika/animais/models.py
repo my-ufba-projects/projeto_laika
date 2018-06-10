@@ -7,13 +7,13 @@ class Animal(models.Model):
     pelagem_escolhas = (('1', 'Curta'), ('2', 'Longa'))
 
     nome = models.CharField(max_length=15)
-    idade = models.DateField()
+    idade = models.DateField(blank=True,null=True)
     sexo = models.CharField(blank=True, max_length=1, choices=sexo_escolhas, default=None)
     pelagem = models.CharField(blank=True, max_length=1, choices=pelagem_escolhas, default=None)
-    peso = models.IntegerField()
+    peso = models.IntegerField(blank=True, null=True)
     vermifugado = models.BooleanField()
     vacinado = models.BooleanField()
-    descricao = models.CharField(max_length=400)
+    descricao = models.CharField(blank=True, max_length=400)
     criador = models.ForeignKey('auth.user', related_name='animais', on_delete=models.CASCADE)
 
     def save(self, *args, **kwargs):

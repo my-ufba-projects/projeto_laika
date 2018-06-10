@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 class AnimalSerializer(serializers.Serializer):
     id = serializers.IntegerField(read_only=True)
     nome = serializers.CharField(max_length=15, required=True)
-    idade = serializers.DateField()
+    idade = serializers.DateField(allow_null=True,default=None)
     sexo = serializers.ChoiceField(('Fêmea', 'Macho'), allow_blank=True)
     pelagem = serializers.ChoiceField(('Curta', 'Longa'), allow_blank=True)
     peso = serializers.IntegerField(required=False)
