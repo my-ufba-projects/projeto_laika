@@ -1,4 +1,5 @@
 from django.db import models
+import datetime
 
 # Create your models here.
 class News(models.Model):
@@ -10,10 +11,12 @@ class News(models.Model):
         (Ad, 'Ad'),
         (AdoptionCenter, 'AdoptionCenter')
     }
-    newsTitle = models.CharField(max_length=128)
-    newsText = models.TextField()
-    newsImage = models.ImageField(upload_to='news/images/')
-    newsType = models.CharField(max_length=10, choices= TYPE_CHOICES, default=News)
+    title = models.CharField(max_length=128)
+    text = models.TextField()
+    image = models.ImageField(upload_to='news/images/')
+    ntype = models.CharField(max_length=10, choices= TYPE_CHOICES, default=News)
+    summary = models.TextField()
+    date = models.DateField(default=datetime.date.today)
 
     def save(self, *args,**kwargs):
         super(News,self).save(*args, **kwargs)
