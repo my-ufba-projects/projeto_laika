@@ -1,4 +1,5 @@
 env/
+.env
 .idea/
 *.pyc
 server/laika/db.sqlite3
