@@ -1,6 +1,6 @@
 # projeto_laika
 
-[![Twitter: @laika](https://img.shields.io/badge/contact-%40laika-blue.svg?style=flat)](https://github.com/flgomes94/projeto_laika/edit/Documentation/README.md)
+[![Twitter: @laika](https://img.shields.io/badge/contact-%40laika-blue.svg?style=flat)](https://github.com/flgomes94/projeto_laika/blob/Documentation/README.md)
 
 -------
 <p align="center">
