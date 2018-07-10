@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.laika.miaudota.PerfilActivity">
+    tools:context="com.laika.miaudota.activities.PerfilActivity">
 
     <android.support.design.widget.AppBarLayout
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
@@ -78,13 +78,6 @@
                     android:layout_marginTop="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Descrição"
-                    android:id="@+id/aa_animal_descricao"/>
-
-                <TextView
-                    android:layout_marginTop="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="Endereço"
                     android:id="@+id/aa_animal_endereco"/>
 
@@ -123,12 +116,28 @@
                     android:text="Porte"
                     android:id="@+id/aa_animal_porte"/>
 
+                </LinearLayout>
+
             </LinearLayout>
 
-        </LinearLayout>
-
-    </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.CollapsingToolbarLayout>
 
     </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:padding="16dp">
+
+        <TextView
+
+            android:text="Descricao"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/aa_animal_descricao"/>
+
+
+    </android.support.v4.widget.NestedScrollView>
 
 </android.support.design.widget.CoordinatorLayout>
