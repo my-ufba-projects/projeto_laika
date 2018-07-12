@@ -26,40 +26,38 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private final String JSON_URL = "https://projeto-laika2.herokuapp.com/animais/?format=json";
+    private final String JSON_URL = "https://projeto-laika2.herokuapp.com/animais.json";
     private JsonArrayRequest request;
     private RequestQueue requestQueue;
     private List<Animal> listaAnimal;
     private RecyclerView recyclerView;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        listaAnimal = new ArrayList<>();
+
+        listaAnimal = new ArrayList<Animal>();
         recyclerView = findViewById(R.id.recyclerviewid);
         jsonrequest();
     }
 
     private void jsonrequest(){
-
+        System.out.println("oiee1");
         request = new JsonArrayRequest(JSON_URL, new Response.Listener<JSONArray>(){
 
             @Override
             public void onResponse(JSONArray response){
-
+                System.out.println("oiee4");
                 JSONObject jsonObject = null;
-
                 for(int i=0; i<response.length(); i++){
 
                     try{
-
+                        System.out.println("oiee2");
                         jsonObject = response.getJSONObject(i);
                         Animal animal  = new Animal();
-                        animal.setNome(jsonObject.getString("name"));
+                        animal.setNome(jsonObject.getString("nome"));
                         animal.setSexo(jsonObject.getString("sexo"));
                         animal.setPelagem(jsonObject.getString("pelagem"));
                         animal.setDescricao(jsonObject.getString("descricao"));
@@ -70,6 +68,12 @@ public class MainActivity extends AppCompatActivity {
                         animal.setVermifugado(jsonObject.getBoolean("vermifugado"));
                         animal.setVacinado(jsonObject.getBoolean("vacinado"));
                         listaAnimal.add(animal);
+                        System.out.println(animal.getNome());
+                        System.out.println(animal.getSexo());
+                        System.out.println(animal.getPelagem());
+                        System.out.println(animal.getDescricao());
+                        System.out.println(animal.getIdade());
+                        System.out.println(animal.isVacinado());
 
                     } catch(JSONException e){
                         e.printStackTrace();

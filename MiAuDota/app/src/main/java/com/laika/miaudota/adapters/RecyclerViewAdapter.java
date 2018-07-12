@@ -25,7 +25,7 @@ import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>{
 
-    private RequestOptions option;
+    RequestOptions option;
     private Context mContext;
     private List<Animal> mData;
 
@@ -49,11 +49,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             public void onClick(View v){
                 Intent i = new Intent(mContext, PerfilActivity.class);
                 i.putExtra("animal_nome", mData.get(viewHolder.getAdapterPosition()).getNome());
-                i.putExtra("animal_idade", mData.get(viewHolder.getAdapterPosition()).getIdade());
+                i.putExtra("animal_idade", String.valueOf(mData.get(viewHolder.getAdapterPosition()).getIdade()));
                 i.putExtra("animal_sexo", mData.get(viewHolder.getAdapterPosition()).getSexo());
-                i.putExtra("animal_vermifugado", mData.get(viewHolder.getAdapterPosition()).isVermifugado());
-                i.putExtra("animal_vacinado", mData.get(viewHolder.getAdapterPosition()).isVacinado());
-                i.putExtra("animal_peso", mData.get(viewHolder.getAdapterPosition()).getPeso());
+                i.putExtra("animal_vermifugado", String.valueOf(mData.get(viewHolder.getAdapterPosition()).isVermifugado()));
+                i.putExtra("animal_vacinado", String.valueOf(mData.get(viewHolder.getAdapterPosition()).isVacinado()));
+                i.putExtra("animal_peso", String.valueOf(mData.get(viewHolder.getAdapterPosition()).getPeso()));
                 i.putExtra("animal_pelagem", mData.get(viewHolder.getAdapterPosition()).getPelagem());
                 i.putExtra("animal_descricao", mData.get(viewHolder.getAdapterPosition()).getDescricao());
                 i.putExtra("animal_endereco", mData.get(viewHolder.getAdapterPosition()).getEndereco());
@@ -79,9 +79,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         else
             holder.tv_vacinado.setText("Não");
 
-        holder.tv_nome.setText(mData.get(position).getNome());
-        holder.tv_idade.setText(mData.get(position).getIdade());
-        holder.tv_sexo.setText(mData.get(position).getSexo());
+        holder.tv_nome.setText(String.valueOf(mData.get(position).getNome()));
+        holder.tv_idade.setText(String.valueOf(mData.get(position).getIdade()));
+        holder.tv_sexo.setText(String.valueOf(mData.get(position).getSexo()));
 
         //Glide.with(mContext).load(mData.get(position).getFoto_url()).apply(option).into(holder.iv_foto);
 

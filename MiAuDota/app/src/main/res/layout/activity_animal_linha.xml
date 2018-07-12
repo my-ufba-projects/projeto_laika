@@ -10,12 +10,12 @@
     android:background="#ffff"
     android:id="@+id/container">
 
-    <ImageView
+    <!--<ImageView
         android:layout_width="100dp"
         android:layout_height="match_parent"
         android:background="@drawable/loading_shape"
         android:id="@+id/animal_foto"/>
-
+    -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="130dp"
