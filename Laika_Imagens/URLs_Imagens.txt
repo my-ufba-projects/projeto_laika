@@ -1,0 +1,21 @@
+C1 https://www.mundodosanimais.pt/wp-media/imagens/caes/doencas-caes-00.jpg
+C2 http://cachorrode29anos.com/blog/wp-content/uploads/Por-que-alguns-c%C3%A3es-engordam-ap%C3%B3s-a-castra%C3%A7%C3%A3o-3-450x300.jpg
+C3 http://lupusalimentos.com.br/system/wp-content/uploads/2014/07/Cirurgia-plastica-para-caes.jpg
+C4 https://www.clubeparacachorros.com.br/wp-content/uploads/2016/10/confira-como-fazer-coxinha-especial-para-caes-e1477069487480.jpg
+C5 https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyJvlh-DirFrEvh25543LpW75BvCWewNKSO1lWV0ruLceurhVjHA
+C6 http://www.portaldocachorro.com/imagens/foto-cachorro-mais-feio-do-mundo-1.jpg
+C7 https://webcachorros.com.br/wp-content/uploads/2014/09/103.jpg
+C8 https://static.noticiasaominuto.com.br/stockimages/1920/naom_5771174c2bdab.jpg?1467029491
+C9 http://tudosobrecachorros.com.br/wp-content/uploads/vira-lata.jpg
+C10 https://i1.wp.com/oportaln10.com.br/wp-content/uploads/2016/03/c%C3%A3o-vira-lata-1.jpeg?fit=1600%2C900&ssl=1
+
+G1 https://www.opovo.com.br/vidaearteimages/app/noticia_148406960805/2018/01/04/1392/filhotesdegatos.jpg
+G2 https://abrilveja.files.wordpress.com/2016/07/saude-gato-20160727-02.jpg
+G3 https://www.petlove.com.br/dicas/wp-content/uploads/2017/08/curiosidades-sobre-gatos-2.jpg
+G4 http://www.6patas.com.br/wp-content/uploads/2016/01/Los-gatos-nos-ignoran-1.jpg
+G5 http://s2.glbimg.com/w6fSs4vAXtUChu3pDazfGXbm-Pc=/smart/e.glbimg.com/og/ed/f/original/2017/09/20/saddest-cat-luhu-maggie-liu-lanlan731-90-59c0c12417dfd__700.jpg
+G6 https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbL3tV7iHYICZNN02H1-341laBIQNUW-rGPwYt1Sta_ZfWpM_f
+G7 https://i2.wp.com/akieobicho.com/wp-content/uploads/2018/01/gato1.jpg?resize=700%2C700&ssl=1
+G8 https://i.ytimg.com/vi/Ag6tWBBR7KE/hqdefault.jpg
+G9 https://docegato.files.wordpress.com/2012/09/imagen-do-gatinho-neymar-blog.jpg
+G10 http://sorisomail.com/img/128460406546.jpg
