@@ -30,10 +30,11 @@ public class PerfilActivity extends AppCompatActivity {
         String endereco = getIntent().getExtras().getString("animal_endereco");
         String porte = getIntent().getExtras().getString("animal_porte");
         //String foto_url = getIntent().getExtras().getString("animal_foto");
-        int idade = getIntent().getExtras().getInt("animal_idade");
-        double peso = getIntent().getExtras().getDouble("animal_peso");
-        Boolean vermifugado = getIntent().getExtras().getBoolean("animal_vermifugado");
-        Boolean vacinado = getIntent().getExtras().getBoolean("animal_vacinado");
+        int idade = Integer.valueOf(getIntent().getExtras().getString("animal_idade"));
+        double peso = Double.valueOf(getIntent().getExtras().getString("animal_peso"));
+        Boolean vermifugado = Boolean.valueOf(getIntent().getExtras().getString("animal_vermifugado"));
+        Boolean vacinado = Boolean.valueOf(getIntent().getExtras().getString("animal_vacinado"));
+
         String vermifugadoString;
         String vacinadoString;
 
@@ -54,7 +55,7 @@ public class PerfilActivity extends AppCompatActivity {
         collapsingToolbarLayout.setTitleEnabled(true);
 
         //ImageView iv_foto = findViewById(R.id.aa_thumbnail);
-        TextView tv_nome = findViewById(R.id.aa_animal_nome);
+        //TextView tv_nome = findViewById(R.id.aa_animal_nome);
         TextView tv_sexo = findViewById(R.id.aa_animal_sexo);
         TextView tv_pelagem = findViewById(R.id.aa_animal_pelagem);
         TextView tv_descricao = findViewById(R.id.aa_animal_descricao);
@@ -66,16 +67,16 @@ public class PerfilActivity extends AppCompatActivity {
         TextView tv_porte = findViewById(R.id.aa_animal_porte);
 
         //Setando os atributos da view
-        tv_nome.setText(nome);
-        tv_sexo.setText(sexo);
-        tv_pelagem.setText(pelagem);
+        //tv_nome.setText(nome);
+        tv_sexo.setText("Sexo: " + sexo);
+        tv_pelagem.setText("Pelagem: " + pelagem);
         tv_descricao.setText(descricao);
-        tv_endereco.setText(endereco);
-        tv_idade.setText(Integer.toString(idade));
-        tv_peso.setText(Double.toString(peso));
-        tv_vermifugado.setText(vermifugadoString);
-        tv_vacinado.setText(vacinadoString);
-        tv_porte.setText(porte);
+        tv_endereco.setText("Endereço: " + endereco);
+        tv_idade.setText("Idade: " + String.valueOf(idade));
+        tv_peso.setText("Peso: " + String.valueOf(peso));
+        tv_vermifugado.setText("Vermifugado: " + vermifugadoString);
+        tv_vacinado.setText("Vacinado: " + vacinadoString);
+        tv_porte.setText("Porte: " + porte);
 
         collapsingToolbarLayout.setTitle(nome);
 

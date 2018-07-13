@@ -70,18 +70,18 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
         if(mData.get(position).isVermifugado())
-            holder.tv_vermifugado.setText("Sim");
+            holder.tv_vermifugado.setText("Vermifugado: Sim");
         else
-            holder.tv_vermifugado.setText("Não");
+            holder.tv_vermifugado.setText("Vermifugado: Não");
 
         if(mData.get(position).isVacinado())
-            holder.tv_vacinado.setText("Sim");
+            holder.tv_vacinado.setText("Vacinado: Sim");
         else
-            holder.tv_vacinado.setText("Não");
+            holder.tv_vacinado.setText("Vacinado: Não");
 
         holder.tv_nome.setText(String.valueOf(mData.get(position).getNome()));
-        holder.tv_idade.setText(String.valueOf(mData.get(position).getIdade()));
-        holder.tv_sexo.setText(String.valueOf(mData.get(position).getSexo()));
+        holder.tv_idade.setText("Idade: " + String.valueOf(mData.get(position).getIdade()));
+        holder.tv_sexo.setText("Sexo: " + String.valueOf(mData.get(position).getSexo()));
 
         //Glide.with(mContext).load(mData.get(position).getFoto_url()).apply(option).into(holder.iv_foto);
 
