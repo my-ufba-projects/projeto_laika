@@ -4,8 +4,6 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -15,21 +13,20 @@ import android.content.Intent;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.android.volley.toolbox.ImageLoader;
 import com.laika.miaudota.R;
-import com.laika.miaudota.models.Animal;
+import com.laika.miaudota.models.*;
 import com.laika.miaudota.activities.PerfilActivity;
 
-import java.util.List;
+import java.util.ArrayList;
 
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>{
 
     RequestOptions option;
     private Context mContext;
-    private List<Animal> mData;
+    private ArrayList<Animal> mData;
 
-    public RecyclerViewAdapter(Context mContext, List<Animal> mData) {
+    public RecyclerViewAdapter(Context mContext, ArrayList<Animal> mData) {
 
         this.mContext = mContext;
         this.mData = mData;
@@ -47,6 +44,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         viewHolder.view_container.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+
                 Intent i = new Intent(mContext, PerfilActivity.class);
                 i.putExtra("animal_nome", mData.get(viewHolder.getAdapterPosition()).getNome());
                 i.putExtra("animal_idade", String.valueOf(mData.get(viewHolder.getAdapterPosition()).getIdade()));
@@ -57,7 +55,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 i.putExtra("animal_pelagem", mData.get(viewHolder.getAdapterPosition()).getPelagem());
                 i.putExtra("animal_descricao", mData.get(viewHolder.getAdapterPosition()).getDescricao());
                 i.putExtra("animal_endereco", mData.get(viewHolder.getAdapterPosition()).getEndereco());
-                //i.putExtra("animal_foto", mData.get(viewHolder.getAdapterPosition()).getFoto_url());
+                i.putExtra("animal_foto", mData.get(viewHolder.getAdapterPosition()).getFoto_url());
+                if(mData.get(viewHolder.getAdapterPosition()) instanceof Cao)
+                    i.putExtra("animal_porte", (((Cao)mData.get(viewHolder.getAdapterPosition())).getPorte()));
 
                 mContext.startActivity(i);
             }
@@ -70,20 +70,25 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
         if(mData.get(position).isVermifugado())
-            holder.tv_vermifugado.setText("Vermifugado: Sim");
+            holder.tv_vermifugado.setText("Vermifugado(a): Sim");
         else
-            holder.tv_vermifugado.setText("Vermifugado: Não");
+            holder.tv_vermifugado.setText("Vermifugado(a): Não");
 
         if(mData.get(position).isVacinado())
-            holder.tv_vacinado.setText("Vacinado: Sim");
+            holder.tv_vacinado.setText("Vacinado(a): Sim");
         else
-            holder.tv_vacinado.setText("Vacinado: Não");
+            holder.tv_vacinado.setText("Vacinado(a): Não");
+
+        if(mData.get(position) instanceof Cao)
+            holder.tv_porte.setText("Porte: " + String.valueOf((((Cao)mData.get(position)).getPorte())));
+        else
+            holder.tv_porte.setText("");
 
         holder.tv_nome.setText(String.valueOf(mData.get(position).getNome()));
-        holder.tv_idade.setText("Idade: " + String.valueOf(mData.get(position).getIdade()));
+        holder.tv_idade.setText("Idade: " + String.valueOf(mData.get(position).getIdade()) + " ano(s)");
         holder.tv_sexo.setText("Sexo: " + String.valueOf(mData.get(position).getSexo()));
 
-        //Glide.with(mContext).load(mData.get(position).getFoto_url()).apply(option).into(holder.iv_foto);
+        Glide.with(mContext).load(mData.get(position).getFoto_url()).apply(option).into(holder.iv_foto);
 
     }
 
@@ -99,7 +104,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         TextView tv_sexo;
         TextView tv_vermifugado;
         TextView tv_vacinado;
-        //ImageView iv_foto;
+        TextView tv_porte;
+        ImageView iv_foto;
         LinearLayout view_container;
 
 
@@ -112,7 +118,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             tv_sexo = itemView.findViewById(R.id.animal_sexo);
             tv_vermifugado = itemView.findViewById(R.id.animal_vermifugado);
             tv_vacinado = itemView.findViewById(R.id.animal_vacinado);
-            //iv_foto = itemView.findViewById(R.id.animal_foto);
+            tv_porte = itemView.findViewById(R.id.animal_porte);
+            iv_foto = itemView.findViewById(R.id.animal_foto);
 
         }
 
