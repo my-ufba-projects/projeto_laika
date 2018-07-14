@@ -26,8 +26,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.laika.miaudota.activities.PerfilActivity" >
-        </activity>
+        <activity android:name="com.laika.miaudota.activities.PerfilActivity" />
+        <activity
+            android:name="com.laika.miaudota.activities.CadastroActivity"
+            android:label="@string/title_activity_cadastro"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CadastroActivity$PlaceholderFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/nome_animal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="nome do cachorro"
+            android:inputType="textPersonName" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/idade_animal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="idade do animal"
+                android:inputType="numberSigned" />
+
+            <EditText
+                android:id="@+id/peso_animal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="peso"
+                android:inputType="numberDecimal" />
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/sexo_macho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Macho" />
+
+            <RadioButton
+                android:id="@+id/sexo_femea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Fêmea" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_pelagem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pelagem" />
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/tipo_pelo" />
+            </LinearLayout>
+            
+
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/vermifugado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vermifugado" />
+
+        <CheckBox
+            android:id="@+id/vacinado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vacinado" />
+
+        <EditText
+            android:id="@+id/endereco_animal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="endereço"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/link_foto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="foto"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/about_animal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="sobre o animal"
+            android:inputType="textMultiLine" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
