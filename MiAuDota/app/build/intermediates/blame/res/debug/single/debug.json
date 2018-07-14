@@ -1504,12 +1504,12 @@
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ee0a08694fede822f7004ee5e106046d/res/drawable-xxhdpi-v4/abc_ic_star_half_black_48dp.png"
     },
     {
-        "merged": "/home/fabio/Documentos/UFBA/POO/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ee0a08694fede822f7004ee5e106046d/res/drawable-mdpi-v4/abc_textfield_default_mtrl_alpha.9.png"
-    },
-    {
         "merged": "/home/fabio/Documentos/UFBA/POO/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ee0a08694fede822f7004ee5e106046d/res/drawable-hdpi-v4/abc_list_divider_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/fabio/Documentos/UFBA/POO/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ee0a08694fede822f7004ee5e106046d/res/drawable-mdpi-v4/abc_textfield_default_mtrl_alpha.9.png"
     },
     {
         "merged": "/home/fabio/Documentos/UFBA/POO/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/drawable_abc_textfield_search_material.xml.flat",
