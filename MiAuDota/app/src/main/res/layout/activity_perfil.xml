@@ -8,9 +8,9 @@
     tools:context="com.laika.miaudota.activities.PerfilActivity">
 
     <android.support.design.widget.AppBarLayout
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         android:layout_width="match_parent"
         android:layout_height="300dp"
+        android:background="#a0ef92"
         android:id="@+id/appbarlayout_id">
 
         <android.support.design.widget.CollapsingToolbarLayout
@@ -20,7 +20,7 @@
             app:layout_scrollFlags="exitUntilCollapsed|scroll"
             app:title="Nome do Animal"
             app:contentScrim="?attr/colorPrimary"
-            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleMarginStart="35dp"
             app:expandedTitleMarginEnd="64dp">
 
             <android.support.v7.widget.Toolbar
@@ -39,17 +39,17 @@
 
 
                 <ImageView
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
                     android:layout_width="160dp"
                     android:layout_height="180dp"
                     android:background="@drawable/loading_shape"
                     android:id="@+id/aa_thumbnail"/>
 
                 <LinearLayout
-                    android:layout_marginTop="30dp"
-                    android:layout_marginStart="15dp"
-                    android:layout_width="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_width="150dp"
                     android:layout_height="220dp"
                     android:orientation="vertical">
 

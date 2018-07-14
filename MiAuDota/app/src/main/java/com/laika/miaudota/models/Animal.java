@@ -1,6 +1,6 @@
 package com.laika.miaudota.models;
 
-public class Animal {
+public abstract class Animal {
 
     private String nome;
     private String sexo;
@@ -19,6 +19,7 @@ public class Animal {
 
     public Animal(String nome, String sexo, String pelagem, String descricao, int idade, double peso,
                   boolean vermifugado, boolean vacinado, String endereco, String foto_url) {
+
         this.nome = nome;
         this.sexo = sexo;
         this.pelagem = pelagem;
@@ -29,6 +30,7 @@ public class Animal {
         this.vacinado = vacinado;
         this.endereco = endereco;
         this.foto_url = foto_url;
+
     }
 
     public String getNome() {
@@ -110,4 +112,5 @@ public class Animal {
     public void setFoto_url(String foto_url) {
         this.foto_url = foto_url;
     }
+
 }

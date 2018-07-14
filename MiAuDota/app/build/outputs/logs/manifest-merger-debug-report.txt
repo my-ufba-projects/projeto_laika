@@ -1,0 +1,141 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml:2:1-30:12
+MERGED from [com.android.support:design:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\aa1d6b2aa0cc4639bfab8f8bf5074774\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\bba331b400d659d5a5ea15581e967004\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\0e01e46dc1722dbd7f0b8ccd165cfc29\AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.bumptech.glide:glide:4.6.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\glide-4.6.1.aar\82e015179e3012e6123508715e8a176c\AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.volley:volley:1.0.0] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\volley-1.0.0.aar\5ecaad654406e588d1466e45eefcdf64\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\ff985401c5b8de646373acacddd28e29\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\37fa3d1319e714f7a10cb1b27fc87230\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\3f1891ce421462b2803f44949627694a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\4954a8e6addf5789683d8fa356670a4b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\69757e5f7c6ea549b3f5a799e22c2d63\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\8e630ba3a7c200603b841f8e6b32df4d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\0c71a4b519254b3372cf1f9682bd187d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.6.1.aar\2583fe567b53d9dac6391a28211225bd\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:transition:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\a134774b104e1ef6988aac92aa6d7042\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\514e4cc749712242fccbce00f7f1a32b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\c38612547298702ecc640f08be453fa8\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\23572ee3766f46850d028bfb1b3b7297\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\dcc4db28222d3946a85494bd9c66a85c\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\8706d796f4d4e87d5b40ee569a544af5\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\69cff033b97ddd7e7b2e5405850c6756\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml:2:1-30:12
+	package
+		ADDED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml:3:5-33
+		INJECTED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml:2:1-30:12
+		INJECTED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml:2:1-30:12
+		INJECTED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml:5:5-66
+	android:name
+		ADDED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml:5:22-64
+application
+ADDED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml:7:5-28:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\0e01e46dc1722dbd7f0b8ccd165cfc29\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\0e01e46dc1722dbd7f0b8ccd165cfc29\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:glide:4.6.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\glide-4.6.1.aar\82e015179e3012e6123508715e8a176c\AndroidManifest.xml:11:5-20
+MERGED from [com.github.bumptech.glide:glide:4.6.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\glide-4.6.1.aar\82e015179e3012e6123508715e8a176c\AndroidManifest.xml:11:5-20
+MERGED from [com.android.volley:volley:1.0.0] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\volley-1.0.0.aar\5ecaad654406e588d1466e45eefcdf64\AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:volley:1.0.0] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\volley-1.0.0.aar\5ecaad654406e588d1466e45eefcdf64\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.6.1.aar\2583fe567b53d9dac6391a28211225bd\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.6.1.aar\2583fe567b53d9dac6391a28211225bd\AndroidManifest.xml:9:5-20
+	android:supportsRtl
+		ADDED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml:12:9-35
+	android:label
+		ADDED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml:10:9-41
+	android:roundIcon
+		ADDED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml:11:9-54
+	android:icon
+		ADDED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml:9:9-43
+	android:allowBackup
+		ADDED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml:8:9-35
+	android:theme
+		ADDED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml:13:9-40
+activity#com.laika.miaudota.activities.MainActivity
+ADDED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml:14:9-22:20
+	android:name
+		ADDED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml:14:19-58
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml:16:13-20:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml:17:17-69
+	android:name
+		ADDED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml:17:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml:19:17-77
+	android:name
+		ADDED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml:19:27-74
+activity#com.laika.miaudota.activities.PerfilActivity
+ADDED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml:24:9-26:20
+	android:name
+		ADDED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml:24:19-60
+uses-sdk
+INJECTED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:design:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\aa1d6b2aa0cc4639bfab8f8bf5074774\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\aa1d6b2aa0cc4639bfab8f8bf5074774\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\bba331b400d659d5a5ea15581e967004\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\bba331b400d659d5a5ea15581e967004\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\0e01e46dc1722dbd7f0b8ccd165cfc29\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\0e01e46dc1722dbd7f0b8ccd165cfc29\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:glide:4.6.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\glide-4.6.1.aar\82e015179e3012e6123508715e8a176c\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.bumptech.glide:glide:4.6.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\glide-4.6.1.aar\82e015179e3012e6123508715e8a176c\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.volley:volley:1.0.0] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\volley-1.0.0.aar\5ecaad654406e588d1466e45eefcdf64\AndroidManifest.xml:7:5-43
+MERGED from [com.android.volley:volley:1.0.0] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\volley-1.0.0.aar\5ecaad654406e588d1466e45eefcdf64\AndroidManifest.xml:7:5-43
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\ff985401c5b8de646373acacddd28e29\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\ff985401c5b8de646373acacddd28e29\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\37fa3d1319e714f7a10cb1b27fc87230\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\37fa3d1319e714f7a10cb1b27fc87230\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\3f1891ce421462b2803f44949627694a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\3f1891ce421462b2803f44949627694a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\4954a8e6addf5789683d8fa356670a4b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\4954a8e6addf5789683d8fa356670a4b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\69757e5f7c6ea549b3f5a799e22c2d63\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\69757e5f7c6ea549b3f5a799e22c2d63\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\8e630ba3a7c200603b841f8e6b32df4d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\8e630ba3a7c200603b841f8e6b32df4d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\0c71a4b519254b3372cf1f9682bd187d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\0c71a4b519254b3372cf1f9682bd187d\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.6.1.aar\2583fe567b53d9dac6391a28211225bd\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.6.1.aar\2583fe567b53d9dac6391a28211225bd\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:transition:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\a134774b104e1ef6988aac92aa6d7042\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\a134774b104e1ef6988aac92aa6d7042\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\514e4cc749712242fccbce00f7f1a32b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\514e4cc749712242fccbce00f7f1a32b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\c38612547298702ecc640f08be453fa8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\c38612547298702ecc640f08be453fa8\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\23572ee3766f46850d028bfb1b3b7297\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\23572ee3766f46850d028bfb1b3b7297\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\dcc4db28222d3946a85494bd9c66a85c\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\dcc4db28222d3946a85494bd9c66a85c\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\8706d796f4d4e87d5b40ee569a544af5\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\8706d796f4d4e87d5b40ee569a544af5\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\69cff033b97ddd7e7b2e5405850c6756\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\69cff033b97ddd7e7b2e5405850c6756\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\danpl\AndroidStudioProjects\MiAuDota\app\src\main\AndroidManifest.xml

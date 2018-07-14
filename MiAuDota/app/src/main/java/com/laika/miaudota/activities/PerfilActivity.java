@@ -29,7 +29,7 @@ public class PerfilActivity extends AppCompatActivity {
         String descricao = getIntent().getExtras().getString("animal_descricao");
         String endereco = getIntent().getExtras().getString("animal_endereco");
         String porte = getIntent().getExtras().getString("animal_porte");
-        //String foto_url = getIntent().getExtras().getString("animal_foto");
+        String foto_url = getIntent().getExtras().getString("animal_foto");
         int idade = Integer.valueOf(getIntent().getExtras().getString("animal_idade"));
         double peso = Double.valueOf(getIntent().getExtras().getString("animal_peso"));
         Boolean vermifugado = Boolean.valueOf(getIntent().getExtras().getString("animal_vermifugado"));
@@ -54,8 +54,6 @@ public class PerfilActivity extends AppCompatActivity {
         CollapsingToolbarLayout collapsingToolbarLayout = findViewById(R.id.collapsingtoolbar_id);
         collapsingToolbarLayout.setTitleEnabled(true);
 
-        //ImageView iv_foto = findViewById(R.id.aa_thumbnail);
-        //TextView tv_nome = findViewById(R.id.aa_animal_nome);
         TextView tv_sexo = findViewById(R.id.aa_animal_sexo);
         TextView tv_pelagem = findViewById(R.id.aa_animal_pelagem);
         TextView tv_descricao = findViewById(R.id.aa_animal_descricao);
@@ -66,24 +64,28 @@ public class PerfilActivity extends AppCompatActivity {
         TextView tv_vacinado = findViewById(R.id.aa_animal_vacinado);
         TextView tv_porte = findViewById(R.id.aa_animal_porte);
 
+        ImageView iv_foto = findViewById(R.id.aa_thumbnail);
+
         //Setando os atributos da view
-        //tv_nome.setText(nome);
         tv_sexo.setText("Sexo: " + sexo);
         tv_pelagem.setText("Pelagem: " + pelagem);
         tv_descricao.setText(descricao);
         tv_endereco.setText("Endereço: " + endereco);
-        tv_idade.setText("Idade: " + String.valueOf(idade));
-        tv_peso.setText("Peso: " + String.valueOf(peso));
-        tv_vermifugado.setText("Vermifugado: " + vermifugadoString);
-        tv_vacinado.setText("Vacinado: " + vacinadoString);
-        tv_porte.setText("Porte: " + porte);
+        tv_idade.setText("Idade: " + String.valueOf(idade) + " ano(s)");
+        tv_peso.setText("Peso: " + String.valueOf(peso) + " kg(s)");
+        tv_vermifugado.setText("Vermifugado(a): " + vermifugadoString);
+        tv_vacinado.setText("Vacinado(a): " + vacinadoString);
+        if(porte!=null)
+            tv_porte.setText("Porte: " + porte);
+        else
+            tv_porte.setText("");
 
         collapsingToolbarLayout.setTitle(nome);
 
         RequestOptions requestOptions = new RequestOptions().centerCrop().placeholder(R.drawable.loading_shape).error(R.drawable.loading_shape);
 
         //Definindo a imagem
-        //Glide.with(this).load(foto_url).apply(requestOptions).into(iv_foto);
+        Glide.with(this).load(foto_url).apply(requestOptions).into(iv_foto);
 
 
     }

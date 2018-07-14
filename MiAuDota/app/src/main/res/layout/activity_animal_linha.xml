@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout
+
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
+    android:layout_height="170dp"
     android:layout_marginTop="5dp"
+    android:layout_marginBottom="7dp"
     android:padding="8dp"
-    android:background="#54afff"
+    android:background="#a0ef92"
     android:id="@+id/container">
 
     <ImageView
-        android:layout_width="100dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_width="120dp"
         android:layout_height="match_parent"
         android:background="@drawable/loading_shape"
         android:id="@+id/animal_foto"/>
 
     <LinearLayout
+        android:layout_marginLeft="20dp"
         android:layout_width="match_parent"
-        android:layout_height="130dp"
+        android:layout_height="150dp"
         android:orientation="vertical"
-        android:layout_margin="8dp">
+        >
 
         <TextView
             android:layout_width="wrap_content"
@@ -57,6 +62,13 @@
             android:layout_height="wrap_content"
             android:id="@+id/animal_vacinado"
             android:text="Vacinado"/>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/animal_porte"
+            android:text="Porte do Animal"/>
 
     </LinearLayout>
 

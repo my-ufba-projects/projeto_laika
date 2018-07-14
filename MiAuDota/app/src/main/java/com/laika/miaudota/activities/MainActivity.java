@@ -4,9 +4,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.LinearLayoutManager;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -21,7 +18,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.List;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -29,51 +25,61 @@ public class MainActivity extends AppCompatActivity {
     private final String JSON_URL = "https://projeto-laika2.herokuapp.com/animais.json";
     private JsonArrayRequest request;
     private RequestQueue requestQueue;
-    private List<Animal> listaAnimal;
+    private ArrayList<Animal> listaAnimal;
     private RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         listaAnimal = new ArrayList<Animal>();
         recyclerView = findViewById(R.id.recyclerviewid);
         jsonrequest();
+
     }
 
     private void jsonrequest(){
-        System.out.println("oiee1");
+
         request = new JsonArrayRequest(JSON_URL, new Response.Listener<JSONArray>(){
 
             @Override
             public void onResponse(JSONArray response){
-                System.out.println("oiee4");
+
                 JSONObject jsonObject = null;
                 for(int i=0; i<response.length(); i++){
-
                     try{
-                        System.out.println("oiee2");
                         jsonObject = response.getJSONObject(i);
-                        Animal animal  = new Animal();
-                        animal.setNome(jsonObject.getString("nome"));
-                        animal.setSexo(jsonObject.getString("sexo"));
-                        animal.setPelagem(jsonObject.getString("pelagem"));
-                        animal.setDescricao(jsonObject.getString("descricao"));
-                        animal.setEndereco(jsonObject.getString("endereco"));
-                        //animal.setFoto_url(jsonObject.getString("foto_url"));
-                        animal.setIdade(jsonObject.getInt("idade"));
-                        animal.setPeso(jsonObject.getDouble("peso"));
-                        animal.setVermifugado(jsonObject.getBoolean("vermifugado"));
-                        animal.setVacinado(jsonObject.getBoolean("vacinado"));
-                        listaAnimal.add(animal);
-                        System.out.println(animal.getNome());
-                        System.out.println(animal.getSexo());
-                        System.out.println(animal.getPelagem());
-                        System.out.println(animal.getDescricao());
-                        System.out.println(animal.getIdade());
-                        System.out.println(animal.isVacinado());
+                        if((jsonObject.getString("porte").equalsIgnoreCase("null"))) {
+                            Gato gato  = new Gato();
+                            gato.setNome(jsonObject.getString("nome"));
+                            gato.setSexo(jsonObject.getString("sexo"));
+                            gato.setPelagem(jsonObject.getString("pelagem"));
+                            gato.setDescricao(jsonObject.getString("descricao"));
+                            gato.setEndereco(jsonObject.getString("endereco"));
+                            gato.setFoto_url(jsonObject.getString("foto_url"));
+                            gato.setIdade(jsonObject.getInt("idade"));
+                            gato.setPeso(jsonObject.getDouble("peso"));
+                            gato.setVermifugado(jsonObject.getBoolean("vermifugado"));
+                            gato.setVacinado(jsonObject.getBoolean("vacinado"));
+                            listaAnimal.add(gato);
+                        }
+                        else{
+                            Cao cao = new Cao();
+                            cao.setNome(jsonObject.getString("nome"));
+                            cao.setSexo(jsonObject.getString("sexo"));
+                            cao.setPelagem(jsonObject.getString("pelagem"));
+                            cao.setDescricao(jsonObject.getString("descricao"));
+                            cao.setEndereco(jsonObject.getString("endereco"));
+                            cao.setFoto_url(jsonObject.getString("foto_url"));
+                            cao.setIdade(jsonObject.getInt("idade"));
+                            cao.setPeso(jsonObject.getDouble("peso"));
+                            cao.setVermifugado(jsonObject.getBoolean("vermifugado"));
+                            cao.setVacinado(jsonObject.getBoolean("vacinado"));
+                            cao.setPorte(jsonObject.getString("porte"));
+                            listaAnimal.add(cao);
+                        }
 
                     } catch(JSONException e){
                         e.printStackTrace();
@@ -92,11 +98,10 @@ public class MainActivity extends AppCompatActivity {
         requestQueue.add(request);
     }
 
-    private void setuprecyclerview(List<Animal> listaAnimal){
+    private void setuprecyclerview(ArrayList<Animal> listaAnimal){
 
         RecyclerViewAdapter myadapter = new RecyclerViewAdapter(this, listaAnimal);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
         recyclerView.setAdapter(myadapter);
 
     }
