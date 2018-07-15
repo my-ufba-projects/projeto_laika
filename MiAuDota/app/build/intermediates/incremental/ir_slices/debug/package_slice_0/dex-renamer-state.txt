@@ -1,4 +1,4 @@
-#Sat Jul 14 02:26:54 BRT 2018
+#Sun Jul 15 00:12:59 BRT 2018
 base.0=/home/fabio/Documentos/UFBA/POO/projeto_laika/MiAuDota/app/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex
