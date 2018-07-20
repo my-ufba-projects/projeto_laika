@@ -5,9 +5,14 @@
     <item
         android:id="@+id/lista_animaisId"
         android:title="@string/actionListar"
-        app:showAsAction="never" />
+        app:showAsAction="never"/>
     <item
         android:id="@+id/cadastrar_animalId"
         android:title="@string/actionCadastrar"
-        app:showAsAction="never" />
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/pesquisa_animaisId"
+        android:title="@string/actionPesquisar"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="always"/>
 </menu>
