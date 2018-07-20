@@ -7,7 +7,7 @@ public abstract class Animal {
     private String pelagem;
     private String descricao;
     private String endereco;
-    private String foto_url;
+    private String fotoUrl;
 
     private int idade;
     private double peso;
@@ -18,7 +18,7 @@ public abstract class Animal {
     public Animal(){}
 
     public Animal(String nome, String sexo, String pelagem, String descricao, int idade, double peso,
-                  boolean vermifugado, boolean vacinado, String endereco, String foto_url) {
+                  boolean vermifugado, boolean vacinado, String endereco, String fotoUrl) {
 
         this.nome = nome;
         this.sexo = sexo;
@@ -29,7 +29,7 @@ public abstract class Animal {
         this.vermifugado = vermifugado;
         this.vacinado = vacinado;
         this.endereco = endereco;
-        this.foto_url = foto_url;
+        this.fotoUrl = fotoUrl;
 
     }
 
@@ -105,12 +105,12 @@ public abstract class Animal {
         this.endereco = endereco;
     }
 
-    public String getFoto_url() {
-        return foto_url;
+    public String getFotoUrl() {
+        return fotoUrl;
     }
 
-    public void setFoto_url(String foto_url) {
-        this.foto_url = foto_url;
+    public void setFotoUrl(String fotoUrl) {
+        this.fotoUrl = fotoUrl;
     }
 
 }

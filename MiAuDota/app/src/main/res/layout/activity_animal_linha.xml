@@ -18,7 +18,7 @@
         android:layout_width="120dp"
         android:layout_height="match_parent"
         android:background="@drawable/loading_shape"
-        android:id="@+id/animal_foto"/>
+        android:id="@+id/animalFoto"/>
 
     <LinearLayout
         android:layout_marginLeft="20dp"
@@ -39,7 +39,7 @@
             android:layout_marginTop="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/animal_idade"
+            android:id="@+id/animalIdade"
             android:text="Idade do Animal"/>
 
         <TextView
@@ -53,21 +53,21 @@
             android:layout_marginTop="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/animal_vermifugado"
+            android:id="@+id/animalVermifugado"
             android:text="Vermifugado"/>
 
         <TextView
             android:layout_marginTop="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/animal_vacinado"
+            android:id="@+id/animalVacinado"
             android:text="Vacinado"/>
 
         <TextView
             android:layout_marginTop="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/animal_porte"
+            android:id="@+id/animalPorte"
             android:text="Porte do Animal"/>
 
     </LinearLayout>

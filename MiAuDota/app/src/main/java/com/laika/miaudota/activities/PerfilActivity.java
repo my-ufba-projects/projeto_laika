@@ -28,17 +28,17 @@ public class PerfilActivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
         //Recebe os dados
-        String nome = getIntent().getExtras().getString("animal_nome");
-        String sexo = getIntent().getExtras().getString("animal_sexo");
-        String pelagem = getIntent().getExtras().getString("animal_pelagem");
-        String descricao = getIntent().getExtras().getString("animal_descricao");
-        String endereco = getIntent().getExtras().getString("animal_endereco");
-        String porte = getIntent().getExtras().getString("animal_porte");
-        String foto_url = getIntent().getExtras().getString("animal_foto");
-        int idade = Integer.valueOf(getIntent().getExtras().getString("animal_idade"));
-        double peso = Double.valueOf(getIntent().getExtras().getString("animal_peso"));
-        Boolean vermifugado = Boolean.valueOf(getIntent().getExtras().getString("animal_vermifugado"));
-        Boolean vacinado = Boolean.valueOf(getIntent().getExtras().getString("animal_vacinado"));
+        String nome = getIntent().getExtras().getString("animalNome");
+        String sexo = getIntent().getExtras().getString("animalSexo");
+        String pelagem = getIntent().getExtras().getString("animalPelagem");
+        String descricao = getIntent().getExtras().getString("animalDescricao");
+        String endereco = getIntent().getExtras().getString("animalEndereco");
+        String porte = getIntent().getExtras().getString("animalPorte");
+        String fotoUrl = getIntent().getExtras().getString("animalFoto");
+        int idade = Integer.valueOf(getIntent().getExtras().getString("animalIdade"));
+        double peso = Double.valueOf(getIntent().getExtras().getString("animalPeso"));
+        Boolean vermifugado = Boolean.valueOf(getIntent().getExtras().getString("animalVermifugado"));
+        Boolean vacinado = Boolean.valueOf(getIntent().getExtras().getString("animalVacinado"));
 
         String vermifugadoString;
         String vacinadoString;
@@ -59,38 +59,38 @@ public class PerfilActivity extends AppCompatActivity {
         CollapsingToolbarLayout collapsingToolbarLayout = findViewById(R.id.collapsingtoolbar_id);
         collapsingToolbarLayout.setTitleEnabled(true);
 
-        TextView tv_sexo = findViewById(R.id.aa_animal_sexo);
-        TextView tv_pelagem = findViewById(R.id.aa_animal_pelagem);
-        TextView tv_descricao = findViewById(R.id.aa_animal_descricao);
-        TextView tv_endereco = findViewById(R.id.aa_animal_endereco);
-        TextView tv_idade = findViewById(R.id.aa_animal_idade);
-        TextView tv_peso = findViewById(R.id.aa_animal_peso);
-        TextView tv_vermifugado = findViewById(R.id.aa_animal_vermifugado);
-        TextView tv_vacinado = findViewById(R.id.aa_animal_vacinado);
-        TextView tv_porte = findViewById(R.id.aa_animal_porte);
+        TextView tvSexo = findViewById(R.id.aa_animalSexo);
+        TextView tvPelagem = findViewById(R.id.aa_animalPelagem);
+        TextView tvDescricao = findViewById(R.id.aa_animalDescricao);
+        TextView tvEndereco = findViewById(R.id.aa_animalEndereco);
+        TextView tvIdade = findViewById(R.id.aa_animalIdade);
+        TextView tvPeso = findViewById(R.id.aa_animalPeso);
+        TextView tvVermifugado = findViewById(R.id.aa_animalVermifugado);
+        TextView tvVacinado = findViewById(R.id.aa_animalVacinado);
+        TextView tvPorte = findViewById(R.id.aa_animalPorte);
 
-        ImageView iv_foto = findViewById(R.id.aa_thumbnail);
+        ImageView ivFoto = findViewById(R.id.aa_thumbnail);
 
         //Setando os atributos da view
-        tv_sexo.setText("Sexo: " + sexo);
-        tv_pelagem.setText("Pelagem: " + pelagem);
-        tv_descricao.setText(descricao);
-        tv_endereco.setText("Endereço: " + endereco);
-        tv_idade.setText("Idade: " + String.valueOf(idade) + " ano(s)");
-        tv_peso.setText("Peso: " + String.valueOf(peso) + " kg(s)");
-        tv_vermifugado.setText("Vermifugado(a): " + vermifugadoString);
-        tv_vacinado.setText("Vacinado(a): " + vacinadoString);
+        tvSexo.setText("Sexo: " + sexo);
+        tvPelagem.setText("Pelagem: " + pelagem);
+        tvDescricao.setText(descricao);
+        tvEndereco.setText("Endereço: " + endereco);
+        tvIdade.setText("Idade: " + String.valueOf(idade) + " ano(s)");
+        tvPeso.setText("Peso: " + String.valueOf(peso) + " kg(s)");
+        tvVermifugado.setText("Vermifugado(a): " + vermifugadoString);
+        tvVacinado.setText("Vacinado(a): " + vacinadoString);
         if(porte!=null)
-            tv_porte.setText("Porte: " + porte);
+            tvPorte.setText("Porte: " + porte);
         else
-            tv_porte.setText("");
+            tvPorte.setText("");
 
         collapsingToolbarLayout.setTitle(nome);
 
         RequestOptions requestOptions = new RequestOptions().centerCrop().placeholder(R.drawable.loading_shape).error(R.drawable.loading_shape);
 
         //Definindo a imagem
-        Glide.with(this).load(foto_url).apply(requestOptions).into(iv_foto);
+        Glide.with(this).load(fotoUrl).apply(requestOptions).into(ivFoto);
 
     }
 
@@ -106,11 +106,11 @@ public class PerfilActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         switch(id){
-            case R.id.lista_animais_id:
+            case R.id.lista_animaisId:
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.cadastrar_animal_id:
+            case R.id.cadastrar_animalId:
                 Toast.makeText(this, "Página de cadastro em desenvolvimento.", Toast.LENGTH_SHORT);
                 break;
         }

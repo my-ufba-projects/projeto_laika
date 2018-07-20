@@ -3,11 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/lista_animais_id"
-        android:title="@string/action_lista"
+        android:id="@+id/lista_animaisId"
+        android:title="@string/actionLista"
         app:showAsAction="never" />
     <item
-        android:id="@+id/cadastrar_animal_id"
-        android:title="@string/action_cadastrar"
+        android:id="@+id/cadastrar_animalId"
+        android:title="@string/actionCadastrar"
         app:showAsAction="never" />
 </menu>

@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                             gato.setPelagem(jsonObject.getString("pelagem"));
                             gato.setDescricao(jsonObject.getString("descricao"));
                             gato.setEndereco(jsonObject.getString("endereco"));
-                            gato.setFoto_url(jsonObject.getString("foto_url"));
+                            gato.setFotoUrl(jsonObject.getString("fotoUrl"));
                             gato.setIdade(jsonObject.getInt("idade"));
                             gato.setPeso(jsonObject.getDouble("peso"));
                             gato.setVermifugado(jsonObject.getBoolean("vermifugado"));
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                             cao.setPelagem(jsonObject.getString("pelagem"));
                             cao.setDescricao(jsonObject.getString("descricao"));
                             cao.setEndereco(jsonObject.getString("endereco"));
-                            cao.setFoto_url(jsonObject.getString("foto_url"));
+                            cao.setFotoUrl(jsonObject.getString("fotoUrl"));
                             cao.setIdade(jsonObject.getInt("idade"));
                             cao.setPeso(jsonObject.getDouble("peso"));
                             cao.setVermifugado(jsonObject.getBoolean("vermifugado"));
@@ -122,10 +122,10 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         switch(id){
-            case R.id.lista_animais_id:
+            case R.id.lista_animaisId:
                 Toast.makeText(this, "Você já está visualizando o item selecionado.", Toast.LENGTH_SHORT);
                 break;
-            case R.id.cadastrar_animal_id:
+            case R.id.cadastrar_animalId:
                 Toast.makeText(this, "Página de cadastro em desenvolvimento.", Toast.LENGTH_SHORT);
                 break;
         }

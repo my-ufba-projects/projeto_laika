@@ -58,56 +58,56 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Sexo"
-                        android:id="@+id/aa_animal_sexo"/>
+                        android:id="@+id/aa_animalSexo"/>
 
                     <TextView
                         android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Pelagem"
-                        android:id="@+id/aa_animal_pelagem"/>
+                        android:id="@+id/aa_animalPelagem"/>
 
                     <TextView
                         android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Endereço"
-                        android:id="@+id/aa_animal_endereco"/>
+                        android:id="@+id/aa_animalEndereco"/>
 
                     <TextView
                         android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Idade"
-                        android:id="@+id/aa_animal_idade"/>
+                        android:id="@+id/aa_animalIdade"/>
 
                     <TextView
                         android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Peso"
-                        android:id="@+id/aa_animal_peso"/>
+                        android:id="@+id/aa_animalPeso"/>
 
                     <TextView
                         android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Vermifugado"
-                        android:id="@+id/aa_animal_vermifugado"/>
+                        android:id="@+id/aa_animalVermifugado"/>
 
                     <TextView
                         android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Vacinado"
-                        android:id="@+id/aa_animal_vacinado"/>
+                        android:id="@+id/aa_animalVacinado"/>
 
                     <TextView
                         android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Porte"
-                        android:id="@+id/aa_animal_porte"/>
+                        android:id="@+id/aa_animalPorte"/>
 
                 </LinearLayout>
 
@@ -128,7 +128,7 @@
             android:text="Descricao"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/aa_animal_descricao"/>
+            android:id="@+id/aa_animalDescricao"/>
 
 
     </android.support.v4.widget.NestedScrollView>

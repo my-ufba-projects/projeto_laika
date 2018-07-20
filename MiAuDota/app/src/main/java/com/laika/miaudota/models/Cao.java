@@ -7,9 +7,9 @@ public class Cao extends Animal{
     public Cao(){}
 
     public Cao(String porte,String nome, String sexo, String pelagem, String descricao, int idade, double peso,
-               boolean vermifugado, boolean vacinado, String endereco, String foto_url) {
+               boolean vermifugado, boolean vacinado, String endereco, String fotoUrl) {
 
-        super(nome,sexo,pelagem,descricao,idade,peso,vermifugado,vacinado, endereco, foto_url);
+        super(nome,sexo,pelagem,descricao,idade,peso,vermifugado,vacinado, endereco, fotoUrl);
         this.porte = porte;
 
     }

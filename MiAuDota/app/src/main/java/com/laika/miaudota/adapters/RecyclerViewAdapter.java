@@ -55,7 +55,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 i.putExtra("animal_pelagem", mData.get(viewHolder.getAdapterPosition()).getPelagem());
                 i.putExtra("animal_descricao", mData.get(viewHolder.getAdapterPosition()).getDescricao());
                 i.putExtra("animal_endereco", mData.get(viewHolder.getAdapterPosition()).getEndereco());
-                i.putExtra("animal_foto", mData.get(viewHolder.getAdapterPosition()).getFoto_url());
+                i.putExtra("animal_foto", mData.get(viewHolder.getAdapterPosition()).getFotoUrl());
                 if(mData.get(viewHolder.getAdapterPosition()) instanceof Cao)
                     i.putExtra("animal_porte", (((Cao)mData.get(viewHolder.getAdapterPosition())).getPorte()));
 
@@ -70,25 +70,25 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
         if(mData.get(position).isVermifugado())
-            holder.tv_vermifugado.setText("Vermifugado(a): Sim");
+            holder.tvVermifugado.setText("Vermifugado(a): Sim");
         else
-            holder.tv_vermifugado.setText("Vermifugado(a): Não");
+            holder.tvVermifugado.setText("Vermifugado(a): Não");
 
         if(mData.get(position).isVacinado())
-            holder.tv_vacinado.setText("Vacinado(a): Sim");
+            holder.tvVacinado.setText("Vacinado(a): Sim");
         else
-            holder.tv_vacinado.setText("Vacinado(a): Não");
+            holder.tvVacinado.setText("Vacinado(a): Não");
 
         if(mData.get(position) instanceof Cao)
-            holder.tv_porte.setText("Porte: " + String.valueOf((((Cao)mData.get(position)).getPorte())));
+            holder.tvPorte.setText("Porte: " + String.valueOf((((Cao)mData.get(position)).getPorte())));
         else
-            holder.tv_porte.setText("");
+            holder.tvPorte.setText("");
 
-        holder.tv_nome.setText(String.valueOf(mData.get(position).getNome()));
-        holder.tv_idade.setText("Idade: " + String.valueOf(mData.get(position).getIdade()) + " ano(s)");
-        holder.tv_sexo.setText("Sexo: " + String.valueOf(mData.get(position).getSexo()));
+        holder.tvNome.setText(String.valueOf(mData.get(position).getNome()));
+        holder.tvIdade.setText("Idade: " + String.valueOf(mData.get(position).getIdade()) + " ano(s)");
+        holder.tvSexo.setText("Sexo: " + String.valueOf(mData.get(position).getSexo()));
 
-        Glide.with(mContext).load(mData.get(position).getFoto_url()).apply(option).into(holder.iv_foto);
+        Glide.with(mContext).load(mData.get(position).getFotoUrl()).apply(option).into(holder.ivFoto);
 
     }
 
@@ -99,13 +99,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView tv_nome;
-        TextView tv_idade;
-        TextView tv_sexo;
-        TextView tv_vermifugado;
-        TextView tv_vacinado;
-        TextView tv_porte;
-        ImageView iv_foto;
+        TextView tvNome;
+        TextView tvIdade;
+        TextView tvSexo;
+        TextView tvVermifugado;
+        TextView tvVacinado;
+        TextView tvPorte;
+        ImageView ivFoto;
         LinearLayout view_container;
 
 
@@ -113,13 +113,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
             super(itemView);
             view_container = itemView.findViewById(R.id.container);
-            tv_nome = itemView.findViewById(R.id.animal_nome);
-            tv_idade = itemView.findViewById(R.id.animal_idade);
-            tv_sexo = itemView.findViewById(R.id.animal_sexo);
-            tv_vermifugado = itemView.findViewById(R.id.animal_vermifugado);
-            tv_vacinado = itemView.findViewById(R.id.animal_vacinado);
-            tv_porte = itemView.findViewById(R.id.animal_porte);
-            iv_foto = itemView.findViewById(R.id.animal_foto);
+            tvNome = itemView.findViewById(R.id.animal_nome);
+            tvIdade = itemView.findViewById(R.id.animalIdade);
+            tvSexo = itemView.findViewById(R.id.animal_sexo);
+            tvVermifugado = itemView.findViewById(R.id.animalVermifugado);
+            tvVacinado = itemView.findViewById(R.id.animalVacinado);
+            tvPorte = itemView.findViewById(R.id.animalPorte);
+            ivFoto = itemView.findViewById(R.id.animalFoto);
 
         }
 
