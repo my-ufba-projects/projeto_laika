@@ -18,6 +18,7 @@ import com.laika.miaudota.models.*;
 import com.laika.miaudota.activities.PerfilActivity;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>{
@@ -123,6 +124,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         }
 
+    }
+
+    public void updateList(List<Animal> newList){
+        mData = new ArrayList<>();
+        mData.addAll(newList);
+        notifyDataSetChanged();
     }
 
 }

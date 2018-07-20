@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
@@ -23,14 +24,19 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
 
     private final String JSON_URL = "https://projeto-laika2.herokuapp.com/animais.json";
     private JsonArrayRequest request;
     private RequestQueue requestQueue;
     private ArrayList<Animal> listaAnimal;
     private RecyclerView recyclerView;
+
+    private RecyclerViewAdapter adapter;
+    private List<Animal> mData = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +47,11 @@ public class MainActivity extends AppCompatActivity {
         listaAnimal = new ArrayList<Animal>();
         recyclerView = findViewById(R.id.recyclerviewid);
         jsonrequest();
+
+        //mData = Arrays.asList(getResources().getStringArray(R.array.listaAnimal));
+        mData = Arrays.asList();
+        adapter = new RecyclerViewAdapter(this, (ArrayList<Animal>) mData);
+        recyclerView.setAdapter(adapter);
 
     }
 
@@ -117,7 +128,33 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_activity, menu);
+
+        MenuItem menuItem = menu.findItem(R.id.pesquisa_animaisId);
+        SearchView searchView = (SearchView) menuItem.getActionView();
+        searchView.setOnQueryTextListener(this);
+
         return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onQueryTextSubmit(String s) {
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String novoTexto) {
+        String pesquisa = novoTexto.toLowerCase();
+        List<Animal> newMData = new ArrayList<>();
+
+        for(Animal animal: mData){
+            if(animal.getSexo().toLowerCase().contains(pesquisa)){
+                newMData.add(animal);
+            }
+        }
+
+        adapter.updateList(newMData);
+
+        return false;
     }
 
     @Override
