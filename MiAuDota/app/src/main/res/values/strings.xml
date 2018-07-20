@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MiAuDota</string>
+    <string name="actionCadastrar">Cadastrar</string>
+    <string name="actionListar">Lista de Animais</string>
 </resources>

@@ -4,7 +4,7 @@
 
     <item
         android:id="@+id/lista_animaisId"
-        android:title="@string/actionLista"
+        android:title="@string/actionListar"
         app:showAsAction="never" />
     <item
         android:id="@+id/cadastrar_animalId"

@@ -1,4 +1,4 @@
-#Fri Jul 13 21:09:16 BRT 2018
-base.0=C\:\\Users\\danpl\\AndroidStudioProjects\\MiAuDota\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\79
+#Fri Jul 20 11:45:44 BRT 2018
+base.0=C\:\\Users\\danpl\\LAIKA\\projeto_laika2\\projeto_laika\\MiAuDota\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\3
 path.0=classes.dex
 renamed.0=classes.dex

@@ -46,18 +46,18 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             public void onClick(View v){
 
                 Intent i = new Intent(mContext, PerfilActivity.class);
-                i.putExtra("animal_nome", mData.get(viewHolder.getAdapterPosition()).getNome());
-                i.putExtra("animal_idade", String.valueOf(mData.get(viewHolder.getAdapterPosition()).getIdade()));
-                i.putExtra("animal_sexo", mData.get(viewHolder.getAdapterPosition()).getSexo());
-                i.putExtra("animal_vermifugado", String.valueOf(mData.get(viewHolder.getAdapterPosition()).isVermifugado()));
-                i.putExtra("animal_vacinado", String.valueOf(mData.get(viewHolder.getAdapterPosition()).isVacinado()));
-                i.putExtra("animal_peso", String.valueOf(mData.get(viewHolder.getAdapterPosition()).getPeso()));
-                i.putExtra("animal_pelagem", mData.get(viewHolder.getAdapterPosition()).getPelagem());
-                i.putExtra("animal_descricao", mData.get(viewHolder.getAdapterPosition()).getDescricao());
-                i.putExtra("animal_endereco", mData.get(viewHolder.getAdapterPosition()).getEndereco());
-                i.putExtra("animal_foto", mData.get(viewHolder.getAdapterPosition()).getFotoUrl());
+                i.putExtra("animalNome", mData.get(viewHolder.getAdapterPosition()).getNome());
+                i.putExtra("animalIdade", String.valueOf(mData.get(viewHolder.getAdapterPosition()).getIdade()));
+                i.putExtra("animalSexo", mData.get(viewHolder.getAdapterPosition()).getSexo());
+                i.putExtra("animalVermifugado", String.valueOf(mData.get(viewHolder.getAdapterPosition()).isVermifugado()));
+                i.putExtra("animalVacinado", String.valueOf(mData.get(viewHolder.getAdapterPosition()).isVacinado()));
+                i.putExtra("animalPeso", String.valueOf(mData.get(viewHolder.getAdapterPosition()).getPeso()));
+                i.putExtra("animalPelagem", mData.get(viewHolder.getAdapterPosition()).getPelagem());
+                i.putExtra("animalDescricao", mData.get(viewHolder.getAdapterPosition()).getDescricao());
+                i.putExtra("animalEndereco", mData.get(viewHolder.getAdapterPosition()).getEndereco());
+                i.putExtra("animalFoto", mData.get(viewHolder.getAdapterPosition()).getFotoUrl());
                 if(mData.get(viewHolder.getAdapterPosition()) instanceof Cao)
-                    i.putExtra("animal_porte", (((Cao)mData.get(viewHolder.getAdapterPosition())).getPorte()));
+                    i.putExtra("animalPorte", (((Cao)mData.get(viewHolder.getAdapterPosition())).getPorte()));
 
                 mContext.startActivity(i);
             }
@@ -113,9 +113,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
             super(itemView);
             view_container = itemView.findViewById(R.id.container);
-            tvNome = itemView.findViewById(R.id.animal_nome);
+            tvNome = itemView.findViewById(R.id.animalNome);
             tvIdade = itemView.findViewById(R.id.animalIdade);
-            tvSexo = itemView.findViewById(R.id.animal_sexo);
+            tvSexo = itemView.findViewById(R.id.animalSexo);
             tvVermifugado = itemView.findViewById(R.id.animalVermifugado);
             tvVacinado = itemView.findViewById(R.id.animalVacinado);
             tvPorte = itemView.findViewById(R.id.animalPorte);

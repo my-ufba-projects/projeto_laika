@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(JSONArray response){
 
                 JSONObject jsonObject = null;
+                System.out.println("Teste");
                 for(int i=0; i<response.length(); i++){
                     try{
                         jsonObject = response.getJSONObject(i);
@@ -62,12 +63,13 @@ public class MainActivity extends AppCompatActivity {
                             gato.setPelagem(jsonObject.getString("pelagem"));
                             gato.setDescricao(jsonObject.getString("descricao"));
                             gato.setEndereco(jsonObject.getString("endereco"));
-                            gato.setFotoUrl(jsonObject.getString("fotoUrl"));
+                            gato.setFotoUrl(jsonObject.getString("foto_url"));
                             gato.setIdade(jsonObject.getInt("idade"));
                             gato.setPeso(jsonObject.getDouble("peso"));
                             gato.setVermifugado(jsonObject.getBoolean("vermifugado"));
                             gato.setVacinado(jsonObject.getBoolean("vacinado"));
                             listaAnimal.add(gato);
+                            System.out.println(gato.getNome());
                         }
                         else{
                             Cao cao = new Cao();
@@ -76,13 +78,14 @@ public class MainActivity extends AppCompatActivity {
                             cao.setPelagem(jsonObject.getString("pelagem"));
                             cao.setDescricao(jsonObject.getString("descricao"));
                             cao.setEndereco(jsonObject.getString("endereco"));
-                            cao.setFotoUrl(jsonObject.getString("fotoUrl"));
+                            cao.setFotoUrl(jsonObject.getString("foto_url"));
                             cao.setIdade(jsonObject.getInt("idade"));
                             cao.setPeso(jsonObject.getDouble("peso"));
                             cao.setVermifugado(jsonObject.getBoolean("vermifugado"));
                             cao.setVacinado(jsonObject.getBoolean("vacinado"));
                             cao.setPorte(jsonObject.getString("porte"));
                             listaAnimal.add(cao);
+                            System.out.println(cao.getNome());
                         }
 
                     } catch(JSONException e){
