@@ -1,4 +1,5 @@
 #Internal package file, do not edit.
+<<<<<<< HEAD
 #Fri Jul 20 12:10:55 BRT 2018
 2.base=C\:\\Users\\danpl\\LAIKA\\projeto_laika2\\projeto_laika\\MiAuDota\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\13
 5.set=DEX
@@ -20,8 +21,28 @@ count=6
 1.baseType=DIRECTORY
 5.path=classes.dex
 0.base=C\:\\Users\\danpl\\LAIKA\\projeto_laika2\\projeto_laika\\MiAuDota\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\15
+=======
+#Sat Jul 14 02:26:59 BRT 2018
+1.base=/home/fabio/Documentos/UFBA/POO/projeto_laika/MiAuDota/app/build/intermediates/transforms/dexMerger/debug/13
+2.path=classes.dex
+>>>>>>> aplicativo_cadastro
 0.baseType=DIRECTORY
+3.baseType=DIRECTORY
+2.base=/home/fabio/Documentos/UFBA/POO/projeto_laika/MiAuDota/app/build/intermediates/transforms/dexMerger/debug/12
 3.set=DEX
+<<<<<<< HEAD
 1.base=C\:\\Users\\danpl\\LAIKA\\projeto_laika2\\projeto_laika\\MiAuDota\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\16
 4.baseType=DIRECTORY
+=======
+2.set=DEX
+1.baseType=DIRECTORY
+3.path=classes.dex
+count=4
+1.set=DEX
+0.path=classes.dex
+3.base=/home/fabio/Documentos/UFBA/POO/projeto_laika/MiAuDota/app/build/intermediates/transforms/dexMerger/debug/11
+>>>>>>> aplicativo_cadastro
 0.set=DEX
+0.base=/home/fabio/Documentos/UFBA/POO/projeto_laika/MiAuDota/app/build/intermediates/transforms/dexMerger/debug/14
+2.baseType=DIRECTORY
+1.path=classes.dex
