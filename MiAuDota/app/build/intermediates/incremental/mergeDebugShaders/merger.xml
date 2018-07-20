@@ -1,6 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
-<merger version="3"><dataSet config="main"><source path="C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\shaders"/></dataSet><dataSet config="debug"><source path="C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\debug\shaders"/></dataSet></merger>
-=======
-<merger version="3"><dataSet config="main"><source path="/home/fabio/Documentos/UFBA/POO/projeto_laika/MiAuDota/app/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/home/fabio/Documentos/UFBA/POO/projeto_laika/MiAuDota/app/src/debug/shaders"/></dataSet></merger>
->>>>>>> aplicativo_cadastro
+<merger version="3"><dataSet config="main"><source path="/home/fabio/Documentos/laika/projeto_laika/MiAuDota/app/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/home/fabio/Documentos/laika/projeto_laika/MiAuDota/app/src/debug/shaders"/></dataSet></merger>

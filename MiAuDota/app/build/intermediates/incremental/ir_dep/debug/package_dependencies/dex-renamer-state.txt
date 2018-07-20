@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-#Fri Jul 20 11:45:41 BRT 2018
-base.0=C\:\\Users\\danpl\\LAIKA\\projeto_laika2\\projeto_laika\\MiAuDota\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
-=======
-#Sat Jul 14 01:53:41 BRT 2018
-base.0=/home/fabio/Documentos/UFBA/POO/projeto_laika/MiAuDota/app/build/intermediates/transforms/dexMerger/debug/10
->>>>>>> aplicativo_cadastro
+#Fri Jul 20 15:18:07 BRT 2018
+base.0=/home/fabio/Documentos/laika/projeto_laika/MiAuDota/app/build/intermediates/transforms/dexMerger/debug/10
 path.0=classes.dex
 renamed.0=classes.dex

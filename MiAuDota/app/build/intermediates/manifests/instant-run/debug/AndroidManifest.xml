@@ -26,7 +26,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
         <activity android:name="com.laika.miaudota.activities.PerfilActivity" >
         </activity>
         <activity android:name="com.laika.miaudota.activities.SplashActivity" >
@@ -36,13 +35,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-=======
         <activity android:name="com.laika.miaudota.activities.PerfilActivity" />
         <activity
             android:name="com.laika.miaudota.activities.CadastroActivity"
             android:label="@string/title_activity_cadastro"
             android:theme="@style/AppTheme.NoActionBar" />
->>>>>>> aplicativo_cadastro
 
         <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"
