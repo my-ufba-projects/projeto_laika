@@ -32,7 +32,8 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     private final String JSON_URL = "https://projeto-laika2.herokuapp.com/animais.json";
     private JsonArrayRequest request;
     private RequestQueue requestQueue;
-    private ArrayList<Animal> listaAnimal;
+    //private ArrayList<Animal> listaAnimal;
+    private List<Animal> listaAnimal;
     private RecyclerView recyclerView;
 
     private RecyclerViewAdapter adapter;
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
+        Toast.makeText(this, "onCreate", Toast.LENGTH_SHORT);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -51,9 +52,9 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         //mData = Arrays.asList(getResources().getStringArray(R.array.listaAnimal));
         //mData = Arrays.asList();
         //adapter = new RecyclerViewAdapter(this, (ArrayList<Animal>) mData);
-        adapter = new RecyclerViewAdapter(this, listaAnimal);
+        adapter = new RecyclerViewAdapter(this, (ArrayList<Animal>) listaAnimal);
         recyclerView.setAdapter(adapter);
-
+        Toast.makeText(this, "onCreate - Fim", Toast.LENGTH_SHORT);
     }
 
     private void jsonrequest(){
@@ -104,7 +105,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
                         e.printStackTrace();
                     }
                 }
-                setuprecyclerview(listaAnimal);
+                setuprecyclerview((ArrayList<Animal>) listaAnimal);
             }
         }, new Response.ErrorListener(){
             @Override

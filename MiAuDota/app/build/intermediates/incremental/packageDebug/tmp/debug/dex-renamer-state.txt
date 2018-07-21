@@ -1,4 +1,4 @@
-#Sat Jul 21 01:27:57 GMT-03:00 2018
+#Sat Jul 21 14:26:17 GMT-03:00 2018
 path.3=classes.dex
 path.2=classes.dex
 path.1=classes.dex
