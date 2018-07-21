@@ -49,8 +49,9 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         jsonrequest();
 
         //mData = Arrays.asList(getResources().getStringArray(R.array.listaAnimal));
-        mData = Arrays.asList();
-        adapter = new RecyclerViewAdapter(this, (ArrayList<Animal>) mData);
+        //mData = Arrays.asList();
+        //adapter = new RecyclerViewAdapter(this, (ArrayList<Animal>) mData);
+        adapter = new RecyclerViewAdapter(this, listaAnimal);
         recyclerView.setAdapter(adapter);
 
     }
@@ -146,7 +147,13 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         String pesquisa = novoTexto.toLowerCase();
         List<Animal> newMData = new ArrayList<>();
 
-        for(Animal animal: mData){
+        /*for(Animal animal: mData){
+            if(animal.getSexo().toLowerCase().contains(pesquisa)){
+                newMData.add(animal);
+            }
+        }*/
+
+        for(Animal animal: listaAnimal){
             if(animal.getSexo().toLowerCase().contains(pesquisa)){
                 newMData.add(animal);
             }
@@ -154,8 +161,8 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
         adapter.updateList(newMData);
 
-        return false;
-    }
+        return true;
+}
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
