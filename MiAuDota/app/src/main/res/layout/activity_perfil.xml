@@ -22,7 +22,7 @@
             app:contentScrim="?attr/colorPrimary"
             app:expandedTitleMarginStart="35dp"
             app:expandedTitleMarginEnd="64dp"
-            android:background="@drawable/perfil">
+            android:background="@drawable/perfil2">
 
             <android.support.v7.widget.Toolbar
                 android:layout_width="match_parent"
