@@ -22,7 +22,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="nome do cachorro"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:textColorLink="@color/colorFoco" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -36,7 +37,8 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:hint="idade do animal"
-                    android:inputType="numberSigned" />
+                    android:inputType="numberSigned"
+                    android:textColorLink="@color/colorFoco" />
 
                 <EditText
                     android:id="@+id/peso_cachorro"
@@ -45,7 +47,8 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:hint="peso"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:textColorLink="@color/colorFoco" />
 
             </LinearLayout>
 
@@ -59,14 +62,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Macho" />
+                    android:text="Macho"
+                    android:textColorLink="@color/colorFoco" />
 
                 <RadioButton
                     android:id="@+id/sexo_femea_cachorro"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Fêmea" />
+                    android:text="Fêmea"
+                    android:textColorLink="@color/colorFoco" />
 
             </RadioGroup>
 
@@ -117,13 +122,15 @@
                 android:id="@+id/vermifugado_cachorro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Vermifugado" />
+                android:text="Vermifugado"
+                android:textColorLink="@color/colorFoco" />
 
             <CheckBox
                 android:id="@+id/vacinado_cachoro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Vacinado" />
+                android:text="Vacinado"
+                android:textColorLink="@color/colorFoco" />
 
             <EditText
                 android:id="@+id/endereco_cachorro"
@@ -131,7 +138,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="endereço"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:textColorLink="@color/colorFoco" />
 
             <EditText
                 android:id="@+id/foto_cachorro"
@@ -139,7 +147,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="foto"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:textColorLink="@color/colorFoco" />
 
             <EditText
                 android:id="@+id/about_cachorro"
@@ -147,13 +156,16 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="sobre o animal"
-                android:inputType="textMultiLine" />
+                android:inputType="textMultiLine"
+                android:textColorLink="@color/colorFoco" />
 
             <Button
                 android:id="@+id/btn_cadastrar_cachorro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Cadastrar" />
+                android:background="@drawable/btn_cadastro"
+                android:text="Cadastrar"
+                android:textColor="@color/colorStrokeBtnCadastro" />
 
         </LinearLayout>
     </ScrollView>

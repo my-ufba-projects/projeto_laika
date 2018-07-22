@@ -12,7 +12,10 @@
         android:id="@+id/btn_cadastrar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Cadastrar"/>
+        android:layout_marginTop="@dimen/margin_btn_cadastro"
+        android:background="@drawable/btn_cadastro"
+        android:text="Cadastrar"
+        android:textColor="@color/colorStrokeBtnCadastro" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerviewid"

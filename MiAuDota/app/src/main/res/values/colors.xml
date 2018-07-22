@@ -5,4 +5,7 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorList">#a0ef92</color>
     <color name="marromClaro">#b58d55</color>
+    <color name="colorStrokeBtnCadastro">#119105</color>
+    <color name="colorBgBtnCadastro">#64acf5c4</color>
+    <color name="colorFoco">#3fb54d</color>
 </resources>

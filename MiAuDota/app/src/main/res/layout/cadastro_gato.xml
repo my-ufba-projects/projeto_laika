@@ -22,7 +22,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="nome do Gato"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:textColorLink="@color/colorFoco" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -36,7 +37,8 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:hint="idade do gato"
-                    android:inputType="numberSigned" />
+                    android:inputType="numberSigned"
+                    android:textColorLink="@color/colorFoco" />
 
                 <EditText
                     android:id="@+id/peso_gato"
@@ -45,7 +47,8 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:hint="peso"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:textColorLink="@color/colorFoco" />
 
             </LinearLayout>
 
@@ -59,14 +62,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Macho" />
+                    android:text="Macho"
+                    android:textColorLink="@color/colorFoco" />
 
                 <RadioButton
                     android:id="@+id/sexo_femea_gato"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Fêmea" />
+                    android:text="Fêmea"
+                    android:textColorLink="@color/colorFoco" />
 
             </RadioGroup>
 
@@ -84,7 +89,8 @@
                         android:id="@+id/txt_pelagem"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Pelagem" />
+                        android:text="Pelagem"
+                        android:textColorLink="@color/colorFoco" />
 
                     <Spinner
                         android:id="@+id/pelagem_gato"
@@ -113,7 +119,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="endereço"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:textColorLink="@color/colorFoco" />
 
             <EditText
                 android:id="@+id/foto_gato"
@@ -121,7 +128,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="foto"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:textColorLink="@color/colorFoco" />
 
             <EditText
                 android:id="@+id/about_gato"
@@ -129,13 +137,16 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="sobre o gato"
-                android:inputType="textMultiLine" />
+                android:inputType="textMultiLine"
+                android:textColorLink="@color/colorFoco" />
 
             <Button
                 android:id="@+id/btn_cadastrar_gato"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Cadastrar" />
+                android:background="@drawable/btn_cadastro"
+                android:text="Cadastrar"
+                android:textColor="@color/colorStrokeBtnCadastro" />
 
         </LinearLayout>
     </ScrollView>
