@@ -1,5 +1,7 @@
 package com.laika.miaudota.models;
 
+// Classe Cao herda atributos e métodos da Classe Abstrata Animal
+
 public class Cao extends Animal{
 
     private String porte;

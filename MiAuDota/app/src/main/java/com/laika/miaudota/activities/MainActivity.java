@@ -34,16 +34,23 @@ import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
 
+    // Constante que define a URL onde se encontra o banco de dados
     private final String JSON_URL = "https://projeto-laika2.herokuapp.com/animais.json";
+
     private JsonArrayRequest request;
     private RequestQueue requestQueue;
+
+    // Lista de Animais definida para ser exclusivamente um ArrayList
     private ArrayList<Animal> listaAnimal;
+
+
     private RecyclerView recyclerView;
     private Button btn_criar;
 
-    //Declaração do adaptador para o filtro da busca
+    // Adaptador para o filtro da busca
     private RecyclerViewAdapter adapter;
 
+    // Responsável por criar Activity atual
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     }
 
 
-
+    // Função que realiza o Request no Banco de dados e adiciona cada Animal na lista
     private void jsonrequest(){
 
         request = new JsonArrayRequest(JSON_URL, new Response.Listener<JSONArray>(){
@@ -137,6 +144,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
     }
 
+    // Cria o Menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -150,6 +158,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         return super.onCreateOptionsMenu(menu);
     }
 
+    // Realiza uma ação a depender da opção escolhida no Menu
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();

@@ -1,5 +1,7 @@
 package com.laika.miaudota.models;
 
+// Classe Abstrata Animal, sendo especializada pelas classes Cao e Gato
+
 public abstract class Animal {
 
     private String nome;
