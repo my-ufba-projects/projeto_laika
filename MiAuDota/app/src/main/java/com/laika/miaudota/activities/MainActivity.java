@@ -41,7 +41,6 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
     //Declaração do adaptador para o filtro da busca
     private RecyclerViewAdapter adapter;
-    private List<Animal> mData = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         jsonrequest();
 
         //Atribuição do adaptador
-        adapter = new RecyclerViewAdapter(this, (ArrayList<Animal>) listaAnimal);
+        adapter = new RecyclerViewAdapter(this, listaAnimal);
         recyclerView.setAdapter(adapter);
     }
 
@@ -174,15 +173,28 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     @Override
     public boolean onQueryTextChange(String newText) {
         String pesquisa = newText.toLowerCase();
-        List<Animal> newMData = new ArrayList<>();
+        List<Animal> newMData = new ArrayList<>(); //Nova lista onde serão adicionados somente os objetos que correspondem à pesquisa
 
+        //Percorre o ArrayList adicionando os animais que se enquadram na pesquisa
         for(Animal animal: listaAnimal){
-            if(animal.getSexo().toLowerCase().contains(pesquisa)){
+            String idade = String.valueOf(animal.getIdade());
+            String peso = String.valueOf(animal.getPeso());
+            if(animal.getSexo().toLowerCase().contains(pesquisa) ||
+                    animal.getDescricao().toLowerCase().contains(pesquisa) ||
+                    animal.getEndereco().toLowerCase().contains(pesquisa) ||
+                    animal.getNome().toLowerCase().contains(pesquisa) ||
+                    animal.getPelagem().toLowerCase().contains(pesquisa) ||
+                    idade.toLowerCase().contains(pesquisa) ||
+                    peso.toLowerCase().contains(pesquisa)
+                    ){
+
                 newMData.add(animal);
             }
         }
 
+        //Atualiza o adapter e seta o recyclerView com o resultado da pesquisa
         adapter.updateList(newMData);
+        recyclerView.setAdapter(adapter);
 
         return true;
     }

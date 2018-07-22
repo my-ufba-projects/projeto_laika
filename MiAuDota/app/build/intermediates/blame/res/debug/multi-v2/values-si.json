@@ -1,20 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Matheus\\Desktop\\projeto_laika\\MiAuDota\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-si\\values-si.xml",
+            "outputFile": "D:\\Documentos\\Git\\projeto_laika\\MiAuDota\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-si\\values-si.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Matheus\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\bff67d360b599491953bf870505140d3\\res\\values-si\\values-si.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,215,322,429,517,622,738,827,914,998,1107,1212,1310,1420,1519,1625,1784,1883",
-                        "endColumns": "109,106,106,87,104,115,88,86,83,108,104,97,109,98,105,158,98,81",
-                        "endOffsets": "210,317,424,512,617,733,822,909,993,1102,1207,1305,1415,1514,1620,1779,1878,1960"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Matheus\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\868a3e1df6d9ed82084aac168c683322\\res\\values-si\\values-si.xml",
+                    "source": "C:\\Users\\Vinicius\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\e3f4abd12c89e40d25d7a9d2c58cde23\\res\\values-si\\values-si.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -28,6 +18,16 @@
                         "startOffsets": "1965",
                         "endColumns": "100",
                         "endOffsets": "2061"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Vinicius\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\456ca687c551da62bc24b119e6164c9b\\res\\values-si\\values-si.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,215,322,429,517,622,738,827,914,998,1107,1212,1310,1420,1519,1625,1784,1883",
+                        "endColumns": "109,106,106,87,104,115,88,86,83,108,104,97,109,98,105,158,98,81",
+                        "endOffsets": "210,317,424,512,617,733,822,909,993,1102,1207,1305,1415,1514,1620,1779,1878,1960"
                     }
                 }
             ]
