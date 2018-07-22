@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Jul 22 16:27:24 BRT 2018
+#Sun Jul 22 18:01:51 BRT 2018
 2.base=C\:\\Users\\danpl\\LAIKA\\projeto_laika2\\projeto_laika\\MiAuDota\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\13
 5.set=DEX
 0.path=classes.dex

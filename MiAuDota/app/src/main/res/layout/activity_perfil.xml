@@ -39,13 +39,24 @@
                 android:padding="5dp">
 
 
-                <ImageView
+                <FrameLayout
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="20dp"
                     android:layout_width="160dp"
-                    android:layout_height="180dp"
-                    android:background="@drawable/rounded_pic"
-                    android:id="@+id/aa_thumbnail"/>
+                    android:layout_height="180dp">
+
+                    <ImageView
+                        android:layout_width="160dp"
+                        android:layout_height="180dp"
+                        android:id="@+id/aa_thumbnail"
+                        android:padding="3dp"/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rounded_pic"/>
+
+                </FrameLayout>
 
                 <LinearLayout
                     android:layout_marginTop="15dp"
