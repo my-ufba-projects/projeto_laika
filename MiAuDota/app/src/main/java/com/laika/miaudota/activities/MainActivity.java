@@ -177,17 +177,17 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
         //Percorre o ArrayList adicionando os animais que se enquadram na pesquisa
         for(Animal animal: listaAnimal){
-            String idade = String.valueOf(animal.getIdade());
-            String peso = String.valueOf(animal.getPeso());
+            String idade = String.valueOf(animal.getIdade()+" anos");
+            //String peso = String.valueOf(animal.getPeso()+" kg");
             String vermifugado = "Não";
             String vacinado = "Não";
 
             //Tratamento dos atributos booleanos (vermifugado e vacinado)
             if(animal.isVermifugado())
-                vermifugado = "Sim";
+                vermifugado = "Vermifugado";
 
             if(animal.isVacinado())
-                vacinado = "Sim";
+                vacinado = "Vacinado";
 
             if(animal.getSexo().toLowerCase().contains(pesquisa) ||
                     animal.getDescricao().toLowerCase().contains(pesquisa) ||
@@ -195,11 +195,11 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
                     animal.getNome().toLowerCase().contains(pesquisa) ||
                     animal.getPelagem().toLowerCase().contains(pesquisa) ||
                     idade.toLowerCase().contains(pesquisa) ||
-                    peso.toLowerCase().contains(pesquisa) ||
+                    //peso.toLowerCase().contains(pesquisa) ||
                     vermifugado.toLowerCase().contains(pesquisa) ||
-                    vacinado.toLowerCase().contains(pesquisa)
+                    vacinado.toLowerCase().contains(pesquisa) ||
+                    ((animal instanceof Cao) && ((Cao) animal).getPorte().toLowerCase().contains(pesquisa))
                     ){
-
                 newMData.add(animal);
             }
         }
