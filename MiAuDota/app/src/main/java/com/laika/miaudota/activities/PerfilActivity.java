@@ -101,16 +101,16 @@ public class PerfilActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
-    @Override
+    @Override //Quando algum item do menu for selecionado execute a rotina
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
         switch(id){
-            case R.id.lista_animaisId:
+            case R.id.lista_animaisId: //Se clicar em Listar animais, chama a MainActivity
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.cadastrar_animalId:
+            case R.id.cadastrar_animalId: //Se clicar em Cadastrar animal, chama a CadastroActivity
                 Toast.makeText(this, "Página de cadastro em desenvolvimento.", Toast.LENGTH_SHORT);
                 break;
         }

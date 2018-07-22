@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -27,8 +28,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
 
     private final String JSON_URL = "https://projeto-laika2.herokuapp.com/animais.json";
     private JsonArrayRequest request;
@@ -36,6 +38,10 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Animal> listaAnimal;
     private RecyclerView recyclerView;
     private Button btn_criar;
+
+    //Declaração do adaptador para o filtro da busca
+    private RecyclerViewAdapter adapter;
+    private List<Animal> mData = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +60,9 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerviewid);
         jsonrequest();
 
+        //Atribuição do adaptador
+        adapter = new RecyclerViewAdapter(this, (ArrayList<Animal>) listaAnimal);
+        recyclerView.setAdapter(adapter);
     }
 
 
@@ -131,6 +140,12 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_activity, menu);
+
+        //Mapeamento e declaração do SearchView
+        MenuItem menuItem = menu.findItem(R.id.pesquisa_animaisId);
+        SearchView searchView = ( SearchView) menuItem.getActionView();
+        searchView.setOnQueryTextListener(this);
+
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -140,12 +155,35 @@ public class MainActivity extends AppCompatActivity {
 
         switch(id){
             case R.id.lista_animaisId:
-                Toast.makeText(this, "Você já está visualizando o item selecionado.", Toast.LENGTH_SHORT);
+                Toast.makeText(this, "Você já está visualizando o item selecionado.", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.cadastrar_animalId:
-                Toast.makeText(this, "Página de cadastro em desenvolvimento.", Toast.LENGTH_SHORT);
+                Intent intent = new Intent(MainActivity.this, CadastroActivity.class);
+                startActivity(intent);
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+        return false;
+    }
+
+    //Implementação do método concernente ao evento onQueryTextChange do SearchView
+    @Override
+    public boolean onQueryTextChange(String newText) {
+        String pesquisa = newText.toLowerCase();
+        List<Animal> newMData = new ArrayList<>();
+
+        for(Animal animal: listaAnimal){
+            if(animal.getSexo().toLowerCase().contains(pesquisa)){
+                newMData.add(animal);
+            }
+        }
+
+        adapter.updateList(newMData);
+
+        return true;
     }
 }

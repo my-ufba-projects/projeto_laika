@@ -12,7 +12,7 @@
         app:showAsAction="never"/>
     <item
         android:id="@+id/pesquisa_animaisId"
-        android:title="@string/actionPesquisar"
         android:icon="@drawable/ic_search"
-        app:showAsAction="always"/>
+        app:showAsAction="ifRoom|collapseActionView"
+        app:actionViewClass="android.support.v7.widget.SearchView"/>
 </menu>

@@ -20,11 +20,6 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity android:name="com.laika.miaudota.activities.MainActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name="com.laika.miaudota.activities.PerfilActivity" >
         </activity>
@@ -35,7 +30,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.laika.miaudota.activities.PerfilActivity" />
         <activity
             android:name="com.laika.miaudota.activities.CadastroActivity"
             android:label="@string/title_activity_cadastro"

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/fabio/Documentos/laika/projeto_laika/MiAuDota/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-port/values-port.xml",
+            "outputFile": "D:\\Documentos\\Git\\projeto_laika\\MiAuDota\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
             "map": [
                 {
-                    "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/50fcc0be4d5e74ea1a69d9da902de1b9/res/values-port/values-port.xml",
+                    "source": "C:\\Users\\Vinicius\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\456ca687c551da62bc24b119e6164c9b\\res\\values-port\\values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
