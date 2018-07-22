@@ -3,73 +3,74 @@
 <LinearLayout
 
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="170dp"
-    android:layout_marginTop="5dp"
     android:layout_marginBottom="7dp"
-    android:padding="8dp"
+    android:layout_marginTop="5dp"
     android:background="@drawable/rounded_bg"
-    android:id="@+id/container">
+    android:orientation="horizontal"
+    android:padding="8dp">
 
     <ImageView
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="15dp"
+        android:id="@+id/animalFoto"
         android:layout_width="120dp"
         android:layout_height="match_parent"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
         android:background="@drawable/rounded_pic"
         android:padding="3dp"
-        android:id="@+id/animalFoto"/>
+        />
 
     <LinearLayout
-        android:layout_marginLeft="20dp"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:orientation="vertical"
-        >
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/animalNome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Nome do Animal"
-            android:textStyle="bold"
-            android:textSize="18sp"/>
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
-            android:layout_marginTop="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/animalIdade"
-            android:text="Idade do Animal"/>
-
-        <TextView
-            android:layout_marginTop="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Idade do Animal" />
+
+        <TextView
             android:id="@+id/animalSexo"
-            android:text="Sexo do Animal"/>
-
-        <TextView
-            android:layout_marginTop="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Sexo do Animal" />
+
+        <TextView
             android:id="@+id/animalVermifugado"
-            android:text="Vermifugado"/>
-
-        <TextView
-            android:layout_marginTop="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Vermifugado" />
+
+        <TextView
             android:id="@+id/animalVacinado"
-            android:text="Vacinado"/>
-
-        <TextView
-            android:layout_marginTop="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Vacinado" />
+
+        <TextView
             android:id="@+id/animalPorte"
-            android:text="Porte do Animal"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Porte do Animal" />
 
     </LinearLayout>
 

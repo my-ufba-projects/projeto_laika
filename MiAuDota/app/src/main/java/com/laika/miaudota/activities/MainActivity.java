@@ -179,13 +179,25 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         for(Animal animal: listaAnimal){
             String idade = String.valueOf(animal.getIdade());
             String peso = String.valueOf(animal.getPeso());
+            String vermifugado = "Não";
+            String vacinado = "Não";
+
+            //Tratamento dos atributos booleanos (vermifugado e vacinado)
+            if(animal.isVermifugado())
+                vermifugado = "Sim";
+
+            if(animal.isVacinado())
+                vacinado = "Sim";
+
             if(animal.getSexo().toLowerCase().contains(pesquisa) ||
                     animal.getDescricao().toLowerCase().contains(pesquisa) ||
                     animal.getEndereco().toLowerCase().contains(pesquisa) ||
                     animal.getNome().toLowerCase().contains(pesquisa) ||
                     animal.getPelagem().toLowerCase().contains(pesquisa) ||
                     idade.toLowerCase().contains(pesquisa) ||
-                    peso.toLowerCase().contains(pesquisa)
+                    peso.toLowerCase().contains(pesquisa) ||
+                    vermifugado.toLowerCase().contains(pesquisa) ||
+                    vacinado.toLowerCase().contains(pesquisa)
                     ){
 
                 newMData.add(animal);

@@ -920,6 +920,10 @@
         "source": "D:\\Documentos\\Git\\projeto_laika\\MiAuDota\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "D:\\Documentos\\Git\\projeto_laika\\MiAuDota\\app\\build\\intermediates\\res\\merged\\debug\\drawable_perfil.xml.flat",
+        "source": "D:\\Documentos\\Git\\projeto_laika\\MiAuDota\\app\\src\\main\\res\\drawable\\perfil.xml"
+    },
+    {
         "merged": "D:\\Documentos\\Git\\projeto_laika\\MiAuDota\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ic_go_search_api_material.xml.flat",
         "source": "C:\\Users\\Vinicius\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\456ca687c551da62bc24b119e6164c9b\\res\\drawable\\abc_ic_go_search_api_material.xml"
     },

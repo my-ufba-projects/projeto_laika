@@ -21,7 +21,8 @@
             app:title="Nome do Animal"
             app:contentScrim="?attr/colorPrimary"
             app:expandedTitleMarginStart="35dp"
-            app:expandedTitleMarginEnd="64dp">
+            app:expandedTitleMarginEnd="64dp"
+            android:background="@drawable/perfil">
 
             <android.support.v7.widget.Toolbar
                 android:layout_width="match_parent"
