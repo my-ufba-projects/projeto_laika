@@ -10,7 +10,7 @@
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:background="#a0ef92"
+        android:background="#ddeadb"
         android:id="@+id/appbarlayout_id">
 
         <android.support.design.widget.CollapsingToolbarLayout
@@ -43,7 +43,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_width="160dp"
                     android:layout_height="180dp"
-                    android:background="@drawable/loading_shape"
+                    android:background="@drawable/rounded_pic"
                     android:id="@+id/aa_thumbnail"/>
 
                 <LinearLayout

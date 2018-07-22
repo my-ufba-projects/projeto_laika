@@ -2,7 +2,7 @@ package com.laika.miaudota.comunicacao;
 
 import com.laika.miaudota.models.Animal;
 
-public class GatoComunicacao implements Comunicacao {
+public class GatoComunicacao implements IComunicacao {
     @Override
     public boolean cadastrar(Animal animal) {
         return false;
