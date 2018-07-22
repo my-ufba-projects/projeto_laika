@@ -27,8 +27,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
 
@@ -177,9 +179,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
         //Percorre o ArrayList adicionando os animais que se enquadram na pesquisa
         for(Animal animal: listaAnimal){
-            String idade = String.valueOf(animal.getIdade()+" anos");
-            //String peso = String.valueOf(animal.getPeso()+" kg");
-            String vermifugado = "Não";
+            String idade = String.valueOf(animal.getIdade()+" anos");            String vermifugado = "Não";
             String vacinado = "Não";
 
             //Tratamento dos atributos booleanos (vermifugado e vacinado)
@@ -189,16 +189,17 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
             if(animal.isVacinado())
                 vacinado = "Vacinado";
 
-            if(animal.getSexo().toLowerCase().contains(pesquisa) ||
-                    animal.getDescricao().toLowerCase().contains(pesquisa) ||
-                    animal.getEndereco().toLowerCase().contains(pesquisa) ||
-                    animal.getNome().toLowerCase().contains(pesquisa) ||
-                    animal.getPelagem().toLowerCase().contains(pesquisa) ||
-                    idade.toLowerCase().contains(pesquisa) ||
-                    //peso.toLowerCase().contains(pesquisa) ||
-                    vermifugado.toLowerCase().contains(pesquisa) ||
-                    vacinado.toLowerCase().contains(pesquisa) ||
-                    ((animal instanceof Cao) && ((Cao) animal).getPorte().toLowerCase().contains(pesquisa))
+            pesquisa = tiraAcento(pesquisa); // Retira acentos do que foi digitado na pesquisa
+
+            if(     tiraAcento(animal.getSexo().toLowerCase()).contains(pesquisa) ||
+                    tiraAcento(animal.getDescricao().toLowerCase()).contains(pesquisa) ||
+                    tiraAcento(animal.getEndereco().toLowerCase()).contains(pesquisa) ||
+                    tiraAcento(animal.getNome().toLowerCase()).contains(pesquisa) ||
+                    tiraAcento(animal.getPelagem().toLowerCase()).contains(pesquisa) ||
+                    tiraAcento(idade.toLowerCase()).contains(pesquisa) ||
+                    tiraAcento(vermifugado.toLowerCase()).contains(pesquisa) ||
+                    tiraAcento(vacinado.toLowerCase()).contains(pesquisa) ||
+                    ((animal instanceof Cao) && tiraAcento(((Cao) animal).getPorte().toLowerCase()).contains(pesquisa))
                     ){
                 newMData.add(animal);
             }
@@ -209,5 +210,12 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         recyclerView.setAdapter(adapter);
 
         return true;
+    }
+
+    // Retira Acentos de uma String
+    public String tiraAcento(String str){
+        String nfdNormalizedString = Normalizer.normalize(str, Normalizer.Form.NFD);
+        Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
+        return pattern.matcher(nfdNormalizedString).replaceAll("");
     }
 }

@@ -19,7 +19,7 @@ public class SplashActivity extends AppCompatActivity {
             public void run(){
                 mostrarInicio();
             }
-        }, 2000);
+        }, 1500);
 
     }
     private void mostrarInicio(){

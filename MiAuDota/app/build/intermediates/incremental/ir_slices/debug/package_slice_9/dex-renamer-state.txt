@@ -1,4 +1,4 @@
-#Sun Jul 22 14:54:18 GMT-03:00 2018
-base.0=D\:\\Documentos\\Git\\projeto_laika\\MiAuDota\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\9
+#Sun Jul 22 16:27:22 BRT 2018
+base.0=C\:\\Users\\danpl\\LAIKA\\projeto_laika2\\projeto_laika\\MiAuDota\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\9
 path.0=classes.dex
 renamed.0=classes.dex
