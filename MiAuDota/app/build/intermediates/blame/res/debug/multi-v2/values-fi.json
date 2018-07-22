@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-<<<<<<< Updated upstream
-            "outputFile": "D:\\Documentos\\Git\\projeto_laika\\MiAuDota\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-fi\\values-fi.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\Vinicius\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\456ca687c551da62bc24b119e6164c9b\\res\\values-fi\\values-fi.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,213,313,414,500,605,723,810,892,972,1079,1182,1279,1385,1484,1588,1751,1850",
-                        "endColumns": "107,99,100,85,104,117,86,81,79,106,102,96,105,98,103,162,98,79",
-                        "endOffsets": "208,308,409,495,600,718,805,887,967,1074,1177,1274,1380,1479,1583,1746,1845,1925"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Vinicius\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\e3f4abd12c89e40d25d7a9d2c58cde23\\res\\values-fi\\values-fi.xml",
-=======
             "outputFile": "C:\\Users\\Matheus\\Desktop\\projeto_laika\\MiAuDota\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-fi\\values-fi.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Matheus\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\868a3e1df6d9ed82084aac168c683322\\res\\values-fi\\values-fi.xml",
->>>>>>> Stashed changes
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -36,8 +19,6 @@
                         "endColumns": "100",
                         "endOffsets": "2026"
                     }
-<<<<<<< Updated upstream
-=======
                 },
                 {
                     "source": "C:\\Users\\Matheus\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\bff67d360b599491953bf870505140d3\\res\\values-fi\\values-fi.xml",
@@ -48,7 +29,6 @@
                         "endColumns": "107,99,100,85,104,117,86,81,79,106,102,96,105,98,103,162,98,79",
                         "endOffsets": "208,308,409,495,600,718,805,887,967,1074,1177,1274,1380,1479,1583,1746,1845,1925"
                     }
->>>>>>> Stashed changes
                 }
             ]
         }
