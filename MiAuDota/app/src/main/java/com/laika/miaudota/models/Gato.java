@@ -1,7 +1,5 @@
 package com.laika.miaudota.models;
 
-// Classe Gato herda atributos e métodos da Classe Abstrata Animal
-
 public class Gato extends Animal{
 
     public Gato(){}

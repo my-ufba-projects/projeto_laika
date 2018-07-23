@@ -20,6 +20,9 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.laika.miaudota.R;
+import com.laika.miaudota.comunicacao.GatoComunicacao;
+import com.laika.miaudota.models.Animal;
+import com.laika.miaudota.models.Gato;
 
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
@@ -81,53 +84,21 @@ public class CadastroGatoActivity extends Fragment {
 
     private void envia_request() throws UnsupportedEncodingException {
 
-        final String nome = this.nome_gato.getText().toString();
-        final String idade = this.idade_gato.getText().toString();
-        final String peso = this.peso_gato.getText().toString();
-        final String sexo;
-        int selecionado_sexo = this.sexo_gato.getCheckedRadioButtonId();
-        if(selecionado_sexo == this.sexo_macho_gato.getId())
-            sexo = this.sexo_macho_gato.getText().toString();
-        else
-            sexo = this.sexo_femea_gato.getText().toString();
-        final String pelagem = String.valueOf(this.pelagem_gato.getSelectedItem());
-        final String porte = "null";
-        final Boolean vermifugado = this.vermifugado_gato.isChecked();
-        final Boolean vacinado = this.vacinado_gato.isChecked();
-        final String endereco = this.endereço_gato.getText().toString();
-        final String foto_cachorro = this.foto_gato.getText().toString();
-        final String about_cachorro = this.about_gato.getText().toString();
+        Animal gato = new Gato(
+                this.nome_gato.getText().toString(),
+                (this.sexo_gato.getCheckedRadioButtonId() == this.sexo_macho_gato.getId() ? this.sexo_macho_gato.getText().toString() : this.sexo_femea_gato.getText().toString()),
+                String.valueOf(this.pelagem_gato.getSelectedItem()),
+                this.about_gato.getText().toString(),
+                Integer.parseInt(this.idade_gato.getText().toString()),
+                Double.parseDouble(this.peso_gato.getText().toString()),
+                this.vermifugado_gato.isChecked(),
+                this.vacinado_gato.isChecked(),
+                this.endereço_gato.getText().toString(),
+                this.foto_gato.getText().toString()
+        );
 
 
-        String url = "https://projeto-laika2.herokuapp.com/animais/";
-        StringRequest postRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                Toast.makeText(getActivity(), "Gato cadastrado com sucesso!", Toast.LENGTH_SHORT).show();
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getActivity(), "Não foi possível cadastrar o gato!", Toast.LENGTH_SHORT).show();
-            }
-        }){
-            @Override
-            protected Map<String,String> getParams(){
-                Map<String,String> parametros = new HashMap<String,String>();
-                parametros.put("nome", nome);
-                parametros.put("idade",idade);
-                parametros.put("sexo", sexo);
-                parametros.put("pelagem", pelagem);
-                parametros.put("peso", peso);
-                parametros.put("vermifugado", String.valueOf(vermifugado));
-                parametros.put("vacinado", String.valueOf(vacinado));
-                parametros.put("descricao", about_cachorro);
-                parametros.put("endereco", endereco);
-                parametros.put("foto_url", foto_cachorro);
-                parametros.put("porte",porte);
-                return parametros;
-            }
-        };
-        queue.add(postRequest);
+        GatoComunicacao comm = new GatoComunicacao(this.queue);
+        comm.cadastrar(gato);
     }
 }

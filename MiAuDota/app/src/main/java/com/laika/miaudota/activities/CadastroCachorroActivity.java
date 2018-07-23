@@ -21,6 +21,9 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.laika.miaudota.R;
+import com.laika.miaudota.comunicacao.CachorroComunicacao;
+import com.laika.miaudota.models.Animal;
+import com.laika.miaudota.models.Cao;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -89,54 +92,22 @@ public class CadastroCachorroActivity extends Fragment{
 
 
     private void envia_request(){
-
-        final String nome = this.nome_cachorro.getText().toString();
-        final String idade = this.idade_cachorro.getText().toString();
-        final String peso = this.peso_cachorro.getText().toString();
-        final String sexo;
-        int selecionado_sexo = this.sexo_cachorro.getCheckedRadioButtonId();
-        if(selecionado_sexo == this.sexo_macho_cachorro.getId())
-            sexo = this.sexo_macho_cachorro.getText().toString();
-        else
-            sexo = this.sexo_femea_cachorro.getText().toString();
-        final String pelagem = String.valueOf(this.pelagem_cachorro.getSelectedItem());
-        final String porte = String.valueOf(this.porte_cachorro.getSelectedItem());
-        final Boolean vermifugado = this.vermifugado_cachorro.isChecked();
-        final Boolean vacinado = this.vacinado_cachorro.isChecked();
-        final String endereco = this.endereço_cachorro.getText().toString();
-        final String foto_cachorro = this.foto_cachorro.getText().toString();
-        final String about_cachorro = this.about_cachorro.getText().toString();
+        Animal cachorro = new Cao(
+                this.nome_cachorro.getText().toString(),
+                (this.sexo_cachorro.getCheckedRadioButtonId()== this.sexo_macho_cachorro.getId()?this.sexo_macho_cachorro.getText().toString():this.sexo_femea_cachorro.getText().toString()),
+                String.valueOf(this.pelagem_cachorro.getSelectedItem()),
+                this.about_cachorro.getText().toString(),
+                Integer.parseInt(this.idade_cachorro.getText().toString()),
+                Double.parseDouble(this.peso_cachorro.getText().toString()),
+                this.vermifugado_cachorro.isChecked(),
+                this.vacinado_cachorro.isChecked(),
+                this.endereço_cachorro.getText().toString(),
+                this.foto_cachorro.getText().toString(),
+                String.valueOf(this.porte_cachorro.getSelectedItem())
+        );
 
 
-        String url = "https://projeto-laika2.herokuapp.com/animais/";
-        StringRequest postRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                Toast.makeText(getActivity(), "Cachorro cadastrado com sucesso!", Toast.LENGTH_SHORT).show();
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getActivity(), "Não foi possível cadastrar o cachorro!", Toast.LENGTH_SHORT).show();
-            }
-        }){
-            @Override
-            protected Map<String,String> getParams(){
-                Map<String,String> parametros = new HashMap<String,String>();
-                parametros.put("nome", nome);
-                parametros.put("idade",idade);
-                parametros.put("sexo", sexo);
-                parametros.put("pelagem", pelagem);
-                parametros.put("peso", peso);
-                parametros.put("vermifugado", String.valueOf(vermifugado));
-                parametros.put("vacinado", String.valueOf(vacinado));
-                parametros.put("descricao", about_cachorro);
-                parametros.put("endereco", endereco);
-                parametros.put("foto_url", foto_cachorro);
-                parametros.put("porte",porte);
-                return parametros;
-            }
-        };
-        queue.add(postRequest);
+        CachorroComunicacao comm = new CachorroComunicacao(this.queue);
+        comm.cadastrar(cachorro);
     }
 }
