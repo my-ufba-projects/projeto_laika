@@ -103,9 +103,14 @@ public class CadastroGatoActivity extends Fragment {
         GatoComunicacao comm = new GatoComunicacao(this.queue);
         comm.cadastrar(gato, new ICallback() {
             @Override
-            public void onSucess() {
+            public void onSucess(Object object) {
                 Toast.makeText(getActivity(), "Gato Cadastrado!", Toast.LENGTH_LONG).show();
                 getActivity().finish();
+            }
+
+            @Override
+            public void onFail(Object object) {
+
             }
         });
     }

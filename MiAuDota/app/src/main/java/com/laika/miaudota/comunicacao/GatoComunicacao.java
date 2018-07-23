@@ -30,7 +30,7 @@ public class GatoComunicacao implements IComunicacao {
         StringRequest postRequest = new StringRequest(Request.Method.POST, Config.url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                callback.onSucess();
+                callback.onSucess(null);
             }
         }, new Response.ErrorListener() {
             @Override

@@ -113,9 +113,14 @@ public class CadastroCachorroActivity extends Fragment{
         CachorroComunicacao comm = new CachorroComunicacao(this.queue);
         comm.cadastrar(cachorro, new ICallback() {
             @Override
-            public void onSucess() {
+            public void onSucess(Object object) {
                 Toast.makeText(getActivity(), "Cão Cadastrado!", Toast.LENGTH_LONG).show();
                 getActivity().finish();
+            }
+
+            @Override
+            public void onFail(Object object) {
+
             }
         });
     }

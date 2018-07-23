@@ -24,12 +24,12 @@
         "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/50fcc0be4d5e74ea1a69d9da902de1b9/res/drawable-ldrtl-hdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
-        "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/drawable-v21_avd_show_password.xml.flat",
-        "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/0866386ea69a02110beb53f46283a344/res/drawable-v21/avd_show_password.xml"
-    },
-    {
         "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/layout_design_menu_item_action_area.xml.flat",
         "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/0866386ea69a02110beb53f46283a344/res/layout/design_menu_item_action_area.xml"
+    },
+    {
+        "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/drawable-v21_avd_show_password.xml.flat",
+        "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/0866386ea69a02110beb53f46283a344/res/drawable-v21/avd_show_password.xml"
     },
     {
         "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/layout_activity_splash.xml.flat",
@@ -56,12 +56,12 @@
         "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/69904f6397dc6502a8ff0bc3b0d1e3d2/res/drawable-v21/notification_action_background.xml"
     },
     {
-        "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
-        "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/50fcc0be4d5e74ea1a69d9da902de1b9/res/drawable-xxxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png"
-    },
-    {
         "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_star_black_48dp.png.flat",
         "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/50fcc0be4d5e74ea1a69d9da902de1b9/res/drawable-xhdpi-v4/abc_ic_star_black_48dp.png"
+    },
+    {
+        "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
+        "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/50fcc0be4d5e74ea1a69d9da902de1b9/res/drawable-xxxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png"
     },
     {
         "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -120,12 +120,12 @@
         "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/50fcc0be4d5e74ea1a69d9da902de1b9/res/drawable-xhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
-        "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/drawable_notification_bg.xml.flat",
-        "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/69904f6397dc6502a8ff0bc3b0d1e3d2/res/drawable/notification_bg.xml"
-    },
-    {
         "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
         "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/50fcc0be4d5e74ea1a69d9da902de1b9/res/drawable-mdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/drawable_notification_bg.xml.flat",
+        "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/69904f6397dc6502a8ff0bc3b0d1e3d2/res/drawable/notification_bg.xml"
     },
     {
         "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
@@ -172,12 +172,12 @@
         "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/7ed4a40f494f50944fbade216c1411a5/res/layout/notification_template_big_media_narrow.xml"
     },
     {
-        "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
-    },
-    {
         "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
         "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
@@ -240,12 +240,12 @@
         "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/50fcc0be4d5e74ea1a69d9da902de1b9/res/layout/abc_expanded_menu_layout.xml"
     },
     {
-        "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
-        "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/50fcc0be4d5e74ea1a69d9da902de1b9/res/drawable-xhdpi-v4/abc_btn_check_to_on_mtrl_000.png"
-    },
-    {
         "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/layout_cadastro_gato.xml.flat",
         "source": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/res/layout/cadastro_gato.xml"
+    },
+    {
+        "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
+        "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/50fcc0be4d5e74ea1a69d9da902de1b9/res/drawable-xhdpi-v4/abc_btn_check_to_on_mtrl_000.png"
     },
     {
         "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/anim_abc_slide_in_bottom.xml.flat",
@@ -364,12 +364,12 @@
         "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/50fcc0be4d5e74ea1a69d9da902de1b9/res/drawable-hdpi-v4/abc_spinner_mtrl_am_alpha.9.png"
     },
     {
-        "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
-        "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/50fcc0be4d5e74ea1a69d9da902de1b9/res/drawable-mdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png"
-    },
-    {
         "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
         "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/50fcc0be4d5e74ea1a69d9da902de1b9/res/drawable-hdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
+        "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/50fcc0be4d5e74ea1a69d9da902de1b9/res/drawable-mdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
         "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -404,12 +404,12 @@
         "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/50fcc0be4d5e74ea1a69d9da902de1b9/res/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
-        "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/drawable_abc_list_selector_holo_light.xml.flat",
-        "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/50fcc0be4d5e74ea1a69d9da902de1b9/res/drawable/abc_list_selector_holo_light.xml"
-    },
-    {
         "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/color-v23_abc_tint_switch_track.xml.flat",
         "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/50fcc0be4d5e74ea1a69d9da902de1b9/res/color-v23/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/drawable_abc_list_selector_holo_light.xml.flat",
+        "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/50fcc0be4d5e74ea1a69d9da902de1b9/res/drawable/abc_list_selector_holo_light.xml"
     },
     {
         "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/layout_design_layout_tab_text.xml.flat",
@@ -484,12 +484,12 @@
         "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/50fcc0be4d5e74ea1a69d9da902de1b9/res/anim/abc_slide_out_bottom.xml"
     },
     {
-        "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_star_black_16dp.png.flat",
-        "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/50fcc0be4d5e74ea1a69d9da902de1b9/res/drawable-xhdpi-v4/abc_ic_star_black_16dp.png"
-    },
-    {
         "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/drawable_abc_seekbar_thumb_material.xml.flat",
         "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/50fcc0be4d5e74ea1a69d9da902de1b9/res/drawable/abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_star_black_16dp.png.flat",
+        "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/50fcc0be4d5e74ea1a69d9da902de1b9/res/drawable-xhdpi-v4/abc_ic_star_black_16dp.png"
     },
     {
         "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/color-v23_abc_tint_btn_checkable.xml.flat",
@@ -600,12 +600,12 @@
         "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/50fcc0be4d5e74ea1a69d9da902de1b9/res/anim/abc_tooltip_exit.xml"
     },
     {
-        "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
-        "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/50fcc0be4d5e74ea1a69d9da902de1b9/res/drawable-hdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png"
-    },
-    {
         "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
         "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/50fcc0be4d5e74ea1a69d9da902de1b9/res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
+        "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/50fcc0be4d5e74ea1a69d9da902de1b9/res/drawable-hdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png"
     },
     {
         "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/layout_notification_template_media_custom.xml.flat",
@@ -624,12 +624,12 @@
         "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/50fcc0be4d5e74ea1a69d9da902de1b9/res/drawable-xhdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png"
     },
     {
-        "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/layout_abc_select_dialog_material.xml.flat",
-        "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/50fcc0be4d5e74ea1a69d9da902de1b9/res/layout/abc_select_dialog_material.xml"
-    },
-    {
         "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
         "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/50fcc0be4d5e74ea1a69d9da902de1b9/res/drawable-xxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png"
+    },
+    {
+        "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/layout_abc_select_dialog_material.xml.flat",
+        "source": "/home/fabio/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/50fcc0be4d5e74ea1a69d9da902de1b9/res/layout/abc_select_dialog_material.xml"
     },
     {
         "merged": "/home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",

@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,6 +19,8 @@ import com.bumptech.glide.request.RequestOptions;
 import com.laika.miaudota.R;
 
 public class PerfilActivity extends AppCompatActivity {
+
+    private Button deletar_animal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,6 +96,14 @@ public class PerfilActivity extends AppCompatActivity {
         //Definindo a imagem
         Glide.with(this).load(fotoUrl).apply(requestOptions).into(ivFoto);
 
+        deletar_animal = (Button) findViewById(R.id.deletar_animal);
+
+        deletar_animal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Toast.makeText(PerfilActivity.this, "Funciona!", Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     @Override
