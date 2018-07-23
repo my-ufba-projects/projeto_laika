@@ -22,8 +22,11 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.laika.miaudota.R;
 import com.laika.miaudota.comunicacao.CachorroComunicacao;
+import com.laika.miaudota.comunicacao.ICallback;
 import com.laika.miaudota.models.Animal;
 import com.laika.miaudota.models.Cao;
+
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -32,6 +35,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -73,7 +77,6 @@ public class CadastroCachorroActivity extends Fragment{
         about_cachorro = (EditText) v.findViewById(R.id.about_cachorro);
         btn_cadastrar = (Button) v.findViewById(R.id.btn_cadastrar_cachorro);
 
-
         btn_cadastrar.setOnClickListener(clique_botao);
         return v;
     }
@@ -108,6 +111,12 @@ public class CadastroCachorroActivity extends Fragment{
 
 
         CachorroComunicacao comm = new CachorroComunicacao(this.queue);
-        comm.cadastrar(cachorro);
+        comm.cadastrar(cachorro, new ICallback() {
+            @Override
+            public void onSucess() {
+                Toast.makeText(getActivity(), "Cão Cadastrado!", Toast.LENGTH_LONG).show();
+                getActivity().finish();
+            }
+        });
     }
 }

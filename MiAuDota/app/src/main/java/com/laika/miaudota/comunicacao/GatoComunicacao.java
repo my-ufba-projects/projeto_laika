@@ -17,16 +17,20 @@ public class GatoComunicacao implements IComunicacao {
     RequestQueue queue;
     private List<Animal> listaAnimal;
 
+    public GatoComunicacao(){
+        this.listaAnimal = new ArrayList<Animal>();
+    }
+
     public GatoComunicacao(RequestQueue queue){
         this.queue = queue;
         this.listaAnimal = new ArrayList<Animal>();
     }
     @Override
-    public boolean cadastrar(final Animal animal) {
+    public void cadastrar(final Animal animal,final ICallback callback) {
         StringRequest postRequest = new StringRequest(Request.Method.POST, Config.url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-
+                callback.onSucess();
             }
         }, new Response.ErrorListener() {
             @Override
@@ -52,11 +56,15 @@ public class GatoComunicacao implements IComunicacao {
             }
         };
         queue.add(postRequest);
-        return true;
     }
 
     @Override
-    public boolean deletar(Animal animal) {
-        return false;
+    public ArrayList<Animal> listar(final ICallback callback) {
+        return null;
+    }
+
+    @Override
+    public void deletar(Animal animal) {
+
     }
 }

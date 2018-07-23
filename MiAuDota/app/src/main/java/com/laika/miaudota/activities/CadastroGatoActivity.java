@@ -21,10 +21,12 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.laika.miaudota.R;
 import com.laika.miaudota.comunicacao.GatoComunicacao;
+import com.laika.miaudota.comunicacao.ICallback;
 import com.laika.miaudota.models.Animal;
 import com.laika.miaudota.models.Gato;
 
 import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -99,6 +101,12 @@ public class CadastroGatoActivity extends Fragment {
 
 
         GatoComunicacao comm = new GatoComunicacao(this.queue);
-        comm.cadastrar(gato);
+        comm.cadastrar(gato, new ICallback() {
+            @Override
+            public void onSucess() {
+                Toast.makeText(getActivity(), "Gato Cadastrado!", Toast.LENGTH_LONG).show();
+                getActivity().finish();
+            }
+        });
     }
 }
