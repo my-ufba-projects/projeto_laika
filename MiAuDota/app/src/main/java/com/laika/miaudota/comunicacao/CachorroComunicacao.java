@@ -26,7 +26,7 @@ import java.util.Map;
 
 public class CachorroComunicacao implements IComunicacao {
     RequestQueue queue;
-    private ArrayList<Animal> listaAnimal;
+    private List<Animal> listaAnimal;
     Activity activity;
 
     public CachorroComunicacao(){
@@ -44,7 +44,7 @@ public class CachorroComunicacao implements IComunicacao {
     }
     @Override
     public void cadastrar(final Animal animal,final ICallback callback) {
-        StringRequest postRequest = new StringRequest(Request.Method.POST, Config.url, new Response.Listener<String>() {
+        StringRequest postRequest = new StringRequest(Request.Method.POST, Config.URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 callback.onSucess(null);
@@ -78,7 +78,7 @@ public class CachorroComunicacao implements IComunicacao {
 
     @Override
     public ArrayList<Animal> listar(final ICallback callback) {
-        JsonArrayRequest request = new JsonArrayRequest(Config.url_json, new Response.Listener<JSONArray>(){
+        JsonArrayRequest request = new JsonArrayRequest(Config.URL_JSON, new Response.Listener<JSONArray>(){
 
             @Override
             public void onResponse(JSONArray response){

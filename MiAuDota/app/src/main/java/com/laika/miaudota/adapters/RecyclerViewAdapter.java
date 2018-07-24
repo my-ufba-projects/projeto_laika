@@ -21,14 +21,16 @@ import com.laika.miaudota.activities.PerfilActivity;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.laika.miaudota.outros.Config.*;
+
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>{
 
     private RequestOptions option;
     private Context mContext;
-    private ArrayList<Animal> mData;
+    private List<Animal> mData;
 
-    public RecyclerViewAdapter(Context mContext, ArrayList<Animal> mData) {
+    public RecyclerViewAdapter(Context mContext, List<Animal> mData) {
 
         this.mContext = mContext;
         this.mData = mData;
@@ -72,23 +74,23 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
         if(mData.get(position).isVermifugado())
-            holder.tvVermifugado.setText("Vermifugado(a): Sim");
+            holder.tvVermifugado.setText(VERMIFUGADO+ESPACO+SIM);
         else
-            holder.tvVermifugado.setText("Vermifugado(a): Não");
+            holder.tvVermifugado.setText(NAO_VERMIFUGADO+ESPACO+NAO);
 
         if(mData.get(position).isVacinado())
-            holder.tvVacinado.setText("Vacinado(a): Sim");
+            holder.tvVacinado.setText(VACINADO+ESPACO+SIM);
         else
-            holder.tvVacinado.setText("Vacinado(a): Não");
+            holder.tvVacinado.setText(NAO_VACINADO+ESPACO+NAO);
 
         if(mData.get(position) instanceof Cao)
-            holder.tvPorte.setText("Porte: " + String.valueOf((((Cao)mData.get(position)).getPorte())));
+            holder.tvPorte.setText(PORTE + ESPACO + String.valueOf((((Cao)mData.get(position)).getPorte())));
         else
-            holder.tvPorte.setText("");
+            holder.tvPorte.setText(BLANK);
 
         holder.tvNome.setText(String.valueOf(mData.get(position).getNome()));
-        holder.tvIdade.setText("Idade: " + String.valueOf(mData.get(position).getIdade()) + " ano(s)");
-        holder.tvSexo.setText("Sexo: " + String.valueOf(mData.get(position).getSexo()));
+        holder.tvIdade.setText(IDADE + ESPACO + String.valueOf(mData.get(position).getIdade()) + ESPACO + ANOS);
+        holder.tvSexo.setText(SEXO + ESPACO + String.valueOf(mData.get(position).getSexo()));
 
         Glide.with(mContext).load(mData.get(position).getFotoUrl()).apply(option).into(holder.ivFoto);
 

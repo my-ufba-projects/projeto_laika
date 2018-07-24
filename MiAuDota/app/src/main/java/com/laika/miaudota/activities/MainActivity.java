@@ -24,6 +24,9 @@ import com.laika.miaudota.R;
 import com.laika.miaudota.comunicacao.CachorroComunicacao;
 import com.laika.miaudota.comunicacao.ICallback;
 import com.laika.miaudota.models.*;
+import com.laika.miaudota.outros.Auxiliares;
+
+import static com.laika.miaudota.outros.Config.*;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -43,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
     private RecyclerView recyclerView;
     private Button btn_criar;
-    private ArrayList<Animal> listaAnimal;
+    private List<Animal> listaAnimal;
 
     // Adaptador para o filtro da busca
     private RecyclerViewAdapter adapter;
@@ -91,7 +94,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
     }
 
-    private void setuprecyclerview(ArrayList<Animal> listaAnimal){
+    private void setuprecyclerview(List<Animal> listaAnimal){
 
         RecyclerViewAdapter myadapter = new RecyclerViewAdapter(this, listaAnimal);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -146,27 +149,28 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
         //Percorre o ArrayList adicionando os animais que se enquadram na pesquisa
         for(Animal animal: listaAnimal){
-            String idade = String.valueOf(animal.getIdade()+" anos");            String vermifugado = "Não";
-            String vacinado = "Não";
+            String idade = String.valueOf(animal.getIdade() + ESPACO + ANOS);
+            String vermifugado = NAO;
+            String vacinado = NAO;
 
             //Tratamento dos atributos booleanos (vermifugado e vacinado)
             if(animal.isVermifugado())
-                vermifugado = "Vermifugado";
+                vermifugado = VERMIFUGADO;
 
             if(animal.isVacinado())
-                vacinado = "Vacinado";
+                vacinado = VACINADO;
 
-            pesquisa = tiraAcento(pesquisa); // Retira acentos do que foi digitado na pesquisa
+            pesquisa = Auxiliares.tiraAcento(pesquisa); // Retira acentos do que foi digitado na pesquisa
 
-            if(     tiraAcento(animal.getSexo().toLowerCase()).contains(pesquisa) ||
-                    tiraAcento(animal.getDescricao().toLowerCase()).contains(pesquisa) ||
-                    tiraAcento(animal.getEndereco().toLowerCase()).contains(pesquisa) ||
-                    tiraAcento(animal.getNome().toLowerCase()).contains(pesquisa) ||
-                    tiraAcento(animal.getPelagem().toLowerCase()).contains(pesquisa) ||
-                    tiraAcento(idade.toLowerCase()).contains(pesquisa) ||
-                    tiraAcento(vermifugado.toLowerCase()).contains(pesquisa) ||
-                    tiraAcento(vacinado.toLowerCase()).contains(pesquisa) ||
-                    ((animal instanceof Cao) && tiraAcento(((Cao) animal).getPorte().toLowerCase()).contains(pesquisa))
+            if(     Auxiliares.tiraAcento(animal.getSexo().toLowerCase()).contains(pesquisa) ||
+                    Auxiliares.tiraAcento(animal.getDescricao().toLowerCase()).contains(pesquisa) ||
+                    Auxiliares.tiraAcento(animal.getEndereco().toLowerCase()).contains(pesquisa) ||
+                    Auxiliares.tiraAcento(animal.getNome().toLowerCase()).contains(pesquisa) ||
+                    Auxiliares.tiraAcento(animal.getPelagem().toLowerCase()).contains(pesquisa) ||
+                    Auxiliares.tiraAcento(idade.toLowerCase()).contains(pesquisa) ||
+                    Auxiliares.tiraAcento(vermifugado.toLowerCase()).contains(pesquisa) ||
+                    Auxiliares.tiraAcento(vacinado.toLowerCase()).contains(pesquisa) ||
+                    ((animal instanceof Cao) && Auxiliares.tiraAcento(((Cao) animal).getPorte().toLowerCase()).contains(pesquisa))
                     ){
                 newMData.add(animal);
             }
@@ -179,10 +183,6 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         return true;
     }
 
-    // Retira Acentos de uma String
-    public String tiraAcento(String str){
-        String nfdNormalizedString = Normalizer.normalize(str, Normalizer.Form.NFD);
-        Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
-        return pattern.matcher(nfdNormalizedString).replaceAll("");
-    }
+
+
 }

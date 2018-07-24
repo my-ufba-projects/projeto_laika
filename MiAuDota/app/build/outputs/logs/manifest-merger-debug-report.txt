@@ -1,153 +1,153 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml:2:1-32:12
-INJECTED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml:2:1-32:12
-INJECTED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml:2:1-32:12
-INJECTED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml:2:1-32:12
-MERGED from [com.android.support:design:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/0866386ea69a02110beb53f46283a344/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:appcompat-v7:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/50fcc0be4d5e74ea1a69d9da902de1b9/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/fabio/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/9101b5383d4f8a75273085de4fb0acbb/AndroidManifest.xml:2:1-11:12
-MERGED from [com.github.bumptech.glide:glide:4.6.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/glide-4.6.1.aar/7063609bb4d955e400779644439f7be2/AndroidManifest.xml:2:1-13:12
-MERGED from [com.android.volley:volley:1.0.0] /home/fabio/.gradle/caches/transforms-1/files-1.1/volley-1.0.0.aar/388e0f0d03870285d0a183f4108d6a13/AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:recyclerview-v7:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/a2c863a13136f64611067d3eac250182/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/3aeea767866b1d977bc457af70878558/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-v4:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/0bb22652d944133657a46f2e409ddba2/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/b7ef3700d050686ccc138b2ba1a504d1/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/53d0922aa10059629ef399fe222d0490/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/d06074ad45e277395b96914583ddc764/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/1e35fcb8380832b25549db176326d49b/AndroidManifest.xml:17:1-22:12
-MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.6.1.aar/7d44814d02d8f1dbfdba636476d6df80/AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:transition:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/0225920f5ffcc659e7f8610af1bbd9c6/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/7ed4a40f494f50944fbade216c1411a5/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/69904f6397dc6502a8ff0bc3b0d1e3d2/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/fabio/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/c0c9d3216c99430590c9953fba0aba9b/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/fabio/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/abb9c2734b3472fa533852ec14114084/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.0] /home/fabio/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/3e21a1dba41ae7b035b3e1dc5e5a9bf9/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/fabio/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/bf013ca6a6445e719482977ba7d3c6f7/AndroidManifest.xml:17:1-22:12
-INJECTED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml:2:1-32:12
-INJECTED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml:2:1-32:12
-INJECTED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml:2:1-32:12
+ADDED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml:2:1-32:12
+MERGED from [com.android.support:design:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\752026e085c28dcfc7ce7e1a08f8615d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\66e1e2305c4966e682e75cafd5930e55\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\9b77b2d438f7dca18a18b71e6f472b36\AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.bumptech.glide:glide:4.6.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\glide-4.6.1.aar\99c3a03922e94675a0c71ad2b604084b\AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.volley:volley:1.0.0] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\volley-1.0.0.aar\75a1c2f05c876178e6935fe415d2f2d8\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\10c22668f8f2ff2d0f61674dfab8abae\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\d7481ce15d559fee37b13049f23744b1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\561b580a47e79e6dadb9d994bac2095f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\86ba7fefe02306cfdb15cfeeefc2465a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\9c5dd2284d5a82ac387a92304cba4101\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\1d5b9a1f66cf5959d0ea2fb463530846\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\aa4b224f30670d876bbc972b545db5ae\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.6.1.aar\1346ba727d79dba9d42df7e254090041\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:transition:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\53943851a61699bb04090417f5cf9ab5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\d4831672920f23e3568ba23f83edb993\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\12b04e00b29c7ec92ee3e0ebb5fba8fb\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\8a5525a6f5538b032b0d5b568e3dee28\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\d9a7eb52503759954ecfa51711802d50\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\04d2219e00fb61d85c0608836062fd25\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\456f56fb5f4ab7c78caccffd8d51eea8\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml:2:1-32:12
 	package
-		ADDED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml:3:5-33
-		INJECTED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml
-		INJECTED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml
+		ADDED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml:3:5-33
+		INJECTED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml
-		ADDED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml:2:1-32:12
-		INJECTED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml:2:1-32:12
+		INJECTED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml
-		ADDED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml:2:1-32:12
-		INJECTED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml:2:1-32:12
+		INJECTED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml:5:5-67
+ADDED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml:5:5-67
 	android:name
-		ADDED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml:5:22-64
+		ADDED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml:5:22-64
 application
-ADDED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml:7:5-30:19
-MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/fabio/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/9101b5383d4f8a75273085de4fb0acbb/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/fabio/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/9101b5383d4f8a75273085de4fb0acbb/AndroidManifest.xml:9:5-20
-MERGED from [com.github.bumptech.glide:glide:4.6.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/glide-4.6.1.aar/7063609bb4d955e400779644439f7be2/AndroidManifest.xml:11:5-20
-MERGED from [com.github.bumptech.glide:glide:4.6.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/glide-4.6.1.aar/7063609bb4d955e400779644439f7be2/AndroidManifest.xml:11:5-20
-MERGED from [com.android.volley:volley:1.0.0] /home/fabio/.gradle/caches/transforms-1/files-1.1/volley-1.0.0.aar/388e0f0d03870285d0a183f4108d6a13/AndroidManifest.xml:9:5-20
-MERGED from [com.android.volley:volley:1.0.0] /home/fabio/.gradle/caches/transforms-1/files-1.1/volley-1.0.0.aar/388e0f0d03870285d0a183f4108d6a13/AndroidManifest.xml:9:5-20
-MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.6.1.aar/7d44814d02d8f1dbfdba636476d6df80/AndroidManifest.xml:9:5-20
-MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.6.1.aar/7d44814d02d8f1dbfdba636476d6df80/AndroidManifest.xml:9:5-20
+ADDED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml:7:5-30:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\9b77b2d438f7dca18a18b71e6f472b36\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\9b77b2d438f7dca18a18b71e6f472b36\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:glide:4.6.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\glide-4.6.1.aar\99c3a03922e94675a0c71ad2b604084b\AndroidManifest.xml:11:5-20
+MERGED from [com.github.bumptech.glide:glide:4.6.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\glide-4.6.1.aar\99c3a03922e94675a0c71ad2b604084b\AndroidManifest.xml:11:5-20
+MERGED from [com.android.volley:volley:1.0.0] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\volley-1.0.0.aar\75a1c2f05c876178e6935fe415d2f2d8\AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:volley:1.0.0] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\volley-1.0.0.aar\75a1c2f05c876178e6935fe415d2f2d8\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.6.1.aar\1346ba727d79dba9d42df7e254090041\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.6.1.aar\1346ba727d79dba9d42df7e254090041\AndroidManifest.xml:9:5-20
 	android:supportsRtl
-		ADDED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml:12:9-35
+		ADDED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml:12:9-35
 	android:label
-		ADDED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml:10:9-41
+		ADDED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml:10:9-41
 	android:roundIcon
-		ADDED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml:11:9-54
+		ADDED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml:11:9-54
 	android:icon
-		ADDED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml:9:9-43
+		ADDED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml:9:9-43
 	android:allowBackup
-		ADDED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml:8:9-35
+		ADDED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml:8:9-35
 	android:theme
-		ADDED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml:13:9-40
+		ADDED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml:13:9-40
 activity#com.laika.miaudota.activities.MainActivity
-ADDED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml:16:9-70
+ADDED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml:16:9-70
 	android:name
-		ADDED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml:16:19-58
+		ADDED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml:16:19-58
 activity#com.laika.miaudota.activities.PerfilActivity
-ADDED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml:17:9-73
+ADDED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml:17:9-73
 	android:name
-		ADDED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml:17:19-60
+		ADDED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml:17:19-60
 activity#com.laika.miaudota.activities.SplashActivity
-ADDED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml:18:9-24:20
+ADDED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml:18:9-24:20
 	android:name
-		ADDED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml:18:19-60
+		ADDED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml:18:19-60
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml:19:13-23:29
+ADDED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml:19:13-23:29
 action#android.intent.action.MAIN
-ADDED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml:20:17-69
+ADDED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml:20:17-69
 	android:name
-		ADDED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml:20:25-66
+		ADDED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml:20:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml:22:17-77
+ADDED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml:22:17-77
 	android:name
-		ADDED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml:22:27-74
+		ADDED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml:22:27-74
 activity#com.laika.miaudota.activities.CadastroActivity
-ADDED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml:26:9-29:59
+ADDED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml:26:9-29:59
 	android:label
-		ADDED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml:28:13-60
+		ADDED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml:28:13-60
 	android:theme
-		ADDED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml:29:13-56
+		ADDED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml:29:13-56
 	android:name
-		ADDED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml:27:13-56
+		ADDED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml:27:13-56
 uses-sdk
-INJECTED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml
-INJECTED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml
-MERGED from [com.android.support:design:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/0866386ea69a02110beb53f46283a344/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/0866386ea69a02110beb53f46283a344/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/50fcc0be4d5e74ea1a69d9da902de1b9/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/50fcc0be4d5e74ea1a69d9da902de1b9/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/fabio/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/9101b5383d4f8a75273085de4fb0acbb/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/fabio/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/9101b5383d4f8a75273085de4fb0acbb/AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.bumptech.glide:glide:4.6.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/glide-4.6.1.aar/7063609bb4d955e400779644439f7be2/AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.bumptech.glide:glide:4.6.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/glide-4.6.1.aar/7063609bb4d955e400779644439f7be2/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.volley:volley:1.0.0] /home/fabio/.gradle/caches/transforms-1/files-1.1/volley-1.0.0.aar/388e0f0d03870285d0a183f4108d6a13/AndroidManifest.xml:7:5-43
-MERGED from [com.android.volley:volley:1.0.0] /home/fabio/.gradle/caches/transforms-1/files-1.1/volley-1.0.0.aar/388e0f0d03870285d0a183f4108d6a13/AndroidManifest.xml:7:5-43
-MERGED from [com.android.support:recyclerview-v7:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/a2c863a13136f64611067d3eac250182/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/a2c863a13136f64611067d3eac250182/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/3aeea767866b1d977bc457af70878558/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/3aeea767866b1d977bc457af70878558/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/0bb22652d944133657a46f2e409ddba2/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/0bb22652d944133657a46f2e409ddba2/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/b7ef3700d050686ccc138b2ba1a504d1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/b7ef3700d050686ccc138b2ba1a504d1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/53d0922aa10059629ef399fe222d0490/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/53d0922aa10059629ef399fe222d0490/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/d06074ad45e277395b96914583ddc764/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/d06074ad45e277395b96914583ddc764/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/1e35fcb8380832b25549db176326d49b/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/1e35fcb8380832b25549db176326d49b/AndroidManifest.xml:20:5-44
-MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.6.1.aar/7d44814d02d8f1dbfdba636476d6df80/AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.6.1.aar/7d44814d02d8f1dbfdba636476d6df80/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:transition:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/0225920f5ffcc659e7f8610af1bbd9c6/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/0225920f5ffcc659e7f8610af1bbd9c6/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/7ed4a40f494f50944fbade216c1411a5/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/7ed4a40f494f50944fbade216c1411a5/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/69904f6397dc6502a8ff0bc3b0d1e3d2/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] /home/fabio/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/69904f6397dc6502a8ff0bc3b0d1e3d2/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/fabio/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/c0c9d3216c99430590c9953fba0aba9b/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/fabio/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/c0c9d3216c99430590c9953fba0aba9b/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/fabio/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/abb9c2734b3472fa533852ec14114084/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/fabio/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/abb9c2734b3472fa533852ec14114084/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] /home/fabio/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/3e21a1dba41ae7b035b3e1dc5e5a9bf9/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] /home/fabio/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/3e21a1dba41ae7b035b3e1dc5e5a9bf9/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/fabio/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/bf013ca6a6445e719482977ba7d3c6f7/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/fabio/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/bf013ca6a6445e719482977ba7d3c6f7/AndroidManifest.xml:20:5-44
-INJECTED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml
-INJECTED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml
+INJECTED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:design:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\752026e085c28dcfc7ce7e1a08f8615d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\752026e085c28dcfc7ce7e1a08f8615d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\66e1e2305c4966e682e75cafd5930e55\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\66e1e2305c4966e682e75cafd5930e55\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\9b77b2d438f7dca18a18b71e6f472b36\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\9b77b2d438f7dca18a18b71e6f472b36\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:glide:4.6.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\glide-4.6.1.aar\99c3a03922e94675a0c71ad2b604084b\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.bumptech.glide:glide:4.6.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\glide-4.6.1.aar\99c3a03922e94675a0c71ad2b604084b\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.volley:volley:1.0.0] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\volley-1.0.0.aar\75a1c2f05c876178e6935fe415d2f2d8\AndroidManifest.xml:7:5-43
+MERGED from [com.android.volley:volley:1.0.0] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\volley-1.0.0.aar\75a1c2f05c876178e6935fe415d2f2d8\AndroidManifest.xml:7:5-43
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\10c22668f8f2ff2d0f61674dfab8abae\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\10c22668f8f2ff2d0f61674dfab8abae\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\d7481ce15d559fee37b13049f23744b1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\d7481ce15d559fee37b13049f23744b1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\561b580a47e79e6dadb9d994bac2095f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\561b580a47e79e6dadb9d994bac2095f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\86ba7fefe02306cfdb15cfeeefc2465a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\86ba7fefe02306cfdb15cfeeefc2465a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\9c5dd2284d5a82ac387a92304cba4101\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\9c5dd2284d5a82ac387a92304cba4101\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\1d5b9a1f66cf5959d0ea2fb463530846\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\1d5b9a1f66cf5959d0ea2fb463530846\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\aa4b224f30670d876bbc972b545db5ae\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\aa4b224f30670d876bbc972b545db5ae\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.6.1.aar\1346ba727d79dba9d42df7e254090041\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.6.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.6.1.aar\1346ba727d79dba9d42df7e254090041\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:transition:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\53943851a61699bb04090417f5cf9ab5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\53943851a61699bb04090417f5cf9ab5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\d4831672920f23e3568ba23f83edb993\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\d4831672920f23e3568ba23f83edb993\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\12b04e00b29c7ec92ee3e0ebb5fba8fb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\12b04e00b29c7ec92ee3e0ebb5fba8fb\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\8a5525a6f5538b032b0d5b568e3dee28\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\8a5525a6f5538b032b0d5b568e3dee28\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\d9a7eb52503759954ecfa51711802d50\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\d9a7eb52503759954ecfa51711802d50\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\04d2219e00fb61d85c0608836062fd25\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\04d2219e00fb61d85c0608836062fd25\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\456f56fb5f4ab7c78caccffd8d51eea8\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\danpl\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\456f56fb5f4ab7c78caccffd8d51eea8\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml
-		ADDED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml
-		INJECTED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml
-		ADDED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml
-		INJECTED from /home/fabio/Documentos/laika2/projeto_laika/MiAuDota/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\danpl\LAIKA\projeto_laika2\projeto_laika\MiAuDota\app\src\main\AndroidManifest.xml

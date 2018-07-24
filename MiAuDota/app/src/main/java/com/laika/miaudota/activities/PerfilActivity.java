@@ -18,6 +18,8 @@ import com.bumptech.glide.request.RequestOptions;
 
 import com.laika.miaudota.R;
 
+import static com.laika.miaudota.outros.Config.*;
+
 public class PerfilActivity extends AppCompatActivity {
 
     private Button deletar_animal;
@@ -49,15 +51,15 @@ public class PerfilActivity extends AppCompatActivity {
 
         //Tratamento do atributo vermifugado
         if (vermifugado)
-            vermifugadoString = "Sim";
+            vermifugadoString = SIM;
         else
-            vermifugadoString = "Não";
+            vermifugadoString = NAO;
 
         //Tratamento do atributo vacinado
         if (vacinado)
-            vacinadoString = "Sim";
+            vacinadoString = SIM;
         else
-            vacinadoString = "Não";
+            vacinadoString = NAO;
 
         //Inicializa as views
         CollapsingToolbarLayout collapsingToolbarLayout = findViewById(R.id.collapsingtoolbar_id);
@@ -76,18 +78,18 @@ public class PerfilActivity extends AppCompatActivity {
         ImageView ivFoto = findViewById(R.id.aa_thumbnail);
 
         //Setando os atributos da view
-        tvSexo.setText("Sexo: " + sexo);
-        tvPelagem.setText("Pelagem: " + pelagem);
+        tvSexo.setText(SEXO + ESPACO + sexo);
+        tvPelagem.setText(PELAGEM + ESPACO + pelagem);
         tvDescricao.setText(descricao);
-        tvEndereco.setText("Endereço: " + endereco);
-        tvIdade.setText("Idade: " + String.valueOf(idade) + " ano(s)");
-        tvPeso.setText("Peso: " + String.valueOf(peso) + " kg(s)");
-        tvVermifugado.setText("Vermifugado(a): " + vermifugadoString);
-        tvVacinado.setText("Vacinado(a): " + vacinadoString);
+        tvEndereco.setText(ENDERECO + ESPACO + endereco);
+        tvIdade.setText(IDADE + ESPACO + String.valueOf(idade) + ESPACO + ANOS);
+        tvPeso.setText(PESO + ESPACO + String.valueOf(peso) + ESPACO + KG);
+        tvVermifugado.setText(VERMIFUGADO + ESPACO + vermifugadoString);
+        tvVacinado.setText(VACINADO + ESPACO + vacinadoString);
         if(porte!=null)
-            tvPorte.setText("Porte: " + porte);
+            tvPorte.setText(PORTE + ESPACO + porte);
         else
-            tvPorte.setText("");
+            tvPorte.setText(BLANK);
 
         collapsingToolbarLayout.setTitle(nome);
 
@@ -96,7 +98,7 @@ public class PerfilActivity extends AppCompatActivity {
         //Definindo a imagem
         Glide.with(this).load(fotoUrl).apply(requestOptions).into(ivFoto);
 
-        deletar_animal = (Button) findViewById(R.id.deletar_animal);
+       // deletar_animal = (Button) findViewById(R.id.deletar_animal);
 
         deletar_animal.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -123,7 +125,7 @@ public class PerfilActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.cadastrar_animalId: //Se clicar em Cadastrar animal, chama a CadastroActivity
-                Toast.makeText(this, "Página de cadastro em desenvolvimento.", Toast.LENGTH_SHORT);
+                Toast.makeText(this, PAGINA_EM_DESENVOLVIMENTO, Toast.LENGTH_SHORT).show();
                 break;
         }
         return super.onOptionsItemSelected(item);

@@ -27,7 +27,7 @@ public class GatoComunicacao implements IComunicacao {
     }
     @Override
     public void cadastrar(final Animal animal,final ICallback callback) {
-        StringRequest postRequest = new StringRequest(Request.Method.POST, Config.url, new Response.Listener<String>() {
+        StringRequest postRequest = new StringRequest(Request.Method.POST, Config.URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 callback.onSucess(null);
