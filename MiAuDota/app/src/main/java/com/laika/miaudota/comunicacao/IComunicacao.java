@@ -9,5 +9,5 @@ public interface IComunicacao {
 
     void cadastrar(Animal animal,final ICallback callback);
     ArrayList<Animal> listar(final ICallback callback);
-    void deletar(Animal animal);
+    void deletar(int id, final ICallback callback);
 }

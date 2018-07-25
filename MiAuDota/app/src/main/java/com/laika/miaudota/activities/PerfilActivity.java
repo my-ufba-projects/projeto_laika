@@ -2,6 +2,7 @@ package com.laika.miaudota.activities;
 
 import android.content.Intent;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -13,19 +14,28 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 
 import com.laika.miaudota.R;
+import com.laika.miaudota.comunicacao.CachorroComunicacao;
+import com.laika.miaudota.comunicacao.GatoComunicacao;
+import com.laika.miaudota.comunicacao.ICallback;
+import com.laika.miaudota.comunicacao.IComunicacao;
 
 import static com.laika.miaudota.outros.Config.*;
 
 public class PerfilActivity extends AppCompatActivity {
 
-    private Button deletar_animal;
+    private FloatingActionButton deletar_animal;
+    private int id;
+    RequestQueue queue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        queue = Volley.newRequestQueue(getApplicationContext());
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil);
 
@@ -39,13 +49,13 @@ public class PerfilActivity extends AppCompatActivity {
         String pelagem = getIntent().getExtras().getString("animalPelagem");
         String descricao = getIntent().getExtras().getString("animalDescricao");
         String endereco = getIntent().getExtras().getString("animalEndereco");
-        String porte = getIntent().getExtras().getString("animalPorte");
+        final String porte = getIntent().getExtras().getString("animalPorte");
         String fotoUrl = getIntent().getExtras().getString("animalFoto");
         int idade = Integer.valueOf(getIntent().getExtras().getString("animalIdade"));
         double peso = Double.valueOf(getIntent().getExtras().getString("animalPeso"));
         Boolean vermifugado = Boolean.valueOf(getIntent().getExtras().getString("animalVermifugado"));
         Boolean vacinado = Boolean.valueOf(getIntent().getExtras().getString("animalVacinado"));
-
+        this.id = getIntent().getExtras().getInt("id");
         String vermifugadoString;
         String vacinadoString;
 
@@ -98,12 +108,45 @@ public class PerfilActivity extends AppCompatActivity {
         //Definindo a imagem
         Glide.with(this).load(fotoUrl).apply(requestOptions).into(ivFoto);
 
-       // deletar_animal = (Button) findViewById(R.id.deletar_animal);
+       deletar_animal = (FloatingActionButton) findViewById(R.id.deletar_animal);
 
         deletar_animal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Toast.makeText(PerfilActivity.this, "Funciona!", Toast.LENGTH_LONG).show();
+                IComunicacao comm;
+                if(porte !=null){
+                    //cachorro
+                    comm = new CachorroComunicacao(queue);
+                    comm.deletar(id, new ICallback() {
+                        @Override
+                        public void onSucess(Object object) {
+                            Toast.makeText(getApplicationContext(), "Cão deletado", Toast.LENGTH_SHORT).show();
+                            finish();
+                        }
+
+                        @Override
+                        public void onFail(Object object) {
+                            Toast.makeText(getApplicationContext(), "Erro!", Toast.LENGTH_SHORT).show();
+                            finish();
+                        }
+                    });
+                }else{
+                    comm = new GatoComunicacao(queue);
+                    comm.deletar(id, new ICallback() {
+                        @Override
+                        public void onSucess(Object object) {
+                            Toast.makeText(getApplicationContext(), "Gato deletado", Toast.LENGTH_SHORT).show();
+                            finish();
+                        }
+
+                        @Override
+                        public void onFail(Object object) {
+                            Toast.makeText(getApplicationContext(), "Erro!", Toast.LENGTH_SHORT).show();
+                            finish();
+                        }
+                    });
+                }
+                //Toast.makeText(getApplicationContext(), "Funciona!", Toast.LENGTH_LONG).show();
             }
         });
     }

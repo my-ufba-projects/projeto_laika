@@ -50,6 +50,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             public void onClick(View v){
 
                 Intent i = new Intent(mContext, PerfilActivity.class);
+                i.putExtra("id", mData.get(viewHolder.getAdapterPosition()).getId());
                 i.putExtra("animalNome", mData.get(viewHolder.getAdapterPosition()).getNome());
                 i.putExtra("animalIdade", String.valueOf(mData.get(viewHolder.getAdapterPosition()).getIdade()));
                 i.putExtra("animalSexo", mData.get(viewHolder.getAdapterPosition()).getSexo());

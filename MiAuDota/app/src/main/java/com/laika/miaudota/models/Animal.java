@@ -10,7 +10,7 @@ public abstract class Animal {
     private String descricao;
     private String endereco;
     private String fotoUrl;
-
+    private int id;
     private int idade;
     private double peso;
 
@@ -115,4 +115,11 @@ public abstract class Animal {
         this.fotoUrl = fotoUrl;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }

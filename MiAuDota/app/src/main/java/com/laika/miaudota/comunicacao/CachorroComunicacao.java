@@ -99,6 +99,7 @@ public class CachorroComunicacao implements IComunicacao {
                             gato.setPeso(jsonObject.getDouble("peso"));
                             gato.setVermifugado(jsonObject.getBoolean("vermifugado"));
                             gato.setVacinado(jsonObject.getBoolean("vacinado"));
+                            gato.setId(jsonObject.getInt("id"));
                             listaAnimal.add(gato);
                             System.out.println(gato.getNome());
                         }
@@ -115,6 +116,7 @@ public class CachorroComunicacao implements IComunicacao {
                             cao.setVermifugado(jsonObject.getBoolean("vermifugado"));
                             cao.setVacinado(jsonObject.getBoolean("vacinado"));
                             cao.setPorte(jsonObject.getString("porte"));
+                            cao.setId(jsonObject.getInt("id"));
                             listaAnimal.add(cao);
                             System.out.println(cao.getNome());
                         }
@@ -142,7 +144,23 @@ public class CachorroComunicacao implements IComunicacao {
 
 
     @Override
-    public void deletar(Animal animal) {
+    public void deletar(int id, final ICallback callback) {
+        System.out.println(Config.URL + id);
+        String x = Config.URL + id;
+        StringRequest request = new StringRequest(Request.Method.DELETE, x,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        callback.onSucess(null);
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        callback.onFail(null);
+                    }
+                });
+        queue.add(request);
     }
 
 }

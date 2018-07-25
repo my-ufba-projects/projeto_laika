@@ -64,7 +64,21 @@ public class GatoComunicacao implements IComunicacao {
     }
 
     @Override
-    public void deletar(Animal animal) {
+    public void deletar(int id, final ICallback callback) {
+        StringRequest request = new StringRequest(Request.Method.DELETE, Config.URL + id,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        callback.onSucess(null);
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        callback.onFail(null);
+                    }
+                });
 
+        queue.add(request);
     }
 }
