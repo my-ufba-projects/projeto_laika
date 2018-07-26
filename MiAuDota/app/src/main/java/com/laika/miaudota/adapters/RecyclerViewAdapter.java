@@ -12,7 +12,6 @@ import android.widget.TextView;
 import android.content.Intent;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.bumptech.glide.request.RequestOptions;
 import com.laika.miaudota.R;
 import com.laika.miaudota.models.*;
@@ -21,7 +20,7 @@ import com.laika.miaudota.activities.PerfilActivity;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.laika.miaudota.outros.Config.*;
+import static com.laika.miaudota.outros.IConstants.*;
 
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>{
@@ -45,7 +44,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         LayoutInflater inflater = LayoutInflater.from(mContext);
         view = inflater.inflate(R.layout.activity_animal_linha,parent,false);
         final MyViewHolder viewHolder = new MyViewHolder(view);
-        viewHolder.view_container.setOnClickListener(new View.OnClickListener(){
+        viewHolder.viewContainer.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
 
@@ -75,23 +74,23 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
         if(mData.get(position).isVermifugado())
-            holder.tvVermifugado.setText(VERMIFUGADO+ESPACO+SIM);
+            holder.tvVermifugado.setText(mContext.getString(R.string.vermifugado_sim));
         else
-            holder.tvVermifugado.setText(NAO_VERMIFUGADO+ESPACO+NAO);
+            holder.tvVermifugado.setText(mContext.getString(R.string.vermifugado_nao));
 
         if(mData.get(position).isVacinado())
-            holder.tvVacinado.setText(VACINADO+ESPACO+SIM);
+            holder.tvVacinado.setText(mContext.getString(R.string.vacinado_sim));
         else
-            holder.tvVacinado.setText(NAO_VACINADO+ESPACO+NAO);
+            holder.tvVacinado.setText(mContext.getString(R.string.vermifugado_nao));
 
         if(mData.get(position) instanceof Cao)
-            holder.tvPorte.setText(PORTE + ESPACO + String.valueOf((((Cao)mData.get(position)).getPorte())));
+            holder.tvPorte.setText(String.format("%s%s", mContext.getString(R.string.porte_question), String.valueOf((((Cao) mData.get(position)).getPorte()))));
         else
             holder.tvPorte.setText(BLANK);
 
         holder.tvNome.setText(String.valueOf(mData.get(position).getNome()));
-        holder.tvIdade.setText(IDADE + ESPACO + String.valueOf(mData.get(position).getIdade()) + ESPACO + ANOS);
-        holder.tvSexo.setText(SEXO + ESPACO + String.valueOf(mData.get(position).getSexo()));
+        holder.tvIdade.setText(String.format("%s%s%s", mContext.getString(R.string.idade_question), String.valueOf(mData.get(position).getIdade()), mContext.getString(R.string.anos_postquestion)));
+        holder.tvSexo.setText(String.format("%s%s", mContext.getString(R.string.sexo_question), String.valueOf(mData.get(position).getSexo())));
 
         Glide.with(mContext).load(mData.get(position).getFotoUrl()).apply(option).into(holder.ivFoto);
 
@@ -102,7 +101,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return mData.size();
     }
 
-    public static class MyViewHolder extends RecyclerView.ViewHolder {
+    static class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView tvNome;
         TextView tvIdade;
@@ -111,20 +110,20 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         TextView tvVacinado;
         TextView tvPorte;
         ImageView ivFoto;
-        LinearLayout view_container;
+        LinearLayout viewContainer;
 
 
-        public MyViewHolder(View itemView){
+        private MyViewHolder(View itemView){
 
             super(itemView);
-            view_container = itemView.findViewById(R.id.container);
-            tvNome = itemView.findViewById(R.id.animalNome);
-            tvIdade = itemView.findViewById(R.id.animalIdade);
-            tvSexo = itemView.findViewById(R.id.animalSexo);
-            tvVermifugado = itemView.findViewById(R.id.animalVermifugado);
-            tvVacinado = itemView.findViewById(R.id.animalVacinado);
-            tvPorte = itemView.findViewById(R.id.animalPorte);
-            ivFoto = itemView.findViewById(R.id.animalFoto);
+            viewContainer = itemView.findViewById(R.id.container);
+            tvNome = itemView.findViewById(R.id.animal_nome);
+            tvIdade = itemView.findViewById(R.id.animal_idade);
+            tvSexo = itemView.findViewById(R.id.animal_sexo);
+            tvVermifugado = itemView.findViewById(R.id.animal_vermifugado);
+            tvVacinado = itemView.findViewById(R.id.animal_vacinado);
+            tvPorte = itemView.findViewById(R.id.animal_porte);
+            ivFoto = itemView.findViewById(R.id.animal_foto);
 
         }
 

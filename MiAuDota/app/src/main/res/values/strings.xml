@@ -19,5 +19,27 @@
         <item>Grande</item>
     </string-array>
 
+
+    <!-- CONSTANTES UTILIZADAS NO CÓDIGO -->
+    <string name="const_sim">Sim</string>
+    <string name="const_nao">Não</string>
+    <string name="const_vermifugado">Vermifugado</string>
+    <string name="const_vacinado">Vacinado</string>
+
+    <string name="vermifugado_sim">Vermifugado(a): Sim</string>
+    <string name="vacinado_sim">Vacinado(a): Sim</string>
+    <string name="vermifugado_nao">Vermifugado(a): Não</string>
+    <string name="vacinado_nao">Vacinado(a): Não</string>
+    <string name="idade_question">Idade:\u0020</string>
+    <string name="sexo_question">Sexo:\u0020</string>
+    <string name="pelagem_question">Pelagem:\u0020</string>
+    <string name="endereco_question">Endereco:\u0020</string>
+    <string name="peso_question">Peso:\u0020</string>
+    <string name="porte_question">Porte:\u0020</string>
+
+    <string name="anos_search">\u0020anos</string>
+    <string name="anos_postquestion">\u0020ano(s)</string>
+    <string name="peso_postquestion">\u0020kg(s)</string>
+
 </resources>
     

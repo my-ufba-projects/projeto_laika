@@ -1,6 +1,5 @@
 package com.laika.miaudota.activities;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -14,11 +13,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.Volley;
-import com.android.volley.toolbox.JsonArrayRequest;
 import com.laika.miaudota.adapters.RecyclerViewAdapter;
 import com.laika.miaudota.R;
 import com.laika.miaudota.comunicacao.CachorroComunicacao;
@@ -26,16 +20,11 @@ import com.laika.miaudota.comunicacao.ICallback;
 import com.laika.miaudota.models.*;
 import com.laika.miaudota.outros.Auxiliares;
 
-import static com.laika.miaudota.outros.Config.*;
+import com.laika.miaudota.outros.IConstants;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Pattern;
+
 
 public class MainActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
 
@@ -43,9 +32,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     // Lista de Animais definida para ser exclusivamente um ArrayList
     //private ArrayList<Animal> listaAnimal;
 
-
     private RecyclerView recyclerView;
-    private Button btn_criar;
     private List<Animal> listaAnimal;
 
     // Adaptador para o filtro da busca
@@ -56,8 +43,9 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btn_criar = (Button) findViewById(R.id.btn_cadastrar);
-        btn_criar.setOnClickListener(new View.OnClickListener() {
+        Button btnCriar;
+        btnCriar = findViewById(R.id.btn_cadastrar);
+        btnCriar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, CadastroActivity.class);
@@ -65,9 +53,9 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
             }
         });
-        listaAnimal = new ArrayList<Animal>();
+        listaAnimal = new ArrayList<>();
         recyclerView = findViewById(R.id.recyclerviewid);
-        jsonrequest();
+        jsonRequest();
 
         //Atribuição do adaptador
         //adapter = new RecyclerViewAdapter(this, listaAnimal);
@@ -76,12 +64,12 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
 
     // Função que realiza o Request no Banco de dados e adiciona cada Animal na lista
-    private void jsonrequest(){
+    private void jsonRequest(){
         CachorroComunicacao comm = new CachorroComunicacao(MainActivity.this);
         comm.listar(new ICallback() {
             @Override
             public void onSucess(Object object) {
-                setuprecyclerview((ArrayList<Animal>) object);
+                setupRecyclerView((ArrayList<Animal>) object);
                 listaAnimal = (ArrayList<Animal>) object;
                 adapter = new RecyclerViewAdapter(MainActivity.this, (ArrayList<Animal>) object);
             }
@@ -94,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
     }
 
-    private void setuprecyclerview(List<Animal> listaAnimal){
+    private void setupRecyclerView(List<Animal> listaAnimal){
 
         RecyclerViewAdapter myadapter = new RecyclerViewAdapter(this, listaAnimal);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -149,16 +137,16 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
         //Percorre o ArrayList adicionando os animais que se enquadram na pesquisa
         for(Animal animal: listaAnimal){
-            String idade = String.valueOf(animal.getIdade() + ESPACO + ANOS);
-            String vermifugado = NAO;
-            String vacinado = NAO;
+            String idade = String.valueOf(animal.getIdade() + getString(R.string.anos_search));
+            String vermifugado = getString(R.string.const_nao);
+            String vacinado = getString(R.string.const_nao);
 
             //Tratamento dos atributos booleanos (vermifugado e vacinado)
             if(animal.isVermifugado())
-                vermifugado = VERMIFUGADO;
+                vermifugado = getString(R.string.const_vermifugado);
 
             if(animal.isVacinado())
-                vacinado = VACINADO;
+                vacinado = getString(R.string.const_vacinado);
 
             pesquisa = Auxiliares.tiraAcento(pesquisa); // Retira acentos do que foi digitado na pesquisa
 

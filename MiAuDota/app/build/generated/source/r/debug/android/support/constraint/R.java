@@ -67,19 +67,19 @@ public final class R {
         public static final int layout_optimizationLevel = 0x7f0400f7;
     }
     public static final class id {
-        public static final int barrier = 0x7f090036;
-        public static final int bottom = 0x7f090039;
-        public static final int chains = 0x7f090043;
-        public static final int dimensions = 0x7f090058;
-        public static final int direct = 0x7f090059;
-        public static final int end = 0x7f09005c;
-        public static final int gone = 0x7f09006d;
-        public static final int invisible = 0x7f090077;
-        public static final int left = 0x7f09007b;
-        public static final int none = 0x7f09008c;
-        public static final int packed = 0x7f090091;
-        public static final int parent = 0x7f090093;
-        public static final int percent = 0x7f090098;
+        public static final int barrier = 0x7f09002d;
+        public static final int bottom = 0x7f090030;
+        public static final int chains = 0x7f09003a;
+        public static final int dimensions = 0x7f09004f;
+        public static final int direct = 0x7f090050;
+        public static final int end = 0x7f090053;
+        public static final int gone = 0x7f090064;
+        public static final int invisible = 0x7f09006e;
+        public static final int left = 0x7f090072;
+        public static final int none = 0x7f090083;
+        public static final int packed = 0x7f090088;
+        public static final int parent = 0x7f09008a;
+        public static final int percent = 0x7f09008f;
         public static final int right = 0x7f0900a2;
         public static final int spread = 0x7f0900c9;
         public static final int spread_inside = 0x7f0900ca;

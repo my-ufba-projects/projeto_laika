@@ -6,7 +6,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.laika.miaudota.models.Animal;
-import com.laika.miaudota.outros.Config;
+import com.laika.miaudota.outros.IConstants;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 public class GatoComunicacao implements IComunicacao {
-    RequestQueue queue;
+    private RequestQueue queue;
     private List<Animal> listaAnimal;
 
     public GatoComunicacao(){
@@ -27,7 +27,7 @@ public class GatoComunicacao implements IComunicacao {
     }
     @Override
     public void cadastrar(final Animal animal,final ICallback callback) {
-        StringRequest postRequest = new StringRequest(Request.Method.POST, Config.URL, new Response.Listener<String>() {
+        StringRequest postRequest = new StringRequest(Request.Method.POST, IConstants.URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 callback.onSucess(null);
@@ -59,13 +59,13 @@ public class GatoComunicacao implements IComunicacao {
     }
 
     @Override
-    public ArrayList<Animal> listar(final ICallback callback) {
-        return null;
+    public void listar(final ICallback callback) {
+
     }
 
     @Override
     public void deletar(int id, final ICallback callback) {
-        StringRequest request = new StringRequest(Request.Method.DELETE, Config.URL + id,
+        StringRequest request = new StringRequest(Request.Method.DELETE, IConstants.URL + id,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

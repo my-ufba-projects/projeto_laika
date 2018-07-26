@@ -11,7 +11,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.laika.miaudota.activities.MainActivity;
 import com.laika.miaudota.models.Gato;
-import com.laika.miaudota.outros.Config;
+import com.laika.miaudota.outros.IConstants;
 import com.laika.miaudota.models.Animal;
 import com.laika.miaudota.models.Cao;
 
@@ -25,9 +25,9 @@ import java.util.List;
 import java.util.Map;
 
 public class CachorroComunicacao implements IComunicacao {
-    RequestQueue queue;
+    private RequestQueue queue;
     private List<Animal> listaAnimal;
-    Activity activity;
+    private Activity activity;
 
     public CachorroComunicacao(){
         this.listaAnimal = new ArrayList<Animal>();
@@ -44,7 +44,7 @@ public class CachorroComunicacao implements IComunicacao {
     }
     @Override
     public void cadastrar(final Animal animal,final ICallback callback) {
-        StringRequest postRequest = new StringRequest(Request.Method.POST, Config.URL, new Response.Listener<String>() {
+        StringRequest postRequest = new StringRequest(Request.Method.POST, IConstants.URL_JSON, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 callback.onSucess(null);
@@ -77,8 +77,8 @@ public class CachorroComunicacao implements IComunicacao {
     }
 
     @Override
-    public ArrayList<Animal> listar(final ICallback callback) {
-        JsonArrayRequest request = new JsonArrayRequest(Config.URL_JSON, new Response.Listener<JSONArray>(){
+    public void listar(final ICallback callback) {
+        JsonArrayRequest request = new JsonArrayRequest(IConstants.URL_JSON, new Response.Listener<JSONArray>(){
 
             @Override
             public void onResponse(JSONArray response){
@@ -139,14 +139,14 @@ public class CachorroComunicacao implements IComunicacao {
         });
         queue = Volley.newRequestQueue(this.activity);
         queue.add(request);
-        return null;
+
     }
 
 
     @Override
     public void deletar(int id, final ICallback callback) {
-        System.out.println(Config.URL + id);
-        String x = Config.URL + id;
+        System.out.println(IConstants.URL + id + ".json");
+        String x = IConstants.URL + id + ".json";
         StringRequest request = new StringRequest(Request.Method.DELETE, x,
                 new Response.Listener<String>() {
                     @Override

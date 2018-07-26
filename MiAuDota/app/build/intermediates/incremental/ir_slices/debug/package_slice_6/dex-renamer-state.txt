@@ -1,4 +1,4 @@
-#Tue Jul 24 23:56:17 BRT 2018
-base.0=/home/fabio/Documentos/laika3/projeto_laika/MiAuDota/app/build/intermediates/transforms/dexMerger/debug/7
+#Wed Jul 25 21:49:52 BRT 2018
+base.0=C\:\\Users\\danpl\\LAIKA\\projeto_laika2\\projeto_laika\\MiAuDota\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\6
 path.0=classes.dex
 renamed.0=classes.dex

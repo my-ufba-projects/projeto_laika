@@ -32,19 +32,23 @@ public class CadastroActivity extends AppCompatActivity {
      * may be best to switch to a
      * {@link android.support.v4.app.FragmentStatePagerAdapter}.
      */
-    private SectionsPagerAdapter mSectionsPagerAdapter;
 
     /**
      * The {@link ViewPager} that will host the section contents.
      */
-    private ViewPager mViewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+
+        SectionsPagerAdapter mSectionsPagerAdapter;
+        ViewPager mViewPager;
+
         setContentView(R.layout.activity_cadastro);
-        System.out.println("teste activity");
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
         setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
@@ -103,13 +107,9 @@ public class CadastroActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position){
                 case 0:
-                    CadastroCachorroActivity tipo1 =new CadastroCachorroActivity();
-                    return tipo1;
-
+                    return new CadastroCachorroActivity();
                 case 1:
-                    CadastroGatoActivity tipo2 = new CadastroGatoActivity();
-                    return tipo2;
-
+                    return new CadastroGatoActivity();
                 default:
                     return null;
             }

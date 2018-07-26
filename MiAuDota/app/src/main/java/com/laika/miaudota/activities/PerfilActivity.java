@@ -9,7 +9,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,26 +24,27 @@ import com.laika.miaudota.comunicacao.GatoComunicacao;
 import com.laika.miaudota.comunicacao.ICallback;
 import com.laika.miaudota.comunicacao.IComunicacao;
 
-import static com.laika.miaudota.outros.Config.*;
+import java.util.Objects;
+
+import com.laika.miaudota.outros.IConstants;
 
 public class PerfilActivity extends AppCompatActivity {
 
-    private FloatingActionButton deletar_animal;
     private int id;
-    RequestQueue queue;
+    private RequestQueue queue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        FloatingActionButton deletarAnimal;
         queue = Volley.newRequestQueue(getApplicationContext());
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil);
-
 
         //Esconde a ActionBar
         getSupportActionBar().hide();
 
         //Recebe os dados
-        String nome = getIntent().getExtras().getString("animalNome");
+        String nome = Objects.requireNonNull(getIntent().getExtras()).getString("animalNome");
         String sexo = getIntent().getExtras().getString("animalSexo");
         String pelagem = getIntent().getExtras().getString("animalPelagem");
         String descricao = getIntent().getExtras().getString("animalDescricao");
@@ -56,50 +56,45 @@ public class PerfilActivity extends AppCompatActivity {
         Boolean vermifugado = Boolean.valueOf(getIntent().getExtras().getString("animalVermifugado"));
         Boolean vacinado = Boolean.valueOf(getIntent().getExtras().getString("animalVacinado"));
         this.id = getIntent().getExtras().getInt("id");
-        String vermifugadoString;
-        String vacinadoString;
-
-        //Tratamento do atributo vermifugado
-        if (vermifugado)
-            vermifugadoString = SIM;
-        else
-            vermifugadoString = NAO;
-
-        //Tratamento do atributo vacinado
-        if (vacinado)
-            vacinadoString = SIM;
-        else
-            vacinadoString = NAO;
 
         //Inicializa as views
         CollapsingToolbarLayout collapsingToolbarLayout = findViewById(R.id.collapsingtoolbar_id);
         collapsingToolbarLayout.setTitleEnabled(true);
 
-        TextView tvSexo = findViewById(R.id.aa_animalSexo);
-        TextView tvPelagem = findViewById(R.id.aa_animalPelagem);
-        TextView tvDescricao = findViewById(R.id.aa_animalDescricao);
-        TextView tvEndereco = findViewById(R.id.aa_animalEndereco);
-        TextView tvIdade = findViewById(R.id.aa_animalIdade);
-        TextView tvPeso = findViewById(R.id.aa_animalPeso);
-        TextView tvVermifugado = findViewById(R.id.aa_animalVermifugado);
-        TextView tvVacinado = findViewById(R.id.aa_animalVacinado);
-        TextView tvPorte = findViewById(R.id.aa_animalPorte);
+        TextView tvSexo = findViewById(R.id.perfil_animal_sexo);
+        TextView tvPelagem = findViewById(R.id.perfil_animal_pelagem);
+        TextView tvDescricao = findViewById(R.id.perfil_animal_descricao);
+        TextView tvEndereco = findViewById(R.id.perfil_animal_endereco);
+        TextView tvIdade = findViewById(R.id.perfil_animal_idade);
+        TextView tvPeso = findViewById(R.id.perfil_animal_peso);
+        TextView tvVermifugado = findViewById(R.id.perfil_animal_vermifugado);
+        TextView tvVacinado = findViewById(R.id.perfil_animal_vacinado);
+        TextView tvPorte = findViewById(R.id.perfil_animal_porte);
 
         ImageView ivFoto = findViewById(R.id.aa_thumbnail);
 
         //Setando os atributos da view
-        tvSexo.setText(SEXO + ESPACO + sexo);
-        tvPelagem.setText(PELAGEM + ESPACO + pelagem);
+        tvSexo.setText(String.format("%s%s", getString(R.string.sexo_question), sexo));
+        tvPelagem.setText(String.format("%s%s", getString(R.string.pelagem_question), pelagem));
         tvDescricao.setText(descricao);
-        tvEndereco.setText(ENDERECO + ESPACO + endereco);
-        tvIdade.setText(IDADE + ESPACO + String.valueOf(idade) + ESPACO + ANOS);
-        tvPeso.setText(PESO + ESPACO + String.valueOf(peso) + ESPACO + KG);
-        tvVermifugado.setText(VERMIFUGADO + ESPACO + vermifugadoString);
-        tvVacinado.setText(VACINADO + ESPACO + vacinadoString);
-        if(porte!=null)
-            tvPorte.setText(PORTE + ESPACO + porte);
+        tvEndereco.setText(String.format("%s%s", getString(R.string.endereco_question), endereco));
+        tvIdade.setText(String.format("%s%s%s", getString(R.string.idade_question), String.valueOf(idade), getString(R.string.anos_postquestion)));
+        tvPeso.setText(String.format("%s%s%s", getString(R.string.peso_question), String.valueOf(peso), getString(R.string.peso_postquestion)));
+
+        if(vermifugado)
+            tvVermifugado.setText(getString(R.string.vermifugado_sim));
         else
-            tvPorte.setText(BLANK);
+            tvVermifugado.setText(getString(R.string.vermifugado_nao));
+
+        if(vacinado)
+            tvVacinado.setText(getString(R.string.vacinado_sim));
+        else
+            tvVacinado.setText(getString(R.string.vacinado_nao));
+
+        if(porte!=null)
+            tvPorte.setText(String.format("%s%s", getString(R.string.porte_question), porte));
+        else
+            tvPorte.setText(IConstants.BLANK);
 
         collapsingToolbarLayout.setTitle(nome);
 
@@ -108,9 +103,9 @@ public class PerfilActivity extends AppCompatActivity {
         //Definindo a imagem
         Glide.with(this).load(fotoUrl).apply(requestOptions).into(ivFoto);
 
-       deletar_animal = (FloatingActionButton) findViewById(R.id.deletar_animal);
+       deletarAnimal = findViewById(R.id.deletar_animal);
 
-        deletar_animal.setOnClickListener(new View.OnClickListener() {
+        deletarAnimal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 IComunicacao comm;
@@ -168,7 +163,7 @@ public class PerfilActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.cadastrar_animalId: //Se clicar em Cadastrar animal, chama a CadastroActivity
-                Toast.makeText(this, PAGINA_EM_DESENVOLVIMENTO, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, IConstants.PAGINA_EM_DESENVOLVIMENTO, Toast.LENGTH_SHORT).show();
                 break;
         }
         return super.onOptionsItemSelected(item);

@@ -11,14 +11,9 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.laika.miaudota.R;
 import com.laika.miaudota.comunicacao.CachorroComunicacao;
@@ -26,87 +21,79 @@ import com.laika.miaudota.comunicacao.ICallback;
 import com.laika.miaudota.models.Animal;
 import com.laika.miaudota.models.Cao;
 
-import org.json.JSONObject;
-
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.io.UnsupportedEncodingException;
-import java.net.URL;
-import java.net.URLConnection;
-import java.net.URLEncoder;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-
 public class CadastroCachorroActivity extends Fragment{
-    RequestQueue queue;
-    private EditText nome_cachorro;
-    private EditText idade_cachorro;
-    private EditText peso_cachorro;
-    private RadioGroup sexo_cachorro;
-    private RadioButton sexo_macho_cachorro;
-    private RadioButton sexo_femea_cachorro;
-    private Spinner pelagem_cachorro;
-    private Spinner porte_cachorro;
-    private CheckBox vermifugado_cachorro;
-    private CheckBox vacinado_cachorro;
-    private EditText endereço_cachorro;
-    private EditText foto_cachorro;
-    private EditText about_cachorro;
-    private Button btn_cadastrar;
+
+    private RequestQueue queue;
+    private EditText nomeCachorro;
+    private EditText idadeCachorro;
+    private EditText pesoCachorro;
+    private RadioGroup sexoCachorro;
+    private RadioButton sexoMachoCachorro;
+    private RadioButton sexoFemeaCachorro;
+    private Spinner pelagemCachorro;
+    private Spinner porteCachorro;
+    private CheckBox vermifugadoCachorro;
+    private CheckBox vacinadoCachorro;
+    private EditText fotoCachorro;
+    private EditText aboutCachorro;
+    private EditText enderecoCachorro;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         super.onCreateView(inflater, container,savedInstanceState);
         View v = inflater.inflate(R.layout.cadastro_cachorro, container, false);
-        queue = Volley.newRequestQueue(v.getContext());
-        nome_cachorro = (EditText) v.findViewById(R.id.nome_cachorro);
-        idade_cachorro = (EditText) v.findViewById(R.id.idade_cachorro);
-        peso_cachorro = (EditText) v.findViewById(R.id.peso_cachorro);
-        sexo_cachorro = (RadioGroup) v.findViewById(R.id.sexo_cachorro);
-        sexo_macho_cachorro = (RadioButton) v.findViewById(R.id.sexo_macho_cachorro);
-        sexo_femea_cachorro = (RadioButton) v.findViewById(R.id.sexo_femea_cachorro);
-        pelagem_cachorro = (Spinner) v.findViewById(R.id.pelagem_cachorro);
-        porte_cachorro = (Spinner) v.findViewById(R.id.porte_cachorro);
-        vermifugado_cachorro = (CheckBox) v.findViewById(R.id.vermifugado_cachorro);
-        vacinado_cachorro = (CheckBox) v.findViewById(R.id.vacinado_cachoro);
-        endereço_cachorro = (EditText) v.findViewById(R.id.endereco_cachorro);
-        foto_cachorro = (EditText) v.findViewById(R.id.foto_cachorro);
-        about_cachorro = (EditText) v.findViewById(R.id.about_cachorro);
-        btn_cadastrar = (Button) v.findViewById(R.id.btn_cadastrar_cachorro);
 
-        btn_cadastrar.setOnClickListener(clique_botao);
+        Button btnCadastrar;
+
+        queue = Volley.newRequestQueue(v.getContext());
+        nomeCachorro = (EditText) v.findViewById(R.id.nome_cachorro);
+        idadeCachorro = (EditText) v.findViewById(R.id.idade_cachorro);
+        pesoCachorro = (EditText) v.findViewById(R.id.peso_cachorro);
+        sexoCachorro = (RadioGroup) v.findViewById(R.id.sexo_cachorro);
+        sexoMachoCachorro = (RadioButton) v.findViewById(R.id.sexo_macho_cachorro);
+        sexoFemeaCachorro = (RadioButton) v.findViewById(R.id.sexo_femea_cachorro);
+        pelagemCachorro = (Spinner) v.findViewById(R.id.pelagem_cachorro);
+        porteCachorro = (Spinner) v.findViewById(R.id.porte_cachorro);
+        vermifugadoCachorro = (CheckBox) v.findViewById(R.id.vermifugado_cachorro);
+        vacinadoCachorro = (CheckBox) v.findViewById(R.id.vacinado_cachoro);
+        enderecoCachorro = (EditText) v.findViewById(R.id.endereco_cachorro);
+        fotoCachorro = (EditText) v.findViewById(R.id.foto_cachorro);
+        aboutCachorro = (EditText) v.findViewById(R.id.about_cachorro);
+
+        btnCadastrar = (Button) v.findViewById(R.id.btn_cadastrar_cachorro);
+        btnCadastrar.setOnClickListener(cliqueBotao);
+
         return v;
     }
 
-    private View.OnClickListener clique_botao = new View.OnClickListener() {
+    private View.OnClickListener cliqueBotao = new View.OnClickListener() {
+
         @Override
         public void onClick(View view) {
 
             try{
-                envia_request();
+                enviaRequest();
             }catch(Exception e){
-                System.out.println(e);
+                e.printStackTrace();
             }
         }
     };
 
-
-    private void envia_request(){
+    private void enviaRequest(){
         Animal cachorro = new Cao(
-                this.nome_cachorro.getText().toString(),
-                (this.sexo_cachorro.getCheckedRadioButtonId()== this.sexo_macho_cachorro.getId()?this.sexo_macho_cachorro.getText().toString():this.sexo_femea_cachorro.getText().toString()),
-                String.valueOf(this.pelagem_cachorro.getSelectedItem()),
-                this.about_cachorro.getText().toString(),
-                Integer.parseInt(this.idade_cachorro.getText().toString()),
-                Double.parseDouble(this.peso_cachorro.getText().toString()),
-                this.vermifugado_cachorro.isChecked(),
-                this.vacinado_cachorro.isChecked(),
-                this.endereço_cachorro.getText().toString(),
-                this.foto_cachorro.getText().toString(),
-                String.valueOf(this.porte_cachorro.getSelectedItem())
+                this.nomeCachorro.getText().toString(),
+                (this.sexoCachorro.getCheckedRadioButtonId()== this.sexoMachoCachorro.getId()?this.sexoMachoCachorro.getText().toString():this.sexoFemeaCachorro.getText().toString()),
+                String.valueOf(this.pelagemCachorro.getSelectedItem()),
+                this.aboutCachorro.getText().toString(),
+                Integer.parseInt(this.idadeCachorro.getText().toString()),
+                Double.parseDouble(this.pesoCachorro.getText().toString()),
+                this.vermifugadoCachorro.isChecked(),
+                this.vacinadoCachorro.isChecked(),
+                this.enderecoCachorro.getText().toString(),
+                this.fotoCachorro.getText().toString(),
+                String.valueOf(this.porteCachorro.getSelectedItem())
         );
 
 
