@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 public class GatoComunicacao implements IComunicacao {
+    //agregação, atributos com tipos que não são primitivos
     private RequestQueue queue;
     private List<Animal> listaAnimal;
 
@@ -21,11 +22,13 @@ public class GatoComunicacao implements IComunicacao {
         this.listaAnimal = new ArrayList<Animal>();
     }
 
+    //recebe a lista de animais
     public GatoComunicacao(RequestQueue queue){
         this.queue = queue;
         this.listaAnimal = new ArrayList<Animal>();
     }
     @Override
+    //cadastrar um animal no banco
     public void cadastrar(final Animal animal,final ICallback callback) {
         StringRequest postRequest = new StringRequest(Request.Method.POST, IConstants.URL, new Response.Listener<String>() {
             @Override

@@ -24,7 +24,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+
 public class CachorroComunicacao implements IComunicacao {
+    //agregação, atributos com tipos que não são primitivos
     private RequestQueue queue;
     private List<Animal> listaAnimal;
     private Activity activity;
@@ -43,6 +45,7 @@ public class CachorroComunicacao implements IComunicacao {
         this.listaAnimal = new ArrayList<Animal>();
     }
     @Override
+    //cadastra no banco de dados
     public void cadastrar(final Animal animal,final ICallback callback) {
         StringRequest postRequest = new StringRequest(Request.Method.POST, IConstants.URL_JSON, new Response.Listener<String>() {
             @Override
@@ -77,6 +80,7 @@ public class CachorroComunicacao implements IComunicacao {
     }
 
     @Override
+    //request para listar os animais e diferenciar gato de cachorro através do porte
     public void listar(final ICallback callback) {
         JsonArrayRequest request = new JsonArrayRequest(IConstants.URL_JSON, new Response.Listener<JSONArray>(){
 

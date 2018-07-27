@@ -23,6 +23,7 @@ import com.laika.miaudota.models.Cao;
 
 public class CadastroCachorroActivity extends Fragment{
 
+    //encapsulamento
     private RequestQueue queue;
     private EditText nomeCachorro;
     private EditText idadeCachorro;
@@ -46,7 +47,7 @@ public class CadastroCachorroActivity extends Fragment{
         View v = inflater.inflate(R.layout.cadastro_cachorro, container, false);
 
         Button btnCadastrar;
-
+        //dados de cadastro
         queue = Volley.newRequestQueue(v.getContext());
         nomeCachorro = (EditText) v.findViewById(R.id.nome_cachorro);
         idadeCachorro = (EditText) v.findViewById(R.id.idade_cachorro);
@@ -83,6 +84,8 @@ public class CadastroCachorroActivity extends Fragment{
 
     private void enviaRequest(){
         Animal cachorro = new Cao(
+                //request para ser usado no OnClickListener
+                //preenche os dados de cadastro
                 this.nomeCachorro.getText().toString(),
                 (this.sexoCachorro.getCheckedRadioButtonId()== this.sexoMachoCachorro.getId()?this.sexoMachoCachorro.getText().toString():this.sexoFemeaCachorro.getText().toString()),
                 String.valueOf(this.pelagemCachorro.getSelectedItem()),
@@ -99,6 +102,7 @@ public class CadastroCachorroActivity extends Fragment{
 
         CachorroComunicacao comm = new CachorroComunicacao(this.queue);
         comm.cadastrar(cachorro, new ICallback() {
+            //sobreposição para exibir a mensagem de cadastro
             @Override
             public void onSucess(Object object) {
                 Toast.makeText(getActivity(), "Cão Cadastrado!", Toast.LENGTH_LONG).show();

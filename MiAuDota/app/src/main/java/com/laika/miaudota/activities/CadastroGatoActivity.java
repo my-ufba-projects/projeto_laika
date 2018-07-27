@@ -47,7 +47,7 @@ public class CadastroGatoActivity extends Fragment {
         View v = inflater.inflate(R.layout.cadastro_gato, container, false);
 
         Button btnCadastrarGato;
-
+        //dados de cadastro
         queue = Volley.newRequestQueue(v.getContext());
         nomeGato = (EditText) v.findViewById(R.id.nome_gato);
         idadeGato = (EditText) v.findViewById(R.id.idade_gato);
@@ -82,7 +82,8 @@ public class CadastroGatoActivity extends Fragment {
 
 
     private void enviaRequest() throws UnsupportedEncodingException {
-
+        //request para ser usado no OnClickListener
+        //preenche os dados de cadastro
         Animal gato = new Gato(
                 this.nomeGato.getText().toString(),
                 (this.sexoGato.getCheckedRadioButtonId() == this.sexoMachoGato.getId() ? this.sexoMachoGato.getText().toString() : this.sexoFemeaGato.getText().toString()),

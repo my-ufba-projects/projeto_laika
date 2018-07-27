@@ -10,6 +10,7 @@ import com.laika.miaudota.R;
 public class SplashActivity extends AppCompatActivity {
 
     @Override
+    //sobreposição para implementar o tempo que a splash aparece
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);

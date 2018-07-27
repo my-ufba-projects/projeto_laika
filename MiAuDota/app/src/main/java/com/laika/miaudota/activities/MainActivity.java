@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
     private RecyclerView recyclerView;
     private List<Animal> listaAnimal;
+    //agregação, atributos com tipos que não são primitivos
 
     // Adaptador para o filtro da busca
     private RecyclerViewAdapter adapter;

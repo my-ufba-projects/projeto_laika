@@ -43,7 +43,7 @@ public class PerfilActivity extends AppCompatActivity {
         //Esconde a ActionBar
         getSupportActionBar().hide();
 
-        //Recebe os dados
+        //Recebe os dados que vão ser mostrados no perfil
         String nome = Objects.requireNonNull(getIntent().getExtras()).getString("animalNome");
         String sexo = getIntent().getExtras().getString("animalSexo");
         String pelagem = getIntent().getExtras().getString("animalPelagem");

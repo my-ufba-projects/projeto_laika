@@ -1,7 +1,7 @@
 package com.laika.miaudota.models;
 
 public class Gato extends Animal{
-
+    //herda da classe animal
     public Gato(){}
 
     public Gato(String nome, String sexo, String pelagem, String descricao, int idade, double peso,

@@ -21,7 +21,7 @@ public abstract class Animal {
 
     public Animal(String nome, String sexo, String pelagem, String descricao, int idade, double peso,
                   boolean vermifugado, boolean vacinado, String endereco, String fotoUrl) {
-
+    //construtor, atribui valor para cada atributo
         this.nome = nome;
         this.sexo = sexo;
         this.pelagem = pelagem;
