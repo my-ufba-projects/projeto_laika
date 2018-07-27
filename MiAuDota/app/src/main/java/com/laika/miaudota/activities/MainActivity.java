@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.laika.miaudota.adapters.RecyclerViewAdapter;
 import com.laika.miaudota.R;
 import com.laika.miaudota.comunicacao.CachorroComunicacao;
+import com.laika.miaudota.comunicacao.GatoComunicacao;
 import com.laika.miaudota.comunicacao.ICallback;
 import com.laika.miaudota.models.*;
 import com.laika.miaudota.outros.Auxiliares;
@@ -33,11 +34,11 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     //private ArrayList<Animal> listaAnimal;
 
     private RecyclerView recyclerView;
-    private List<Animal> listaAnimal;
+    private List<Animal> listaAnimal= new ArrayList<Animal>();
     //agregação, atributos com tipos que não são primitivos
 
     // Adaptador para o filtro da busca
-    private RecyclerViewAdapter adapter;
+    private RecyclerViewAdapter adapter = new RecyclerViewAdapter(MainActivity.this, listaAnimal);
 
     // Responsável por criar Activity atual
     @Override
@@ -54,25 +55,53 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
             }
         });
-        listaAnimal = new ArrayList<>();
+        //listaAnimal = new ArrayList<>();
         recyclerView = findViewById(R.id.recyclerviewid);
-        jsonRequest();
+        recyclerView.setAdapter(adapter);
+        //jsonRequest();
 
         //Atribuição do adaptador
         //adapter = new RecyclerViewAdapter(this, listaAnimal);
-        recyclerView.setAdapter(adapter);
+        //
+    }
+
+    @Override
+    protected void onResume() {
+        jsonRequest();
+        super.onResume();
     }
 
 
     // Função que realiza o Request no Banco de dados e adiciona cada Animal na lista
     private void jsonRequest(){
+        listaAnimal.clear();
         CachorroComunicacao comm = new CachorroComunicacao(MainActivity.this);
+        GatoComunicacao comm2 = new GatoComunicacao(MainActivity.this);
         comm.listar(new ICallback() {
             @Override
             public void onSucess(Object object) {
-                setupRecyclerView((ArrayList<Animal>) object);
-                listaAnimal = (ArrayList<Animal>) object;
-                adapter = new RecyclerViewAdapter(MainActivity.this, (ArrayList<Animal>) object);
+                //System.out.println("cachorro " + ((ArrayList <Animal>) object).size() );
+                listaAnimal.addAll((ArrayList<Animal>) object);
+                setupRecyclerView(listaAnimal);
+                //listaAnimal.sort();
+                //adapter = new RecyclerViewAdapter(MainActivity.this, (ArrayList<Animal>) object);
+            }
+
+            @Override
+            public void onFail(Object object) {
+
+            }
+        });
+
+        comm2.listar(new ICallback() {
+            @Override
+            public void onSucess(Object object) {
+                //System.out.println("gato " + ((ArrayList <Animal>) object).size() );
+                listaAnimal.addAll((ArrayList<Animal>) object);
+                setupRecyclerView(listaAnimal);
+
+                //listaAnimal.sort();
+                //adapter = new RecyclerViewAdapter(MainActivity.this, (ArrayList<Animal>) object);
             }
 
             @Override
@@ -84,9 +113,12 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     }
 
     private void setupRecyclerView(List<Animal> listaAnimal){
-
         RecyclerViewAdapter myadapter = new RecyclerViewAdapter(this, listaAnimal);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        //recyclerView.setAdapter(myadapter);
+        //myadapter.setAdapter(listaAnimal);
+        System.out.println(listaAnimal.size());
+        myadapter.updateList(listaAnimal);
         recyclerView.setAdapter(myadapter);
 
     }

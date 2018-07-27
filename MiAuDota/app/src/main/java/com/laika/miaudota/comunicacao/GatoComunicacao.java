@@ -1,12 +1,21 @@
 package com.laika.miaudota.comunicacao;
 
+import android.app.Activity;
+
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.laika.miaudota.models.Animal;
+import com.laika.miaudota.models.Gato;
 import com.laika.miaudota.outros.IConstants;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -17,11 +26,16 @@ public class GatoComunicacao implements IComunicacao {
     //agregação, atributos com tipos que não são primitivos
     private RequestQueue queue;
     private List<Animal> listaAnimal;
+    private Activity activity;
 
     public GatoComunicacao(){
         this.listaAnimal = new ArrayList<Animal>();
     }
 
+    public GatoComunicacao(Activity activity){
+        this.listaAnimal = new ArrayList<Animal>();
+        this.activity = activity;
+    }
     //recebe a lista de animais
     public GatoComunicacao(RequestQueue queue){
         this.queue = queue;
@@ -30,7 +44,7 @@ public class GatoComunicacao implements IComunicacao {
     @Override
     //cadastrar um animal no banco
     public void cadastrar(final Animal animal,final ICallback callback) {
-        StringRequest postRequest = new StringRequest(Request.Method.POST, IConstants.URL, new Response.Listener<String>() {
+        StringRequest postRequest = new StringRequest(Request.Method.POST, IConstants.URL_JSON_GATOS, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 callback.onSucess(null);
@@ -62,13 +76,59 @@ public class GatoComunicacao implements IComunicacao {
     }
 
     @Override
+    //request para listar os animais e diferenciar gato de cachorro através do porte
     public void listar(final ICallback callback) {
+        JsonArrayRequest request = new JsonArrayRequest(IConstants.URL_JSON_GATOS, new Response.Listener<JSONArray>(){
+
+            @Override
+            public void onResponse(JSONArray response){
+                JSONObject jsonObject = null;
+                System.out.println("Teste");
+                for(int i=0; i<response.length(); i++){
+                    try{
+                        jsonObject = response.getJSONObject(i);
+                        Gato gato = new Gato();
+                        gato.setNome(jsonObject.getString("nome"));
+                        gato.setSexo(jsonObject.getString("sexo"));
+                        gato.setPelagem(jsonObject.getString("pelagem"));
+                        gato.setDescricao(jsonObject.getString("descricao"));
+                        gato.setEndereco(jsonObject.getString("endereco"));
+                        gato.setFotoUrl(jsonObject.getString("foto_url"));
+                        gato.setIdade(jsonObject.getInt("idade"));
+                        gato.setPeso(jsonObject.getDouble("peso"));
+                        gato.setVermifugado(jsonObject.getBoolean("vermifugado"));
+                        gato.setVacinado(jsonObject.getBoolean("vacinado"));
+                        //gato.setPorte(jsonObject.getString("porte"));
+                        gato.setId(jsonObject.getInt("id"));
+                        listaAnimal.add(gato);
+                        System.out.println(gato.getNome());
+
+
+                    } catch(JSONException e){
+                        e.printStackTrace();
+                    }
+                }
+
+                //fim do request
+                callback.onSucess(listaAnimal);
+                //setuprecyclerview(listaAnimal);
+            }
+        }, new Response.ErrorListener(){
+            @Override
+            public void onErrorResponse(VolleyError error){
+
+            }
+        });
+        queue = Volley.newRequestQueue(this.activity);
+        queue.add(request);
 
     }
 
     @Override
     public void deletar(int id, final ICallback callback) {
-        StringRequest request = new StringRequest(Request.Method.DELETE, IConstants.URL + id,
+        System.out.println(IConstants.URL + id + ".json");
+        String x = IConstants.URL + id + ".json";
+        StringRequest request = new StringRequest(Request.Method.DELETE, x,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -81,7 +141,6 @@ public class GatoComunicacao implements IComunicacao {
                         callback.onFail(null);
                     }
                 });
-
         queue.add(request);
     }
 }

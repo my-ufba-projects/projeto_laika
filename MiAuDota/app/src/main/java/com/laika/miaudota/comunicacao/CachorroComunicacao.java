@@ -31,9 +31,9 @@ public class CachorroComunicacao implements IComunicacao {
     private List<Animal> listaAnimal;
     private Activity activity;
 
-    public CachorroComunicacao(){
-        this.listaAnimal = new ArrayList<Animal>();
-    }
+    //public CachorroComunicacao(){
+    //    this.listaAnimal = new ArrayList<Animal>();
+    //}
 
     public CachorroComunicacao(Activity activity){
         this.listaAnimal = new ArrayList<Animal>();
@@ -47,7 +47,7 @@ public class CachorroComunicacao implements IComunicacao {
     @Override
     //cadastra no banco de dados
     public void cadastrar(final Animal animal,final ICallback callback) {
-        StringRequest postRequest = new StringRequest(Request.Method.POST, IConstants.URL_JSON, new Response.Listener<String>() {
+        StringRequest postRequest = new StringRequest(Request.Method.POST, IConstants.URL_JSON_CAES, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 callback.onSucess(null);
@@ -82,7 +82,7 @@ public class CachorroComunicacao implements IComunicacao {
     @Override
     //request para listar os animais e diferenciar gato de cachorro através do porte
     public void listar(final ICallback callback) {
-        JsonArrayRequest request = new JsonArrayRequest(IConstants.URL_JSON, new Response.Listener<JSONArray>(){
+        JsonArrayRequest request = new JsonArrayRequest(IConstants.URL_JSON_CAES, new Response.Listener<JSONArray>(){
 
             @Override
             public void onResponse(JSONArray response){
@@ -91,39 +91,22 @@ public class CachorroComunicacao implements IComunicacao {
                 for(int i=0; i<response.length(); i++){
                     try{
                         jsonObject = response.getJSONObject(i);
-                        if((jsonObject.getString("porte").equalsIgnoreCase("null"))) {
-                            Gato gato  = new Gato();
-                            gato.setNome(jsonObject.getString("nome"));
-                            gato.setSexo(jsonObject.getString("sexo"));
-                            gato.setPelagem(jsonObject.getString("pelagem"));
-                            gato.setDescricao(jsonObject.getString("descricao"));
-                            gato.setEndereco(jsonObject.getString("endereco"));
-                            gato.setFotoUrl(jsonObject.getString("foto_url"));
-                            gato.setIdade(jsonObject.getInt("idade"));
-                            gato.setPeso(jsonObject.getDouble("peso"));
-                            gato.setVermifugado(jsonObject.getBoolean("vermifugado"));
-                            gato.setVacinado(jsonObject.getBoolean("vacinado"));
-                            gato.setId(jsonObject.getInt("id"));
-                            listaAnimal.add(gato);
-                            System.out.println(gato.getNome());
-                        }
-                        else{
-                            Cao cao = new Cao();
-                            cao.setNome(jsonObject.getString("nome"));
-                            cao.setSexo(jsonObject.getString("sexo"));
-                            cao.setPelagem(jsonObject.getString("pelagem"));
-                            cao.setDescricao(jsonObject.getString("descricao"));
-                            cao.setEndereco(jsonObject.getString("endereco"));
-                            cao.setFotoUrl(jsonObject.getString("foto_url"));
-                            cao.setIdade(jsonObject.getInt("idade"));
-                            cao.setPeso(jsonObject.getDouble("peso"));
-                            cao.setVermifugado(jsonObject.getBoolean("vermifugado"));
-                            cao.setVacinado(jsonObject.getBoolean("vacinado"));
-                            cao.setPorte(jsonObject.getString("porte"));
-                            cao.setId(jsonObject.getInt("id"));
-                            listaAnimal.add(cao);
-                            System.out.println(cao.getNome());
-                        }
+                        Cao cao = new Cao();
+                        cao.setNome(jsonObject.getString("nome"));
+                        cao.setSexo(jsonObject.getString("sexo"));
+                        cao.setPelagem(jsonObject.getString("pelagem"));
+                        cao.setDescricao(jsonObject.getString("descricao"));
+                        cao.setEndereco(jsonObject.getString("endereco"));
+                        cao.setFotoUrl(jsonObject.getString("foto_url"));
+                        cao.setIdade(jsonObject.getInt("idade"));
+                        cao.setPeso(jsonObject.getDouble("peso"));
+                        cao.setVermifugado(jsonObject.getBoolean("vermifugado"));
+                        cao.setVacinado(jsonObject.getBoolean("vacinado"));
+                        cao.setPorte(jsonObject.getString("porte"));
+                        cao.setId(jsonObject.getInt("id"));
+                        listaAnimal.add(cao);
+                        System.out.println(cao.getNome());
+
 
                     } catch(JSONException e){
                         e.printStackTrace();
