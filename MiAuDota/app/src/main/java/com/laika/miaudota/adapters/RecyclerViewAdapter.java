@@ -16,12 +16,10 @@ import com.bumptech.glide.request.RequestOptions;
 import com.laika.miaudota.R;
 import com.laika.miaudota.models.*;
 import com.laika.miaudota.activities.PerfilActivity;
+import com.laika.miaudota.outros.IConstants;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.laika.miaudota.outros.IConstants.*;
-
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>{
 
@@ -85,11 +83,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         if(mData.get(position) instanceof Cao)
             holder.tvPorte.setText(String.format("%s%s", mContext.getString(R.string.porte_question), String.valueOf((((Cao) mData.get(position)).getPorte()))));
         else
-            holder.tvPorte.setText(BLANK);
+            holder.tvPorte.setText(IConstants.BLANK);
 
         holder.tvNome.setText(String.valueOf(mData.get(position).getNome()));
         holder.tvIdade.setText(String.format("%s%s%s", mContext.getString(R.string.idade_question), String.valueOf(mData.get(position).getIdade()), mContext.getString(R.string.anos_postquestion)));
         holder.tvSexo.setText(String.format("%s%s", mContext.getString(R.string.sexo_question), String.valueOf(mData.get(position).getSexo())));
+
+        if(!(mData.get(position).getFotoUrl().contains(IConstants.JPG_EXTENSION)) && !(mData.get(position).getFotoUrl().contains(IConstants.JPEG_EXTENSION)) && !(mData.get(position).getFotoUrl().contains(IConstants.PNG_EXTENSION)))
+            mData.get(position).setFotoUrl(IConstants.URL_FOTO_PADRAO);
 
         Glide.with(mContext).load(mData.get(position).getFotoUrl()).apply(option).into(holder.ivFoto);
 
