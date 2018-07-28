@@ -20,6 +20,7 @@ import com.laika.miaudota.comunicacao.CachorroComunicacao;
 import com.laika.miaudota.comunicacao.ICallback;
 import com.laika.miaudota.models.Animal;
 import com.laika.miaudota.models.Cao;
+import com.laika.miaudota.outros.IConstants;
 
 public class CadastroCachorroActivity extends Fragment{
 
@@ -105,7 +106,7 @@ public class CadastroCachorroActivity extends Fragment{
             //sobreposição para exibir a mensagem de cadastro
             @Override
             public void onSucess(Object object) {
-                Toast.makeText(getActivity(), "Cão Cadastrado!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), IConstants.CAO_CADASTRADO_SUCESS, Toast.LENGTH_LONG).show();
                 getActivity().finish();
             }
 

@@ -132,8 +132,7 @@ public class CachorroComunicacao implements IComunicacao {
 
     @Override
     public void deletar(int id, final ICallback callback) {
-        System.out.println(IConstants.URL + id + ".json");
-        String x = IConstants.URL + id + ".json";
+        String x = IConstants.URL + id + IConstants.JSON_EXTENSION;
         StringRequest request = new StringRequest(Request.Method.DELETE, x,
                 new Response.Listener<String>() {
                     @Override

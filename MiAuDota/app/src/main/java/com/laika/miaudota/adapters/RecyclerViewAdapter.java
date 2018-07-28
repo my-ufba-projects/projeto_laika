@@ -40,9 +40,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View view;
         LayoutInflater inflater = LayoutInflater.from(mContext);
-        view = inflater.inflate(R.layout.activity_animal_linha,parent,false);
+        View view = inflater.inflate(R.layout.activity_animal_linha,parent,false);
         final MyViewHolder viewHolder = new MyViewHolder(view);
         viewHolder.viewContainer.setOnClickListener(new View.OnClickListener(){
             @Override

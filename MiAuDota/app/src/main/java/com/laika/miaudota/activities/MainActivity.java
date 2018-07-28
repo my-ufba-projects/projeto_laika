@@ -29,13 +29,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
 
-    // Constante que define a URL onde se encontra o banco de dados
-    // Lista de Animais definida para ser exclusivamente um ArrayList
-    //private ArrayList<Animal> listaAnimal;
-
     private RecyclerView recyclerView;
     private List<Animal> listaAnimal= new ArrayList<Animal>();
-    //agregação, atributos com tipos que não são primitivos
 
     // Adaptador para o filtro da busca
     private RecyclerViewAdapter adapter = new RecyclerViewAdapter(MainActivity.this, listaAnimal);
@@ -43,26 +38,23 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     // Responsável por criar Activity atual
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button btnCriar;
-        btnCriar = findViewById(R.id.btn_cadastrar);
+
+        Button btnCriar = findViewById(R.id.btn_cadastrar);
+
         btnCriar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, CadastroActivity.class);
                 startActivity(intent);
-
             }
         });
-        //listaAnimal = new ArrayList<>();
+
         recyclerView = findViewById(R.id.recyclerviewid);
         recyclerView.setAdapter(adapter);
-        //jsonRequest();
 
-        //Atribuição do adaptador
-        //adapter = new RecyclerViewAdapter(this, listaAnimal);
-        //
     }
 
     @Override
@@ -71,20 +63,18 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         super.onResume();
     }
 
-
     // Função que realiza o Request no Banco de dados e adiciona cada Animal na lista
     private void jsonRequest(){
+
         listaAnimal.clear();
-        CachorroComunicacao comm = new CachorroComunicacao(MainActivity.this);
-        GatoComunicacao comm2 = new GatoComunicacao(MainActivity.this);
-        comm.listar(new ICallback() {
+        CachorroComunicacao cachorroComunicacao = new CachorroComunicacao(MainActivity.this);
+        GatoComunicacao gatoComunicacao = new GatoComunicacao(MainActivity.this);
+
+        cachorroComunicacao.listar(new ICallback() {
             @Override
             public void onSucess(Object object) {
-                //System.out.println("cachorro " + ((ArrayList <Animal>) object).size() );
                 listaAnimal.addAll((ArrayList<Animal>) object);
                 setupRecyclerView(listaAnimal);
-                //listaAnimal.sort();
-                //adapter = new RecyclerViewAdapter(MainActivity.this, (ArrayList<Animal>) object);
             }
 
             @Override
@@ -93,15 +83,11 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
             }
         });
 
-        comm2.listar(new ICallback() {
+        gatoComunicacao.listar(new ICallback() {
             @Override
             public void onSucess(Object object) {
-                //System.out.println("gato " + ((ArrayList <Animal>) object).size() );
                 listaAnimal.addAll((ArrayList<Animal>) object);
                 setupRecyclerView(listaAnimal);
-
-                //listaAnimal.sort();
-                //adapter = new RecyclerViewAdapter(MainActivity.this, (ArrayList<Animal>) object);
             }
 
             @Override
@@ -113,11 +99,9 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     }
 
     private void setupRecyclerView(List<Animal> listaAnimal){
+
         RecyclerViewAdapter myadapter = new RecyclerViewAdapter(this, listaAnimal);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        //recyclerView.setAdapter(myadapter);
-        //myadapter.setAdapter(listaAnimal);
-        System.out.println(listaAnimal.size());
         myadapter.updateList(listaAnimal);
         recyclerView.setAdapter(myadapter);
 
@@ -126,6 +110,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     // Cria o Menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_activity, menu);
 
@@ -135,16 +120,18 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         searchView.setOnQueryTextListener(this);
 
         return super.onCreateOptionsMenu(menu);
+
     }
 
     // Realiza uma ação a depender da opção escolhida no Menu
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
         int id = item.getItemId();
 
         switch(id){
             case R.id.lista_animaisId:
-                Toast.makeText(this, "Você já está visualizando o item selecionado.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, IConstants.JA_ESTA_VISUALIZANDO, Toast.LENGTH_SHORT).show();
                 break;
             case R.id.cadastrar_animalId:
                 Intent intent = new Intent(MainActivity.this, CadastroActivity.class);
@@ -155,21 +142,17 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     }
 
     @Override
-    public boolean onQueryTextSubmit(String query) {
-        return false;
-    }
-
-    //Implementação do método concernente ao evento onQueryTextChange do SearchView
-
-
+    public boolean onQueryTextSubmit(String query) { return false; }
 
     @Override
     public boolean onQueryTextChange(String newText) {
+
         String pesquisa = newText.toLowerCase();
         List<Animal> newMData = new ArrayList<>(); //Nova lista onde serão adicionados somente os objetos que correspondem à pesquisa
 
         //Percorre o ArrayList adicionando os animais que se enquadram na pesquisa
         for(Animal animal: listaAnimal){
+
             String idade = String.valueOf(animal.getIdade() + getString(R.string.anos_search));
             String vermifugado = getString(R.string.const_nao);
             String vacinado = getString(R.string.const_nao);
@@ -191,7 +174,9 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
                     Auxiliares.tiraAcento(idade.toLowerCase()).contains(pesquisa) ||
                     Auxiliares.tiraAcento(vermifugado.toLowerCase()).contains(pesquisa) ||
                     Auxiliares.tiraAcento(vacinado.toLowerCase()).contains(pesquisa) ||
-                    ((animal instanceof Cao) && Auxiliares.tiraAcento(((Cao) animal).getPorte().toLowerCase()).contains(pesquisa))
+                    ((animal instanceof Cao) && Auxiliares.tiraAcento(((Cao) animal).getPorte().toLowerCase()).contains(pesquisa)) ||
+                    ((animal instanceof Cao) && (pesquisa.equals("cao") || pesquisa.equals("caes") || pesquisa.equals("cachorro") || pesquisa.equals("cachorros"))) ||
+                    ((animal instanceof Gato) && (pesquisa.equals("gato") || pesquisa.equals("gatos")))
                     ){
                 newMData.add(animal);
             }
@@ -203,7 +188,5 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
         return true;
     }
-
-
 
 }

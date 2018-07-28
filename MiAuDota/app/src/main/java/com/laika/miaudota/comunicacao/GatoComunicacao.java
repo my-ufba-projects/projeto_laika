@@ -98,7 +98,6 @@ public class GatoComunicacao implements IComunicacao {
                         gato.setPeso(jsonObject.getDouble("peso"));
                         gato.setVermifugado(jsonObject.getBoolean("vermifugado"));
                         gato.setVacinado(jsonObject.getBoolean("vacinado"));
-                        //gato.setPorte(jsonObject.getString("porte"));
                         gato.setId(jsonObject.getInt("id"));
                         listaAnimal.add(gato);
                         System.out.println(gato.getNome());
@@ -126,8 +125,7 @@ public class GatoComunicacao implements IComunicacao {
 
     @Override
     public void deletar(int id, final ICallback callback) {
-        System.out.println(IConstants.URL + id + ".json");
-        String x = IConstants.URL + id + ".json";
+        String x = IConstants.URL + id + IConstants.JSON_EXTENSION;
         StringRequest request = new StringRequest(Request.Method.DELETE, x,
                 new Response.Listener<String>() {
                     @Override

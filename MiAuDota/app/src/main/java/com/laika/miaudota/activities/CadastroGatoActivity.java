@@ -20,6 +20,7 @@ import com.laika.miaudota.comunicacao.GatoComunicacao;
 import com.laika.miaudota.comunicacao.ICallback;
 import com.laika.miaudota.models.Animal;
 import com.laika.miaudota.models.Gato;
+import com.laika.miaudota.outros.IConstants;
 
 import java.io.UnsupportedEncodingException;
 
@@ -102,7 +103,7 @@ public class CadastroGatoActivity extends Fragment {
         comm.cadastrar(gato, new ICallback() {
             @Override
             public void onSucess(Object object) {
-                Toast.makeText(getActivity(), "Gato Cadastrado!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), IConstants.GATO_CADASTRADO_SUCESS, Toast.LENGTH_LONG).show();
                 getActivity().finish();
             }
 
