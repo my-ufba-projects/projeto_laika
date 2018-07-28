@@ -111,7 +111,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         ImageView ivFoto;
         LinearLayout viewContainer;
 
-
         private MyViewHolder(View itemView){
 
             super(itemView);

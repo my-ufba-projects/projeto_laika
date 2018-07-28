@@ -23,14 +23,10 @@ import java.util.List;
 import java.util.Map;
 
 public class GatoComunicacao implements IComunicacao {
-    //agregação, atributos com tipos que não são primitivos
+
     private RequestQueue queue;
     private List<Animal> listaAnimal;
     private Activity activity;
-
-    public GatoComunicacao(){
-        this.listaAnimal = new ArrayList<Animal>();
-    }
 
     public GatoComunicacao(Activity activity){
         this.listaAnimal = new ArrayList<Animal>();
@@ -59,12 +55,12 @@ public class GatoComunicacao implements IComunicacao {
             protected Map<String,String> getParams(){
                 Map<String,String> parametros = new HashMap<String,String>();
                 parametros.put("nome", animal.getNome());
-                parametros.put("idade", ""+animal.getIdade());
+                parametros.put("idade", String.valueOf(animal.getIdade()));
                 parametros.put("sexo", animal.getSexo());
                 parametros.put("pelagem", animal.getPelagem());
-                parametros.put("peso", ""+animal.getPeso());
-                parametros.put("vermifugado", ""+animal.isVermifugado());
-                parametros.put("vacinado", ""+ animal.isVacinado());
+                parametros.put("peso", String.valueOf(animal.getPeso()));
+                parametros.put("vermifugado", String.valueOf(animal.isVermifugado()));
+                parametros.put("vacinado", String.valueOf(animal.isVacinado()));
                 parametros.put("descricao", animal.getDescricao());
                 parametros.put("endereco", animal.getEndereco());
                 parametros.put("foto_url", animal.getFotoUrl());
@@ -83,7 +79,6 @@ public class GatoComunicacao implements IComunicacao {
             @Override
             public void onResponse(JSONArray response){
                 JSONObject jsonObject = null;
-                System.out.println("Teste");
                 for(int i=0; i<response.length(); i++){
                     try{
                         jsonObject = response.getJSONObject(i);
@@ -100,9 +95,6 @@ public class GatoComunicacao implements IComunicacao {
                         gato.setVacinado(jsonObject.getBoolean("vacinado"));
                         gato.setId(jsonObject.getInt("id"));
                         listaAnimal.add(gato);
-                        System.out.println(gato.getNome());
-
-
                     } catch(JSONException e){
                         e.printStackTrace();
                     }
@@ -120,7 +112,6 @@ public class GatoComunicacao implements IComunicacao {
         });
         queue = Volley.newRequestQueue(this.activity);
         queue.add(request);
-
     }
 
     @Override

@@ -1,7 +1,6 @@
 package com.laika.miaudota.outros;
 
 public interface IConstants {
-    //interface para armazenar as constantes
 
     String URL = "https://projeto-laika2.herokuapp.com/animais/";
     //String URL_JSON = "https://projeto-laika2.herokuapp.com/animais.json";

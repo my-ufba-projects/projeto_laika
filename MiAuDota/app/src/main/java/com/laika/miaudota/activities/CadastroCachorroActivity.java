@@ -24,7 +24,6 @@ import com.laika.miaudota.outros.IConstants;
 
 public class CadastroCachorroActivity extends Fragment{
 
-    //encapsulamento
     private RequestQueue queue;
     private EditText nomeCachorro;
     private EditText idadeCachorro;
@@ -48,7 +47,7 @@ public class CadastroCachorroActivity extends Fragment{
         View v = inflater.inflate(R.layout.cadastro_cachorro, container, false);
 
         Button btnCadastrar;
-        //dados de cadastro
+
         queue = Volley.newRequestQueue(v.getContext());
         nomeCachorro = (EditText) v.findViewById(R.id.nome_cachorro);
         idadeCachorro = (EditText) v.findViewById(R.id.idade_cachorro);
@@ -74,7 +73,6 @@ public class CadastroCachorroActivity extends Fragment{
 
         @Override
         public void onClick(View view) {
-
             try{
                 enviaRequest();
             }catch(Exception e){
@@ -100,9 +98,8 @@ public class CadastroCachorroActivity extends Fragment{
                 String.valueOf(this.porteCachorro.getSelectedItem())
         );
 
-
-        CachorroComunicacao comm = new CachorroComunicacao(this.queue);
-        comm.cadastrar(cachorro, new ICallback() {
+        CachorroComunicacao cachorroComunicacao = new CachorroComunicacao(this.queue);
+        cachorroComunicacao.cadastrar(cachorro, new ICallback() {
             //sobreposição para exibir a mensagem de cadastro
             @Override
             public void onSucess(Object object) {

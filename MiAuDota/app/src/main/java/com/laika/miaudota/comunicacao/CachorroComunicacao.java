@@ -24,16 +24,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 public class CachorroComunicacao implements IComunicacao {
-    //agregação, atributos com tipos que não são primitivos
+
     private RequestQueue queue;
     private List<Animal> listaAnimal;
     private Activity activity;
-
-    //public CachorroComunicacao(){
-    //    this.listaAnimal = new ArrayList<Animal>();
-    //}
 
     public CachorroComunicacao(Activity activity){
         this.listaAnimal = new ArrayList<Animal>();
@@ -62,12 +57,12 @@ public class CachorroComunicacao implements IComunicacao {
             protected Map<String,String> getParams(){
                 Map<String,String> parametros = new HashMap<String,String>();
                 parametros.put("nome", animal.getNome());
-                parametros.put("idade", ""+animal.getIdade());
+                parametros.put("idade", String.valueOf(animal.getIdade()));
                 parametros.put("sexo", animal.getSexo());
                 parametros.put("pelagem", animal.getPelagem());
-                parametros.put("peso", ""+animal.getPeso());
-                parametros.put("vermifugado", ""+animal.isVermifugado());
-                parametros.put("vacinado", ""+ animal.isVacinado());
+                parametros.put("peso", String.valueOf(animal.getPeso()));
+                parametros.put("vermifugado", String.valueOf(animal.isVermifugado()));
+                parametros.put("vacinado", String.valueOf(animal.isVacinado()));
                 parametros.put("descricao", animal.getDescricao());
                 parametros.put("endereco", animal.getEndereco());
                 parametros.put("foto_url", animal.getFotoUrl());
@@ -76,7 +71,6 @@ public class CachorroComunicacao implements IComunicacao {
             }
         };
         queue.add(postRequest);
-
     }
 
     @Override
@@ -87,7 +81,6 @@ public class CachorroComunicacao implements IComunicacao {
             @Override
             public void onResponse(JSONArray response){
                 JSONObject jsonObject = null;
-                System.out.println("Teste");
                 for(int i=0; i<response.length(); i++){
                     try{
                         jsonObject = response.getJSONObject(i);
@@ -105,9 +98,6 @@ public class CachorroComunicacao implements IComunicacao {
                         cao.setPorte(jsonObject.getString("porte"));
                         cao.setId(jsonObject.getInt("id"));
                         listaAnimal.add(cao);
-                        System.out.println(cao.getNome());
-
-
                     } catch(JSONException e){
                         e.printStackTrace();
                     }
@@ -116,7 +106,6 @@ public class CachorroComunicacao implements IComunicacao {
                 //fim do request
                 callback.onSucess(listaAnimal);
 
-                //setuprecyclerview(listaAnimal);
             }
         }, new Response.ErrorListener(){
             @Override
@@ -126,9 +115,7 @@ public class CachorroComunicacao implements IComunicacao {
         });
         queue = Volley.newRequestQueue(this.activity);
         queue.add(request);
-
     }
-
 
     @Override
     public void deletar(int id, final ICallback callback) {

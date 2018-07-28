@@ -72,7 +72,6 @@ public class CadastroGatoActivity extends Fragment {
     private View.OnClickListener clique_botao = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-
             try{
                 enviaRequest();
             }catch(Exception e){
@@ -80,7 +79,6 @@ public class CadastroGatoActivity extends Fragment {
             }
         }
     };
-
 
     private void enviaRequest() throws UnsupportedEncodingException {
         //request para ser usado no OnClickListener
@@ -98,9 +96,8 @@ public class CadastroGatoActivity extends Fragment {
                 this.fotoGato.getText().toString()
         );
 
-
-        GatoComunicacao comm = new GatoComunicacao(this.queue);
-        comm.cadastrar(gato, new ICallback() {
+        GatoComunicacao gatoComunicacao = new GatoComunicacao(this.queue);
+        gatoComunicacao.cadastrar(gato, new ICallback() {
             @Override
             public void onSucess(Object object) {
                 Toast.makeText(getActivity(), IConstants.GATO_CADASTRADO_SUCESS, Toast.LENGTH_LONG).show();
