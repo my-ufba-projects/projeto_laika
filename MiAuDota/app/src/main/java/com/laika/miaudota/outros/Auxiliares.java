@@ -3,8 +3,6 @@ package com.laika.miaudota.outros;
 import java.text.Normalizer;
 import java.util.regex.Pattern;
 
-import com.laika.miaudota.outros.IConstants;
-
 public class Auxiliares {
 
     // Retira Acentos de uma String

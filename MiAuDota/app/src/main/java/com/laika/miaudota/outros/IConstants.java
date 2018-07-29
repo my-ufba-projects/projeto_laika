@@ -14,8 +14,15 @@ public interface IConstants {
     String BLANK = "";
 
     String PAGINA_EM_DESENVOLVIMENTO = "A Página está em Desenvolvimento";
-    String CAO_CADASTRADO_SUCESS = "Cão Cadastrado com Sucesso!";
-    String GATO_CADASTRADO_SUCESS = "Gato Cadastrado com Sucesso!";
+    String CAO_CADASTRADO_SUCESSO = "Cão Cadastrado com Sucesso!";
+    String GATO_CADASTRADO_SUCESSO = "Gato Cadastrado com Sucesso!";
     String JA_ESTA_VISUALIZANDO = "Você já está visualizando o item selecionado";
+    String ERRO_DELETAR_CONEXAO = "Erro ao apagar animal";
+    String ANIMAL_DELETADO_SUCESSO = "Animal apagado com sucesso!";
+    String ERRO_LISTAR = "Erro ao listar animais";
+    String ERRO_CADASTRAR = "Erro ao cadastrar animal";
+    String ERRO_CADASTRAR_DADOS = "Preencha os campos Nome, Idade e Peso";
+    String CAO = "Cao";
+    String GATO = "Gato";
 
 }

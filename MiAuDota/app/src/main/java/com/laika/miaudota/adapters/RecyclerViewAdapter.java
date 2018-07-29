@@ -35,7 +35,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     }
 
-    @Override
+    @Override @NonNull
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         LayoutInflater inflater = LayoutInflater.from(mContext);
@@ -57,8 +57,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 i.putExtra("animalDescricao", mData.get(viewHolder.getAdapterPosition()).getDescricao());
                 i.putExtra("animalEndereco", mData.get(viewHolder.getAdapterPosition()).getEndereco());
                 i.putExtra("animalFoto", mData.get(viewHolder.getAdapterPosition()).getFotoUrl());
-                if(mData.get(viewHolder.getAdapterPosition()) instanceof Cao)
-                    i.putExtra("animalPorte", (((Cao)mData.get(viewHolder.getAdapterPosition())).getPorte()));
+                if(mData.get(viewHolder.getAdapterPosition()) instanceof Cao) {
+                    i.putExtra("animalPorte", (((Cao) mData.get(viewHolder.getAdapterPosition())).getPorte()));
+                    i.putExtra("animalTipo", IConstants.CAO);
+                }
+                else
+                    i.putExtra("animalTipo", IConstants.GATO);
 
                 mContext.startActivity(i);
             }

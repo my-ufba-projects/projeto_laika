@@ -1,7 +1,6 @@
 package com.laika.miaudota.models;
 
 public class Cao extends Animal{
-    //herda da classe animal e especializa com o porte
 
     private String porte;
 

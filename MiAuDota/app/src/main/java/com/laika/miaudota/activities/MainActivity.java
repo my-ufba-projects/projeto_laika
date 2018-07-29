@@ -2,6 +2,7 @@ package com.laika.miaudota.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.CheckResult;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.LinearLayoutManager;
@@ -42,9 +43,9 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btnCriar = findViewById(R.id.btn_cadastrar);
+        Button btnCadastrar = findViewById(R.id.btn_cadastrar);
 
-        btnCriar.setOnClickListener(new View.OnClickListener() {
+        btnCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, CadastroActivity.class);
@@ -79,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
             @Override
             public void onFail(Object object) {
-
+                Toast.makeText(getApplicationContext(), IConstants.ERRO_LISTAR, Toast.LENGTH_LONG).show();
             }
         });
 
@@ -92,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
             @Override
             public void onFail(Object object) {
-
+                Toast.makeText(getApplicationContext(), IConstants.ERRO_LISTAR, Toast.LENGTH_LONG).show();
             }
         });
 

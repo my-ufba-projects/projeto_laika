@@ -1,10 +1,12 @@
 package com.laika.miaudota.activities;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.telephony.IccOpenLogicalChannelResponse;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -41,7 +43,7 @@ public class PerfilActivity extends AppCompatActivity {
         setContentView(R.layout.activity_perfil);
 
         //Esconde a ActionBar
-        getSupportActionBar().hide();
+            getSupportActionBar().hide();
 
         //Recebe os dados que vão ser mostrados no perfil
         String nome = Objects.requireNonNull(getIntent().getExtras()).getString("animalNome");
@@ -56,6 +58,7 @@ public class PerfilActivity extends AppCompatActivity {
         Boolean vermifugado = Boolean.valueOf(getIntent().getExtras().getString("animalVermifugado"));
         Boolean vacinado = Boolean.valueOf(getIntent().getExtras().getString("animalVacinado"));
         this.id = getIntent().getExtras().getInt("id");
+        final String animalTipo = getIntent().getExtras().getString("animalTipo");
 
         //Inicializa as views
         CollapsingToolbarLayout collapsingToolbarLayout = findViewById(R.id.collapsingtoolbar_id);
@@ -108,64 +111,37 @@ public class PerfilActivity extends AppCompatActivity {
         deletarAnimal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                IComunicacao comm;
-                if(porte !=null){
-                    //cachorro
-                    comm = new CachorroComunicacao(queue);
-                    comm.deletar(id, new ICallback() {
+                if(animalTipo != null && animalTipo.equals(IConstants.CAO)){
+                    IComunicacao cachorroComunicacao = new CachorroComunicacao(queue);
+                    cachorroComunicacao.deletar(id, new ICallback() {
                         @Override
                         public void onSucess(Object object) {
-                            Toast.makeText(getApplicationContext(), "Cão deletado", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), IConstants.ANIMAL_DELETADO_SUCESSO, Toast.LENGTH_SHORT).show();
                             finish();
                         }
 
                         @Override
                         public void onFail(Object object) {
-                            Toast.makeText(getApplicationContext(), "Erro!", Toast.LENGTH_SHORT).show();
-                            finish();
+                            Toast.makeText(getApplicationContext(), IConstants.ERRO_DELETAR_CONEXAO, Toast.LENGTH_SHORT).show();
                         }
                     });
-                }else{
-                    comm = new GatoComunicacao(queue);
-                    comm.deletar(id, new ICallback() {
+                }else if(animalTipo != null && animalTipo.equals(IConstants.GATO)){
+                    IComunicacao gatoComunicacao = new GatoComunicacao(queue);
+                    gatoComunicacao.deletar(id, new ICallback() {
                         @Override
                         public void onSucess(Object object) {
-                            Toast.makeText(getApplicationContext(), "Gato deletado", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), IConstants.ANIMAL_DELETADO_SUCESSO, Toast.LENGTH_SHORT).show();
                             finish();
                         }
 
                         @Override
                         public void onFail(Object object) {
-                            Toast.makeText(getApplicationContext(), "Erro!", Toast.LENGTH_SHORT).show();
-                            finish();
+                            Toast.makeText(getApplicationContext(), IConstants.ERRO_DELETAR_CONEXAO, Toast.LENGTH_SHORT).show();
                         }
                     });
                 }
-                //Toast.makeText(getApplicationContext(), "Funciona!", Toast.LENGTH_LONG).show();
             }
         });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_activity, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override //Quando algum item do menu for selecionado execute a rotina
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
-        switch(id){
-            case R.id.lista_animaisId: //Se clicar em Listar animais, chama a MainActivity
-                Intent intent = new Intent(this, MainActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.cadastrar_animalId: //Se clicar em Cadastrar animal, chama a CadastroActivity
-                Toast.makeText(this, IConstants.PAGINA_EM_DESENVOLVIMENTO, Toast.LENGTH_SHORT).show();
-                break;
-        }
-        return super.onOptionsItemSelected(item);
-    }
 }

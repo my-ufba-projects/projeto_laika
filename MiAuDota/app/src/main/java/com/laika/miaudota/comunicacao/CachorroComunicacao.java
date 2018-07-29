@@ -50,7 +50,7 @@ public class CachorroComunicacao implements IComunicacao {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
+                callback.onFail(null);
             }
         }){
             @Override
@@ -80,7 +80,7 @@ public class CachorroComunicacao implements IComunicacao {
 
             @Override
             public void onResponse(JSONArray response){
-                JSONObject jsonObject = null;
+                JSONObject jsonObject;
                 for(int i=0; i<response.length(); i++){
                     try{
                         jsonObject = response.getJSONObject(i);
@@ -105,12 +105,11 @@ public class CachorroComunicacao implements IComunicacao {
 
                 //fim do request
                 callback.onSucess(listaAnimal);
-
             }
         }, new Response.ErrorListener(){
             @Override
             public void onErrorResponse(VolleyError error){
-
+                callback.onFail(null);
             }
         });
         queue = Volley.newRequestQueue(this.activity);

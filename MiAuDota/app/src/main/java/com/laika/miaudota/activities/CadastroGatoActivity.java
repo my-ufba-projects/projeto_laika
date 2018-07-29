@@ -1,6 +1,7 @@
 package com.laika.miaudota.activities;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,7 +42,7 @@ public class CadastroGatoActivity extends Fragment {
     private EditText aboutGato;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull  LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         super.onCreateView(inflater, container,savedInstanceState);
@@ -75,12 +76,13 @@ public class CadastroGatoActivity extends Fragment {
             try{
                 enviaRequest();
             }catch(Exception e){
+                Toast.makeText(getActivity(), IConstants.ERRO_CADASTRAR_DADOS, Toast.LENGTH_LONG).show();
                 e.printStackTrace();
             }
         }
     };
 
-    private void enviaRequest() throws UnsupportedEncodingException {
+    private void enviaRequest(){
         //request para ser usado no OnClickListener
         //preenche os dados de cadastro
         Animal gato = new Gato(
@@ -100,13 +102,14 @@ public class CadastroGatoActivity extends Fragment {
         gatoComunicacao.cadastrar(gato, new ICallback() {
             @Override
             public void onSucess(Object object) {
-                Toast.makeText(getActivity(), IConstants.GATO_CADASTRADO_SUCESS, Toast.LENGTH_LONG).show();
-                getActivity().finish();
+                Toast.makeText(getActivity(), IConstants.GATO_CADASTRADO_SUCESSO, Toast.LENGTH_LONG).show();
+                if(getActivity() != null)
+                    getActivity().finish();
             }
 
             @Override
             public void onFail(Object object) {
-
+                Toast.makeText(getActivity(), IConstants.ERRO_CADASTRAR, Toast.LENGTH_SHORT).show();
             }
         });
     }

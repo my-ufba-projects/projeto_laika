@@ -1,6 +1,7 @@
 package com.laika.miaudota.activities;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,7 +41,7 @@ public class CadastroCachorroActivity extends Fragment{
     private EditText enderecoCachorro;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull  LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         super.onCreateView(inflater, container,savedInstanceState);
@@ -76,6 +77,7 @@ public class CadastroCachorroActivity extends Fragment{
             try{
                 enviaRequest();
             }catch(Exception e){
+                Toast.makeText(getActivity(), IConstants.ERRO_CADASTRAR_DADOS, Toast.LENGTH_LONG).show();
                 e.printStackTrace();
             }
         }
@@ -103,13 +105,14 @@ public class CadastroCachorroActivity extends Fragment{
             //sobreposição para exibir a mensagem de cadastro
             @Override
             public void onSucess(Object object) {
-                Toast.makeText(getActivity(), IConstants.CAO_CADASTRADO_SUCESS, Toast.LENGTH_LONG).show();
-                getActivity().finish();
+                Toast.makeText(getActivity(), IConstants.CAO_CADASTRADO_SUCESSO, Toast.LENGTH_LONG).show();
+                if(getActivity() != null)
+                    getActivity().finish();
             }
 
             @Override
             public void onFail(Object object) {
-
+                Toast.makeText(getActivity(), IConstants.ERRO_CADASTRAR, Toast.LENGTH_SHORT).show();
             }
         });
     }
