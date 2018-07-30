@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\danpl\\LAIKA\\projeto_laika2\\projeto_laika\\MiAuDota\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
+            "outputFile": "C:\\Users\\Matheus\\Desktop\\projeto_laika\\MiAuDota\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\danpl\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\66e1e2305c4966e682e75cafd5930e55\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Matheus\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\bff67d360b599491953bf870505140d3\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\danpl\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\d4831672920f23e3568ba23f83edb993\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Matheus\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\b9c9e79f7a2f8917f0fd856afbbc051b\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
